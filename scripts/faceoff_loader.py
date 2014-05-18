@@ -2,10 +2,10 @@ from get_faceoffs import get_faces
 from get_links import get_links
 
 conferences = [
+               'http://littleeast.com/sports/mlax/2013-14/schedule',
                'http://www.nescac.com/sports/mlax/2013-14/schedule',
                'http://www.newmacsports.com/sports/mlax/2013-14/schedule',
-               'http://www.thegnac.com/sports/mlax/2013-14/schedule',
-               'http://littleeast.com/sports/mlax/2013-14/schedule',
+               #'http://www.thegnac.com/sports/mlax/2013-14/schedule',
               ]
 
 if __name__ == "__main__":
