@@ -52,11 +52,10 @@ def get_faces(url):
       else:
         winner = rest[:period]
         rest = rest[period + 1:]
+
+      if '(' in winner:
+        winner = winner.split(' (')[0]
         
       print currentQuarter, time, home, away, winner 
 
     # currentQuarter, home, away, winner, time
-
-
-get_faces('http://newmacsports.com/sports/mlax/2013-14/boxscores/20140315_3fn9.xml')
-get_faces('http://newmacsports.com/sports/mlax/2013-14/boxscores/20140315_zg56.xml')
