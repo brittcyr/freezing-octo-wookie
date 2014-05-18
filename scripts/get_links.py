@@ -20,10 +20,10 @@ def get_links(conference_url = 'http://www.newmacsports.com/sports/mlax/2013-14/
   link_list = []
   
   for link in links:
-    if 'Box Score' in str(link) or 'Stats' in str(link):
+    if 'Box Score' in str(link):
       url = urlparse.urljoin(domain, str(link['href']))
       link_list.append(url)
-  print 'Got all links'
+  print 'Got all links for ' + conference_url
   return link_list
 
 if __name__ == "__main__":
