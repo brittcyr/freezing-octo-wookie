@@ -13,14 +13,14 @@ def get_links(conference_url = 'http://www.newmacsports.com/sports/mlax/2013-14/
   br = feedparser.parse(conference_url)
   page = BeautifulSoup(str(br))
   links = page.findAll('a')
-  
+
   parsed = urlparse.urlsplit(conference_url)
   domain = '{uri.scheme}://{uri.netloc}/'.format(uri=parsed)
 
   link_list = []
-  
+
   for link in links:
-    if 'Box Score' in str(link):
+    if 'Box' in str(link):
       url = urlparse.urljoin(domain, str(link['href']))
       link_list.append(url)
   print 'Got all links for ' + conference_url
