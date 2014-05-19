@@ -5,12 +5,6 @@ import mechanize
 import feedparser
 
 def get_faces(url):
-  # Browser
-  br = mechanize.Browser()
-  br.set_handle_redirect(True)
-  br.addheaders = [('User-agent', 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.1) Gecko/2008071615 Fedora/3.0.1-1.fc9 Firefox/3.0.1')]
-
-  print url
   try:
     br = feedparser.parse(url + '?view=plays')
     statbox = BeautifulSoup(str(br)).findAll("div", {"class" :"stats-fullbox clearfix"})[-1]
@@ -61,5 +55,60 @@ def get_faces(url):
 
   except:
     print 'FAILED ' + url
+    return get_faces_other_type(url)
 
     # currentQuarter, home, away, winner, time
+
+
+def get_faces_other_type(url):
+  try:
+    br = feedparser.parse(url)
+    statbox = BeautifulSoup(str(br)).findAll("table", {"class" :"center_wide"})
+
+    # Remove duplicates
+    if len(statbox) % 2 == 0 and len(statbox) > 4:
+      statbox = statbox[: len(statbox) / 2]
+    table = [x.findAll("tr") for x in statbox]
+
+    currentQuarter = 0
+    for ind in range(len(table)):
+      quarter = table[ind]
+      currentQuarter = ind + 1
+      for row in quarter:
+        # At a faceoff
+        if 'Faceoff' in str(row):
+          time = row.find("td").contents[0]
+          time = time[1:-1]
+
+          face_data = str(row.findAll("td")[1].contents[0]).split('Faceoff ')[1]
+          [players, rest] = face_data.split('won by')
+          [home, away] = players.split('vs')
+          rest = rest.strip()
+
+          # REST is Winner punctuation then optionally the groundball
+          winner = ''
+          comma = rest.find(',')
+          period = rest.find('.')
+          if comma != -1:
+            if period != -1:
+              winner = rest[:min(comma, period)]
+              rest = rest[min(comma, period) + 1:]
+            else:
+              winner = rest[:comma]
+              rest = rest[comma + 1:]
+          else:
+            winner = rest[:period]
+            rest = rest[period + 1:]
+
+          if '(' in winner:
+            winner = winner.split(' (')[0]
+        
+          print currentQuarter, time, home, away, winner 
+
+  except :
+    print 'FAIL'
+
+if __name__ == '__main__':
+  get_faces_other_type('http://athletics.lycoming.edu/boxscore.aspx?path=mlax&id=2321')
+  pass
+  
