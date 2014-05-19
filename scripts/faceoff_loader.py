@@ -6,10 +6,15 @@ conferences = [
                'http://www.nescac.com/sports/mlax/2013-14/schedule',
                'http://www.newmacsports.com/sports/mlax/2013-14/schedule',
                'http://www.thegnac.com/sports/mlax/2013-14/schedule',
+               'http://nacathletics.com/sports/mlax/2013-14/schedule',
               ]
 
 conferences2 = [
                 'http://www.cccathletics.com/sports/mlax/composite?date=2014-02-01',
+               ]
+
+conferences3 = [
+                'http://www.empire8.com/stats.aspx?path=mlax&year=2014',
                ]
 
 if __name__ == "__main__":
