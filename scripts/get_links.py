@@ -27,6 +27,7 @@ def get_links_calendar(conference_url='http://www.cccathletics.com/sports/mlax/c
 
   for a in range(180):
     url = prefix + str(a)
+    print 'Working on ' + url
     br = feedparser.parse(url)
     page = BeautifulSoup(str(br))
     links = page.findAll('a')
