@@ -1,5 +1,5 @@
 from get_faceoffs import get_faces
-from get_links import get_links
+from get_links import get_links, get_links_calendar
 
 conferences = [
                'http://littleeast.com/sports/mlax/2013-14/schedule',
