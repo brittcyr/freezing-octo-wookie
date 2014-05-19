@@ -54,7 +54,6 @@ def get_faces(url):
         print currentQuarter, time, home, away, winner 
 
   except:
-    print 'FAILED ' + url
     return get_faces_other_type(url)
 
     # currentQuarter, home, away, winner, time

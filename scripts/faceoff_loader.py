@@ -1,4 +1,4 @@
-from get_faceoffs import get_faces
+from get_faceoffs import get_faces, get_faces_other_type
 from get_links import get_links, get_links_calendar
 
 conferences = [
@@ -34,7 +34,7 @@ conferences3 = [
 # Could not find MAC, PAC, Skyline
 
 if __name__ == "__main__":
-  for conference in conferences:
+  for conference in conferences3:
     links = get_links(conference)
     for link in links:
       get_faces(link)
@@ -42,4 +42,7 @@ if __name__ == "__main__":
     links = get_links_calendar(conference)
     for link in links:
       get_faces(link)
-
+  for conference in conferences3:
+    links = get_links_calendar(conference)
+    for link in links:
+      get_faces_other_type(link)
