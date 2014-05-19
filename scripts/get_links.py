@@ -25,7 +25,7 @@ def get_links_calendar(conference_url='http://www.cccathletics.com/sports/mlax/c
   prefix = conference_url[:-2]
   link_list = []
 
-  for a in range(120):
+  for a in range(180):
     url = prefix + str(a)
     br = feedparser.parse(url)
     page = BeautifulSoup(str(br))

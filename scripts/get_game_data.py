@@ -1,15 +1,9 @@
 #!/usr/bin/env python
 import re
 from BeautifulSoup import BeautifulSoup
-import mechanize
 import feedparser
 
 def get_game_data(url):
-  # Browser
-  br = mechanize.Browser()
-  br.set_handle_redirect(True)
-  br.addheaders = [('User-agent', 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.1) Gecko/2008071615 Fedora/3.0.1-1.fc9 Firefox/3.0.1')]
-
   br = feedparser.parse(url)
   statbox = BeautifulSoup(str(br)).findAll("div", {"class" :"stats-wrapper lcgame clearfix"})
 
@@ -44,5 +38,6 @@ def get_game_data(url):
     pass
 
   # date, time, location, away, home, home_wins, faces, officials_list
-get_game_data('http://newmacsports.com/sports/mlax/2013-14/boxscores/20140315_3fn9.xml')
-get_game_data('http://newmacsports.com/sports/mlax/2013-14/boxscores/20140315_zg56.xml')
+#get_game_data('http://newmacsports.com/sports/mlax/2013-14/boxscores/20140315_3fn9.xml')
+#get_game_data('http://newmacsports.com/sports/mlax/2013-14/boxscores/20140315_zg56.xml')
+get_game_data('http://www.cmsvathletics.com/boxscore.aspx?path=mlax&id=2735')

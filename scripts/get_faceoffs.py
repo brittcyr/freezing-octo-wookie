@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 import re
 from BeautifulSoup import BeautifulSoup
-import mechanize
 import feedparser
 
 def get_faces(url):

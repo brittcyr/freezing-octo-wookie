@@ -34,10 +34,6 @@ conferences3 = [
 # Could not find MAC, PAC, Skyline
 
 if __name__ == "__main__":
-  for conference in conferences3:
-    links = get_links(conference)
-    for link in links:
-      get_faces(link)
   for conference in conferences2:
     links = get_links_calendar(conference)
     for link in links:
@@ -46,3 +42,7 @@ if __name__ == "__main__":
     links = get_links_calendar(conference)
     for link in links:
       get_faces_other_type(link)
+  for conference in conferences3:
+    links = get_links(conference)
+    for link in links:
+      get_faces(link)
