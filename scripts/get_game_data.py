@@ -61,43 +61,67 @@ def get_game_data(url):
   # date, time, location, away, home, home_wins, faces, officials_list
 
 def get_game_data_other_type(url):
+  stats = ''
   try:
     br = feedparser.parse(url)
     page = BeautifulSoup(str(br))
 
     stats= page.findAll("table", {"class" : "stats_table center_wide has_more_padding has_cell_borders"})[0]
+
+  except:
+    return None
+
+  try:
     away = stats.findAll("tr")[1].find("td").contents[0]
     home = stats.findAll("tr")[2].find("td").contents[0]
+  except:
+    away = ''
+    home = ''
 
+  try:
     official_start = str(page).index("Official")
     officials = str(page)[official_start: str(page).index('<br', official_start)]
     officials = strip(officials)
     officials_list = officials_split(officials)
+  except:
+    officials_list = []
 
+  try:
     date_start = str(page).index("Date")
     date = str(page)[date_start: str(page).index('<br', date_start)]
     date = strip(date)
+  except:
+    date = ''
 
+  try:
     time_start = str(page).index("Time")
     time = str(page)[time_start: str(page).index('<br', time_start)]
     time = strip(time)
+  except:
+    time = ''
 
+  try:
     site_start = str(page).index("Site")
     location = str(page)[site_start: str(page).index('<br', site_start)]
     location = format_site(strip(location))
+  except:
+    location = ''
 
+  try:
     stats= page.findAll("table", {"class" : "center has_more_padding has_cell_borders stats_table"})
     stats = [x for x in stats if "Face" in str(x)][0]
     home_wins = stats.find("tbody").find("tr").findAll("td")[-1].contents[0]
     away_wins = stats.find("tbody").findAll("tr")[-1].findAll("td")[-1].contents[0]
     faces = int(home_wins) + int(away_wins)
-    print date, time, location, away, home, home_wins, faces, officials_list
-    return (date, time, location, away, home, home_wins, faces, officials_list)
   except:
-    pass
-    return None
+    home_wins = 0
+    away_wins = 0
+    faces = 0
 
-    # date, time, location, away, home, home_wins, faces, officials_list
+  print date, time, location, away, home, home_wins, faces, officials_list
+  return (date, time, location, away, home, home_wins, faces, officials_list)
+
+  # date, time, location, away, home, home_wins, faces, officials_list
 
 if __name__ == "__main__":
   get_game_data('http://newmacsports.com/sports/mlax/2013-14/boxscores/20140315_3fn9.xml')

@@ -60,7 +60,7 @@ if __name__ == "__main__":
     # TODO: Create GAME object
     # TODO: Check for duplicate
 
-    (date, time, location, away, home, home_wins, faces, officials_list) = game_data
+    (date, time, location, away, home, home_wins, num_faces, officials_list) = game_data
     for face in faces:
       (currentQuarter, time, home, away, winner) = face
       winner = decide(home, away, winner)
