@@ -16,7 +16,7 @@ def officials_split(officials):
     officials = officials.split(';')
   elif ',' in officials:
     officials = officials.split(',')
-  bad = ['Sports ', 'Ath.', 'Info', ' SID']
+  bad = ['Sports ', 'Ath.', 'Info', ' SID', 'Comm.']
   officials = [x for x in officials if not any([b in x for b in bad])]
   return [x.lstrip(' 0123456789') for x in officials]
 
@@ -25,6 +25,7 @@ def format_site(site):
     site = site.split('@')[1]
   if '(' in site and ')' in site:
     site = site.split('(')[1].split(')')[0]
+  site = site.replace('\\', '')
   return site.strip()
 
 def format_team(team):
@@ -34,6 +35,7 @@ def format_team(team):
     team = team[team.split('No. ')[1].index(' '):]
   html_parser = HTMLParser.HTMLParser()
   team = html_parser.unescape(team)
+  team = team.replace('\\', '')
   team = team.strip()
   return team
 

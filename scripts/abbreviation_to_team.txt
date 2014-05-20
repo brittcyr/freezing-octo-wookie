@@ -212,3 +212,5 @@ BCML	Becker College
 JWUMLAX	Johnson & Wales (RI)
 F&amp;M	Frank. & Marsh.
 W&amp;J	Wash. & Jefferson
+F&M	Frank. & Marsh.
+W&J	Wash. & Jefferson
