@@ -3,9 +3,15 @@ import re
 from BeautifulSoup import BeautifulSoup
 import feedparser
 
+def flip(name):
+  if len(name.split(', ')) == 2:
+    name = ' '.join(reversed(name.split(',')))
+  return name
+
 def get_faces(url):
   try:
     br = feedparser.parse(url + '?view=plays')
+    br = feedparser.parse(br['href'] + '?view=plays')
     statbox = BeautifulSoup(str(br)).findAll("div", {"class" :"stats-fullbox clearfix"})[-1]
     table = statbox.find("table").findAll("tr")
 
@@ -30,6 +36,8 @@ def get_faces(url):
         face_data = str(row.findAll("td")[1].contents[0]).split('Faceoff ')[1]
         [players, rest] = face_data.split('won by')
         [home, away] = players.split('vs')
+        home = flip(home)
+        away = flip(away)
         rest = rest.strip()
 
         # REST is Winner punctuation then optionally the groundball
@@ -53,7 +61,7 @@ def get_faces(url):
         print currentQuarter, time, home, away, winner 
 
   except:
-    return get_faces_other_type(url)
+    get_faces_other_type(url)
 
     # currentQuarter, home, away, winner, time
 
@@ -81,6 +89,8 @@ def get_faces_other_type(url):
           face_data = str(row.findAll("td")[1].contents[0]).split('Faceoff ')[1]
           [players, rest] = face_data.split('won by')
           [home, away] = players.split('vs')
+          home = flip(home)
+          away = flip(away)
           rest = rest.strip()
 
           # REST is Winner punctuation then optionally the groundball
@@ -107,6 +117,6 @@ def get_faces_other_type(url):
     print 'FAIL'
 
 if __name__ == '__main__':
-  get_faces_other_type('http://athletics.lycoming.edu/boxscore.aspx?path=mlax&id=2321')
+  get_faces('http://www.laxmagazine.com/links/b9gzz2')
   pass
   

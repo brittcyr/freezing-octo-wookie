@@ -38,7 +38,10 @@ laxmag = 'http://www.laxmagazine.com/college_men/DIII/2013-14/schedule?date=2014
 if __name__ == "__main__":
   links = get_links_calendar(laxmag)
   print len(links)
-  for link in linksa:
+  links = list(set(links))
+  print len(links)
+  for link in links:
+    print link
     get_faces(link)
 
 #  for conference in conferences2:
