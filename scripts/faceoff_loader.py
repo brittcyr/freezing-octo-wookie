@@ -52,6 +52,7 @@ if __name__ == "__main__":
     faces = get_faces(link)
 
     # TODO: Create GAME object
+    # TODO: Check for duplicate
 
     (date, time, location, away, home, home_wins, faces, officials_list) = game_data
     for face in faces:
