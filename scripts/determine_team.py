@@ -1,5 +1,4 @@
-# For every game, decide whether it is already mapped
-# Otherwise, 
+
 
 # Load the existing mapping from a txt
 def load_mapping():
@@ -17,6 +16,7 @@ def load_mapping():
   f.close()
   return mapping
 
+# Decide which team it belongs to or ask user for input
 def decide(home, away, abbr):
   mapping = load_mapping()
   if abbr in mapping:
@@ -48,3 +48,5 @@ def decide(home, away, abbr):
     
 if __name__ == "__main__":
   decide('Johnson &amp; Wales', '(RI) Norwich', 'NOR')
+  decide('SUNY Cobleskill', 'Morrisville St.' , 'MORM')
+  decide('SUNY Cobleskill', 'Morrisville St.' , 'COBM')

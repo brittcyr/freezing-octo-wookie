@@ -57,6 +57,7 @@ def get_game_data(url):
   except:
     pass
   print date, time, location, away, home, home_wins, faces, officials_list
+  return (date, time, location, away, home, home_wins, faces, officials_list)
   # date, time, location, away, home, home_wins, faces, officials_list
 
 def get_game_data_other_type(url):
@@ -91,8 +92,10 @@ def get_game_data_other_type(url):
     away_wins = stats.find("tbody").findAll("tr")[-1].findAll("td")[-1].contents[0]
     faces = int(home_wins) + int(away_wins)
     print date, time, location, away, home, home_wins, faces, officials_list
+    return (date, time, location, away, home, home_wins, faces, officials_list)
   except:
     pass
+    return None
 
     # date, time, location, away, home, home_wins, faces, officials_list
 

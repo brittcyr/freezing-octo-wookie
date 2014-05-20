@@ -15,6 +15,8 @@ def get_faces(url):
     statbox = BeautifulSoup(str(br)).findAll("div", {"class" :"stats-fullbox clearfix"})[-1]
     table = statbox.find("table").findAll("tr")
 
+    faces = []
+
     currentQuarter = 0
     violationHome = 0
     violationAway = 0
@@ -59,10 +61,10 @@ def get_faces(url):
           winner = winner.split(' (')[0]
         
         print currentQuarter, time, home, away, winner 
-
+        faces.append((currentQuarter, time, home, away, winner ))
+    return faces
   except:
-    get_faces_other_type(url)
-
+    return get_faces_other_type(url)
     # currentQuarter, home, away, winner, time
 
 
@@ -70,6 +72,8 @@ def get_faces_other_type(url):
   try:
     br = feedparser.parse(url)
     statbox = BeautifulSoup(str(br)).findAll("table", {"class" :"center_wide"})
+   
+    faces = []
 
     # Remove duplicates
     if len(statbox) % 2 == 0 and len(statbox) > 4:
@@ -112,9 +116,12 @@ def get_faces_other_type(url):
             winner = winner.split(' (')[0]
         
           print currentQuarter, time, home, away, winner 
+          faces.append((currentQuarter, time, home, away, winner ))
+    return faces
 
   except :
     print 'FAIL'
+    return None
 
 if __name__ == '__main__':
   get_faces('http://www.laxmagazine.com/links/b9gzz2')

@@ -41,8 +41,25 @@ if __name__ == "__main__":
   links = list(set(links))
   for link in links:
     print link
-    get_game_data(link)
-    get_faces(link)
+    game_data = get_game_data(link)
+    if not game_data:
+      f = open('failed_links.txt', 'a')
+      f.write(link)
+      f.write('\n')
+      f.close()
+      continue
+    faces = get_faces(link)
+
+
+    # TODO: Clean and upload to the database and determine winner
+
+
+
+
+
+
+
+
 
 #  for conference in conferences2:
 #    links = get_links_calendar(conference)
