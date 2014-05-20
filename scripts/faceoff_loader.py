@@ -1,6 +1,7 @@
 from get_faceoffs import get_faces, get_faces_other_type
 from get_links import get_links, get_links_calendar
 from get_game_data import get_game_data
+from determine_team import decide
 
 conferences = [
                'http://cacsports.com/sports/mlax/2013-14/schedule',
@@ -50,19 +51,15 @@ if __name__ == "__main__":
       continue
     faces = get_faces(link)
 
+    # TODO: Create GAME object
 
     (date, time, location, away, home, home_wins, faces, officials_list) = game_data
     for face in faces:
       (currentQuarter, time, home, away, winner) = face
-      # TODO: Determine the winner
+      winner = decide(home, away, winner)
+
+      # TODO: Create FACEOFF object
       
-
-
-    # TODO: Clean and upload to the database
-
-
-
-
 
 
 
