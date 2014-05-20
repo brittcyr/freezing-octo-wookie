@@ -10,6 +10,7 @@ def format_name(name):
     name = name.replace("  ", " ")
   html_parser = HTMLParser.HTMLParser()
   name = html_parser.unescape(name)
+  name = name.replace('\\', '')
   name = name.title()
   return name
 
