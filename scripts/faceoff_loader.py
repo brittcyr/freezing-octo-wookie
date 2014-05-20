@@ -68,10 +68,6 @@ if __name__ == "__main__":
       # TODO: Create FACEOFF object
       
 
-
-
-
-
 #  for conference in conferences2:
 #    links = get_links_calendar(conference)
 #    for link in links:
