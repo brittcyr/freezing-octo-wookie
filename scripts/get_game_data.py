@@ -17,7 +17,7 @@ def officials_split(officials):
   elif ',' in officials:
     officials = officials.split(',')
   bad = ['Sports ', 'Ath.', 'Info']
-  officials = [x for x in officials if x not in bad]
+  officials = [x for x in officials if not any([b in x for b in bad])]
   return [x.lstrip(' 0123456789') for x in officials]
 
 def format_site(site):
