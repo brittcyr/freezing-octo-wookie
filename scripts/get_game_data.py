@@ -19,6 +19,8 @@ def officials_split(officials):
 def format_site(site):
   if '@' in site:
     site = site.split('@')[1]
+  if '(' in site and ')' in site:
+    site = site.split('(')[1].split(')')[0]
   return site.strip()
 
 def format_team(team):
@@ -26,6 +28,15 @@ def format_team(team):
     team = team.split('#')[1]
   team = team.strip()
   return team
+
+def format_time(time):
+  if 'p' in time:
+    time = time.split('p')[0]
+  if 'a' in time:
+    time = time.split('a')[0]
+  if ':' not in time:
+    time = time + ':00'
+  return time
 
 def get_game_data(url):
   try:
@@ -36,7 +47,7 @@ def get_game_data(url):
     location = format_site(head.contents[2])
     time = head.contents[4]
     date = time.split(' ')[0]
-    time = time.split(' ')[2]
+    time = format_time(time.split(' ')[2])
   
     header = BeautifulSoup(str(statbox)).findAll("span", {"class" : "stats-header"})
     away = header[0].contents[0]
@@ -106,7 +117,7 @@ def get_game_data_other_type(url):
   try:
     time_start = str(page).index("Time")
     time = str(page)[time_start: str(page).index('<br', time_start)]
-    time = strip(time)
+    time = format_time(strip(time))
   except:
     time = ''
 
