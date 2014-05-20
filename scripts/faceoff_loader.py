@@ -45,7 +45,7 @@ if __name__ == "__main__":
   for link in links:
     counter += 1
     if counter % 10 == 0:
-      print 'Checked ' + counter + ' out of ' + 'total'
+      print 'Checked ' + str(counter) + ' out of ' + str(total)
     print link
     game_data = get_game_data(link)
     if not game_data:

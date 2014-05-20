@@ -204,3 +204,8 @@ CMSV-M	Mt. St. Vincent
 VWC	Virginia Wesleyan
 BCM	Bridgewater
 CCM	Colorado Col.
+BACM	Bryn Athyn
+FRNM	Franciscan
+GM	Gwynedd-Mercy
+EMM	Emmanuel College
+BCML	Becker College
