@@ -16,7 +16,7 @@ def officials_split(officials):
     officials = officials.split(';')
   elif ',' in officials:
     officials = officials.split(',')
-  bad = ['Sports ', 'Ath.', 'Info', ' SID', 'Comm.']
+  bad = ['Sports ', 'Ath.', 'Info', ' SID', 'Comm.', 'STAT', 'Stat']
   officials = [x for x in officials if not any([b in x for b in bad])]
   return [x.lstrip(' 0123456789') for x in officials]
 
