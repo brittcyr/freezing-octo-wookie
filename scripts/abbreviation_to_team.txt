@@ -214,3 +214,6 @@ F&amp;M	Frank. & Marsh.
 W&amp;J	Wash. & Jefferson
 F&M	Frank. & Marsh.
 W&J	Wash. & Jefferson
+F&M	Franklin & Marshall
+WC	o. 5 Washington College
+SAL	o. 2 Salisbury

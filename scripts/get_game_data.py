@@ -32,7 +32,8 @@ def format_team(team):
   if '#' in team:
     team = team[team.index('  ', team.index('#')):]
   if 'No. ' in team:
-    team = team[team.split('No. ')[1].index(' '):]
+    team = team.split('No. ')[1]
+    team = team[team.index(' '):]
   html_parser = HTMLParser.HTMLParser()
   team = html_parser.unescape(team)
   team = team.replace('\\', '')
@@ -158,6 +159,7 @@ def get_game_data_other_type(url):
   # date, time, location, away, home, home_wins, faces, officials_list
 
 if __name__ == "__main__":
+  get_game_data('http://www.suseagulls.com/sports/mlax/2013-14/boxscores/20140518_9usw.xml')
   get_game_data('http://www.laxmagazine.com/links/xwxm4g')
   get_game_data('http://www.laxmagazine.com/links/k5pmhe')
   get_game_data('http://newmacsports.com/sports/mlax/2013-14/boxscores/20140315_3fn9.xml')
