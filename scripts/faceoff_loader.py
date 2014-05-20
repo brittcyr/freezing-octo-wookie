@@ -58,8 +58,8 @@ if __name__ == "__main__":
       continue
 
     (date, time, location, away_team, home_team, home_wins, num_faces, officials_list) = game_data
-    # TODO: Create GAME object
     # TODO: Check for duplicate
+    # TODO: Create GAME object
 
     for face in faces:
       (currentQuarter, time, home, away, winner) = face

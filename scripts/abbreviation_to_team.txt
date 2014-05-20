@@ -85,3 +85,5 @@ KENMLX	Kenyon
 BC	Beloit
 MMA	Mass. Maritime
 BAB	Babson
+DC	Defiance
+DENM	5 Denison
