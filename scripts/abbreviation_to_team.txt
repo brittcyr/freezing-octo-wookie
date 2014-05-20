@@ -1,0 +1,14 @@
+COBM	Cobleskill St.
+WELM	Wells
+HUSM	Husson
+JSC	Johnson State
+UMWML	Mary Washington
+RMCMLX14	Randolph-Macon
+UMW	Mary Washington
+HSC	Hampden-Sydney
+BW-M	Baldwin Wallace
+CAP-M	Capital
+RWU	Roger Williams
+LCMLAX14	Lasell
+ELMHURST	Elmhurst
+AUGIE	Augustana (IL)
