@@ -100,3 +100,4 @@ if __name__ == "__main__":
   get_game_data('http://newmacsports.com/sports/mlax/2013-14/boxscores/20140315_3fn9.xml')
   get_game_data('http://newmacsports.com/sports/mlax/2013-14/boxscores/20140315_zg56.xml')
   get_game_data('http://www.cmsvathletics.com/boxscore.aspx?path=mlax&id=2735')
+  get_game_data('http://www.centenarycyclones.com/boxscore.aspx?path=mlax&id=3022')
