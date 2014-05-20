@@ -29,3 +29,9 @@ MSOE	MSOE
 AU	Aurora
 ANMML	Anna Maria
 MCL	Mitchell
+DPUM	DePauw
+DENM	#5 Denison
+SCRMLX14	Scranton
+GOUM	Goucher
+MSMC-M	Mt. St. Mary (N.Y.)
+MARITIME	Maritime (N.Y.)

@@ -21,6 +21,12 @@ def format_site(site):
     site = site.split('@')[1]
   return site.strip()
 
+def format_team(team):
+  if '#' in team:
+    team = team.split('#')[1]
+  team = team.strip()
+  return team
+
 def get_game_data(url):
   try:
     br = feedparser.parse(url)
@@ -35,6 +41,8 @@ def get_game_data(url):
     header = BeautifulSoup(str(statbox)).findAll("span", {"class" : "stats-header"})
     away = header[0].contents[0]
     home = header[2].contents[0]
+    away = format_team(away)
+    home = format_team(home)
 
     face_box = [x for x in BeautifulSoup(str(statbox)).findAll("table") if "FACE" in str(x)][0]
     face_results = face_box.findAll("td")[-1].contents[0]
@@ -74,6 +82,8 @@ def get_game_data_other_type(url):
   try:
     away = stats.findAll("tr")[1].find("td").contents[0]
     home = stats.findAll("tr")[2].find("td").contents[0]
+    away = format_team(away)
+    home = format_team(home)
   except:
     away = ''
     home = ''
