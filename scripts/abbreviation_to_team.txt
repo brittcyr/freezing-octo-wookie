@@ -209,3 +209,4 @@ FRNM	Franciscan
 GM	Gwynedd-Mercy
 EMM	Emmanuel College
 BCML	Becker College
+JWUMLAX	Johnson & Wales (RI)
