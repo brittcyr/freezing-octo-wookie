@@ -57,13 +57,13 @@ if __name__ == "__main__":
       f.close()
       continue
 
-    (date, time, location, away, home, home_wins, num_faces, officials_list) = game_data
+    (date, time, location, away_team, home_team, home_wins, num_faces, officials_list) = game_data
     # TODO: Create GAME object
     # TODO: Check for duplicate
 
     for face in faces:
       (currentQuarter, time, home, away, winner) = face
-      winner = decide(home, away, winner)
+      winner = decide(home_team, away_team, winner)
 
       # TODO: Create FACEOFF object
       
