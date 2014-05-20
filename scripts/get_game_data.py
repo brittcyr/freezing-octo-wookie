@@ -10,12 +10,15 @@ def strip(word):
     word = word.strip()
   return word
 
+# Ath. and 'Sports '
 def officials_split(officials):
   if ';' in officials:
-    return officials.split(';')
-  if ',' in officials:
-    return officials.split(',')
-  return [officals]
+    officials = officials.split(';')
+  elif ',' in officials:
+    officials = officials.split(',')
+  bad = ['Sports ', 'Ath.']
+  officials = [x for x in officials if x not in bad]
+  return [x.lstrip(' 0123456789') for x in officials]
 
 def format_site(site):
   if '@' in site:
@@ -105,7 +108,7 @@ def get_game_data_other_type(url):
     home = ''
 
   try:
-    official_start = str(page).index("Official")
+    official_start = str(page).index("Officials")
     officials = str(page)[official_start: str(page).index('<br', official_start)]
     officials = strip(officials)
     officials_list = officials_split(officials)
@@ -154,8 +157,8 @@ def get_game_data_other_type(url):
 
 if __name__ == "__main__":
   get_game_data('http://www.laxmagazine.com/links/xwxm4g')
-  #get_game_data('http://www.laxmagazine.com/links/k5pmhe')
-  #get_game_data('http://newmacsports.com/sports/mlax/2013-14/boxscores/20140315_3fn9.xml')
-  #get_game_data('http://newmacsports.com/sports/mlax/2013-14/boxscores/20140315_zg56.xml')
-  #get_game_data('http://www.cmsvathletics.com/boxscore.aspx?path=mlax&id=2735')
-  #get_game_data('http://www.centenarycyclones.com/boxscore.aspx?path=mlax&id=3022')
+  get_game_data('http://www.laxmagazine.com/links/k5pmhe')
+  get_game_data('http://newmacsports.com/sports/mlax/2013-14/boxscores/20140315_3fn9.xml')
+  get_game_data('http://newmacsports.com/sports/mlax/2013-14/boxscores/20140315_zg56.xml')
+  get_game_data('http://www.cmsvathletics.com/boxscore.aspx?path=mlax&id=2735')
+  get_game_data('http://www.centenarycyclones.com/boxscore.aspx?path=mlax&id=3022')

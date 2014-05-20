@@ -17,7 +17,7 @@ def load_mapping():
   return mapping
 
 # Decide which team it belongs to or ask user for input
-def decide(home, away, abbr):
+def decide(home, away, abbr, other = None):
   mapping = load_mapping()
   if abbr in mapping:
     if home in mapping[abbr]:
@@ -26,6 +26,20 @@ def decide(home, away, abbr):
       return False
 
     print 'Current mapping for this abbr is: ' + str(mapping[abbr])
+
+  if other and other in mapping:
+    if home in mapping[other]:
+      f = open('abbreviation_to_team.txt', 'a')
+      f.write(abbr + '\t' + away)
+      f.write('\n')
+      f.close()
+      return False
+    if away in mapping[other]:
+      f = open('abbreviation_to_team.txt', 'a')
+      f.write(abbr + '\t' + home)
+      f.write('\n')
+      f.close()
+      return True
 
   print 'Home is ' + home
   print 'Away is ' + away

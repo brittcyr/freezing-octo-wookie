@@ -172,3 +172,34 @@ SLU_M	St. Lawrence
 BSC	Birmingham Southern
 STOCKM	Richard Stockton
 GMML	Gwynedd Mercy
+UMBML	UMass Boston
+MCD	McDaniel
+FC	Ferrum
+BET	Bethany (W.Va.)
+W&amp;J	Washington and Jefferson
+UD	University of Dubuque
+AMH	Amherst
+BOWM14	Bowdoin
+ETWN	Elizabethtown
+GC	Gordon
+EC	Endicott
+MTU	Mount Union
+ALBIONM	Albion
+ADRIANM	Adrian
+WCM	Whittier
+IWU	Ill. Wesleyan
+UMD	UMass Dartmouth
+MSJM	Mt. St. Joseph
+JCUM	John Carroll
+SMML14	Southern Me.
+GRIFFI~1	Westminster
+SU	Shenandoah
+W&amp;J	Washington and Jefferson (Pa.)
+CONN	Connecticut Col.
+MU	Marymount (Va.)
+ALB	Albright
+CARTHAGE	Carthage
+FUMLAX	Fontbonne
+CMSV-M	Mt. St. Vincent
+VWC	Virginia Wesleyan
+BCM	Bridgewater
