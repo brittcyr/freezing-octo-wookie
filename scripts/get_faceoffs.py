@@ -16,6 +16,7 @@ def format_name(name):
 
 def get_faces(url):
   try:
+    html_parser = HTMLParser.HTMLParser()
     br = feedparser.parse(url + '?view=plays')
     br = feedparser.parse(br['href'] + '?view=plays')
     statbox = BeautifulSoup(str(br)).findAll("div", {"class" :"stats-fullbox clearfix"})[-1]
@@ -65,6 +66,7 @@ def get_faces(url):
 
         if '(' in winner:
           winner = winner.split(' (')[0]
+        winner = html_parser.unescape(winner)
         
         print currentQuarter, time, home, away, winner 
         faces.append((currentQuarter, time, home, away, winner ))
@@ -78,6 +80,7 @@ def get_faces_other_type(url):
   try:
     br = feedparser.parse(url)
     statbox = BeautifulSoup(str(br)).findAll("table", {"class" :"center_wide"})
+    html_parser = HTMLParser.HTMLParser()
    
     faces = []
 
@@ -120,6 +123,7 @@ def get_faces_other_type(url):
 
           if '(' in winner:
             winner = winner.split(' (')[0]
+          winner = html_parser.unescape(winner)
         
           print currentQuarter, time, home, away, winner 
           faces.append((currentQuarter, time, home, away, winner ))
