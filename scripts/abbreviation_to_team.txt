@@ -217,3 +217,5 @@ W&J	Wash. & Jefferson
 F&M	Franklin & Marshall
 WC	o. 5 Washington College
 SAL	o. 2 Salisbury
+W&L	Washington & Lee
+W&L	Washington and Lee

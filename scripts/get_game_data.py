@@ -10,15 +10,19 @@ def strip(word):
     word = word.strip()
   return word
 
-# Ath. and 'Sports '
 def officials_split(officials):
   if ';' in officials:
     officials = officials.split(';')
   elif ',' in officials:
     officials = officials.split(',')
+  return [official_prune(x) for x in officials if official_prune(x)]
+
+def official_prune(official):
   bad = ['Sports ', 'Ath.', 'Info', ' SID', 'Comm.', 'STAT', 'Stat', 'Athle',]
-  officials = [x for x in officials if not any([b in x for b in bad])]
-  return [x.lstrip(' 0123456789') for x in officials]
+  if any([b in official for b in bad]):
+    return None
+  else:
+    return official.lstrip(' 0123456789') 
 
 def format_site(site):
   if '@' in site:
@@ -83,7 +87,10 @@ def get_game_data(url):
       if "Officials" in str(official):
         break
       else:
-        officials_list.append(str(official.contents[0]))
+        possible = str(official.contents[0])
+	pruned = official_prune(possible)
+	if pruned:
+          officials_list.append(pruned)
   except:
     pass
   print date, time, location, away, home, home_wins, faces, officials_list
@@ -159,6 +166,7 @@ def get_game_data_other_type(url):
   # date, time, location, away, home, home_wins, faces, officials_list
 
 if __name__ == "__main__":
+  get_game_data('http://www.bwyellowjackets.com/sports/mlax/2013-14/boxscores/20140402_qldc.xml?view=undefined')
   get_game_data('http://www.suseagulls.com/sports/mlax/2013-14/boxscores/20140518_9usw.xml')
   get_game_data('http://www.laxmagazine.com/links/xwxm4g')
   get_game_data('http://www.laxmagazine.com/links/k5pmhe')
