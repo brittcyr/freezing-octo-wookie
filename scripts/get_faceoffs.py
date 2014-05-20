@@ -2,11 +2,14 @@
 import re
 from BeautifulSoup import BeautifulSoup
 import feedparser
+import HTMLParser
 
 def format_name(name):
   if len(name.split(', ')) == 2:
     name = ''.join(reversed(name.split(', ')))
     name = name.replace("  ", " ")
+  html_parser = HTMLParser.HTMLParser()
+  name = html_parser.unescape(name)
   name = name.title()
   return name
 

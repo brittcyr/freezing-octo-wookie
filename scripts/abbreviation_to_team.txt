@@ -133,3 +133,30 @@ CALVINM	Calvin College
 WC	No. 5 Washington College
 SAL	No. 2 Salisbury
 HAVMLX	Haverford
+TCML2014	Trinity (Conn.)
+HCM	Huntingdon
+BCM	Berry
+SUM	Shenandoah
+VWCM	Virginia Wesleyan
+NC	Nichols
+DENM	4 Denison
+ALFRED	Alfred St.
+DELHI	SUNY Delhi
+LYNM2014	Lyndon St.
+CENTRE	Centre
+FSCM	Farmingdale State
+ONEML	Oneonta St.
+REGM	Regis (Mass.)
+HAM	Hamilton
+BATES	Bates
+NOR	Norwich
+UMF	Me.-Farmington
+GMC	Green Mountain
+GC	19 Gettysburg
+SEWANEE	Sewanee
+DREWML14	Drew University
+RAND	Randolph
+BATH	Bryn Athyn
+WNE-M	Western New Eng.
+ALVML	Alvernia
+HOPEMEN	Hope

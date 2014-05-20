@@ -2,6 +2,7 @@
 import re
 from BeautifulSoup import BeautifulSoup
 import feedparser
+import HTMLParser
 
 def strip(word):
   if ':' in word:
@@ -28,7 +29,8 @@ def format_team(team):
     team = team[team.index('  ', team.index('#')):]
   if 'No. ' in team:
     team = team[team.split('No. ')[1].index(' '):]
-
+  html_parser = HTMLParser.HTMLParser()
+  team = html_parser.unescape(team)
   team = team.strip()
   return team
 
@@ -118,7 +120,10 @@ def get_game_data_other_type(url):
     date = ''
 
   try:
-    time_start = str(page).index("Time")
+    if "Start" in str(page):
+      time_start = str(page).index("Start")
+    else:
+      time_start = str(page).index("Time")
     time = str(page)[time_start: str(page).index('<br', time_start)]
     time = format_time(strip(time))
   except:
@@ -148,6 +153,7 @@ def get_game_data_other_type(url):
   # date, time, location, away, home, home_wins, faces, officials_list
 
 if __name__ == "__main__":
+  get_game_data('http://www.laxmagazine.com/links/xwxm4g')
   get_game_data('http://newmacsports.com/sports/mlax/2013-14/boxscores/20140315_3fn9.xml')
   get_game_data('http://newmacsports.com/sports/mlax/2013-14/boxscores/20140315_zg56.xml')
   get_game_data('http://www.cmsvathletics.com/boxscore.aspx?path=mlax&id=2735')
