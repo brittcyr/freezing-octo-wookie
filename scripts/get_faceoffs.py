@@ -5,7 +5,7 @@ import feedparser
 
 def flip(name):
   if len(name.split(', ')) == 2:
-    name = ' '.join(reversed(name.split(', ')))
+    name = ''.join(reversed(name.split(', ')))
   return name
 
 def get_faces(url):
