@@ -50,6 +50,12 @@ if __name__ == "__main__":
       f.close()
       continue
     faces = get_faces(link)
+    if not faces:
+      f = open('failed_links.txt', 'a')
+      f.write(link)
+      f.write('\n')
+      f.close()
+      continue
 
     # TODO: Create GAME object
     # TODO: Check for duplicate
