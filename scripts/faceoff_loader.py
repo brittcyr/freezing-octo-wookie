@@ -1,5 +1,6 @@
 from get_faceoffs import get_faces, get_faces_other_type
 from get_links import get_links, get_links_calendar
+from get_game_data import get_game_data
 
 conferences = [
                'http://cacsports.com/sports/mlax/2013-14/schedule',
@@ -37,11 +38,10 @@ laxmag = 'http://www.laxmagazine.com/college_men/DIII/2013-14/schedule?date=2014
 
 if __name__ == "__main__":
   links = get_links_calendar(laxmag)
-  print len(links)
   links = list(set(links))
-  print len(links)
   for link in links:
     print link
+    get_game_data(link)
     get_faces(link)
 
 #  for conference in conferences2:
