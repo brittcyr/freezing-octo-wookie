@@ -105,3 +105,31 @@ SJMML14	Saint Joseph\'s (Me.)
 SPR	Springfield
 BACMLAX	Bryn Athyn
 WITM	Wittenberg
+UC	Ursinus
+LVC	Lebanon Valley
+HIRM	Hiram
+KENM	Kenyon
+WNE	Western New England
+DENM	8 Denison
+DCM	Dickinson
+SCRMLX14	University of Scranton
+KEAN	Kean University
+MVILLE	Manhattanville
+VCMLAX	Vassar
+UNION	Union
+KSC	Keene State
+PSU	Plymouth St.
+LARM	La Roche
+BSC	Birmingham-Southern
+CLK	Clark
+PSU	Plymouth State
+MEDM	Medaille
+GC	Gettysburg
+F&amp;M	Franklin &amp; Marshall
+ALMC	Alma College
+CUW	Concordia University Wisconsin
+ALMA	Alma College
+CALVINM	Calvin College
+WC	No. 5 Washington College
+SAL	No. 2 Salisbury
+HAVMLX	Haverford

@@ -26,6 +26,9 @@ def format_site(site):
 def format_team(team):
   if '#' in team:
     team = team[team.index('  ', team.index('#')):]
+  if 'No. ' in team:
+    team = team[team.split('No. ')[1].index(' '):]
+
   team = team.strip()
   return team
 
