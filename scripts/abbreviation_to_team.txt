@@ -12,3 +12,20 @@ RWU	Roger Williams
 LCMLAX14	Lasell
 ELMHURST	Elmhurst
 AUGIE	Augustana (IL)
+CENTRE_M	Centre
+RHODES	Rhodes
+RIT	RIT
+STE	Stevenson
+DREWML14	Drew
+USMMA	Merchant Marine
+RIVIER	Rivier
+SJMML14	Saint Joseph\'s
+SRU	Salve Regina
+WIT	Wentworth
+YCP	York (Pa.)
+MUHL	Muhlenberg
+HOOD	Hood
+MSOE	MSOE
+AU	Aurora
+ANMML	Anna Maria
+MCL	Mitchell
