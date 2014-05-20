@@ -35,3 +35,53 @@ SCRMLX14	Scranton
 GOUM	Goucher
 MSMC-M	Mt. St. Mary (N.Y.)
 MARITIME	Maritime (N.Y.)
+UNE	U. of New England
+CC	Curry
+MIDMLAX	Middlebury
+WESM14	Wesleyan (Conn.)
+MIML	Misericordia
+NUML	Neumann
+WC	Washington College
+FSU	Frostburg St.
+TRANSY	Transylvania
+HANOVER	Hanover
+OWUM	Ohio Wesleyan
+DENM	Denison
+CST	Castleton
+JSC	Johnson St.
+THIEL	Thiel
+OTT	Otterbein
+NEC	New England Col.
+IDA	Mount Ida
+SWATM	Swarthmore
+KINGSML	King\'s (Pa.)
+HILM	Hilbert
+MORM	Morrisville St.
+LC	Lynchburg
+COR	Cortland St.
+UMF-M	Me.-Farmington
+THOMAS	Thomas
+OBEM	Oberlin
+BENEDICT	Benedictine (IL)
+MILLSAPS	Millsaps
+JWUMLAX	Johnson &amp; Wales (RI)
+MMA	Maine Maritime
+COBM	SUNY Cobleskill
+SWATMLAX	Swarthmore
+EUML	Eastern
+SITM	SUNYIT
+BARD	Bard
+PLATM1~1	Plattsburgh St.
+WES	Wesley
+SMC	St. Mary\'s (Md.)
+RANDM	Randolph
+BCM	Bridgewater (Va.)
+PLATM14	Plattsburgh St.
+GC	#16 Gettysburg
+F&amp;M	Frank. &amp; Marsh.
+HOPE	Hope
+ALBION	Albion
+KENMLX	Kenyon
+BC	Beloit
+MMA	Mass. Maritime
+BAB	Babson
