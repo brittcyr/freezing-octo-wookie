@@ -51,7 +51,14 @@ if __name__ == "__main__":
     faces = get_faces(link)
 
 
-    # TODO: Clean and upload to the database and determine winner
+    (date, time, location, away, home, home_wins, faces, officials_list) = game_data
+    for face in faces:
+      (currentQuarter, time, home, away, winner) = face
+      # TODO: Determine the winner
+      
+
+
+    # TODO: Clean and upload to the database
 
 
 
