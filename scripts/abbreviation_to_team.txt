@@ -87,3 +87,21 @@ MMA	Mass. Maritime
 BAB	Babson
 DC	Defiance
 DENM	5 Denison
+GC	16 Gettysburg
+CLK	Clark University
+MIT	MIT
+RIT	Rochester Inst.
+WILLIAMS	Williams
+MSU	Montclair State
+W&amp;J	Wash. &amp; Jefferson
+WOO	Wooster
+MMA	Massachusetts Maritime
+IWU	Illinois Wesleyan
+OLIVET	Olivet
+CANTONM	SUNY Canton
+SUSM	Susquehanna
+BCML	Becker
+SJMML14	Saint Joseph\'s (Me.)
+SPR	Springfield
+BACMLAX	Bryn Athyn
+WITM	Wittenberg

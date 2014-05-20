@@ -3,10 +3,11 @@ import re
 from BeautifulSoup import BeautifulSoup
 import feedparser
 
-def flip(name):
+def format_name(name):
   if len(name.split(', ')) == 2:
     name = ''.join(reversed(name.split(', ')))
     name = name.replace("  ", " ")
+  name = name.title()
   return name
 
 def get_faces(url):
@@ -39,8 +40,8 @@ def get_faces(url):
         face_data = str(row.findAll("td")[1].contents[0]).split('Faceoff ')[1]
         [players, rest] = face_data.split('won by')
         [home, away] = players.split('vs')
-        home = flip(home)
-        away = flip(away)
+        home = format_name(home)
+        away = format_name(away)
         rest = rest.strip()
 
         # REST is Winner punctuation then optionally the groundball
@@ -94,8 +95,8 @@ def get_faces_other_type(url):
           face_data = str(row.findAll("td")[1].contents[0]).split('Faceoff ')[1]
           [players, rest] = face_data.split('won by')
           [home, away] = players.split('vs')
-          home = flip(home)
-          away = flip(away)
+          home = format_name(home)
+          away = format_name(away)
           rest = rest.strip()
 
           # REST is Winner punctuation then optionally the groundball

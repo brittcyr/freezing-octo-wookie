@@ -40,7 +40,12 @@ laxmag = 'http://www.laxmagazine.com/college_men/DIII/2013-14/schedule?date=2014
 if __name__ == "__main__":
   links = get_links_calendar(laxmag)
   links = list(set(links))
+  total = len(links)
+  counter = 0
   for link in links:
+    counter += 1
+    if counter % 10 == 0:
+      print 'Checked ' + counter + ' out of ' + 'total'
     print link
     game_data = get_game_data(link)
     if not game_data:
