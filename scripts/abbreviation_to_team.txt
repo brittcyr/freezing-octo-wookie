@@ -160,3 +160,15 @@ BATH	Bryn Athyn
 WNE-M	Western New Eng.
 ALVML	Alvernia
 HOPEMEN	Hope
+W&amp;L	Washington &amp; Lee
+RC	Roanoke
+BERRY	Berry
+W&amp;L	Washington and Lee
+EMEM	Emerson
+FCM	Ferrum
+WILMINGTON	Wilmington
+BALDWIN WALLACE	Baldwin Wallace
+SLU_M	St. Lawrence
+BSC	Birmingham Southern
+STOCKM	Richard Stockton
+GMML	Gwynedd Mercy

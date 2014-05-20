@@ -113,7 +113,7 @@ def get_game_data_other_type(url):
     officials_list = []
 
   try:
-    date_start = str(page).index("Date")
+    date_start = str(page).index("Date:")
     date = str(page)[date_start: str(page).index('<br', date_start)]
     date = strip(date)
   except:
@@ -121,16 +121,16 @@ def get_game_data_other_type(url):
 
   try:
     if "Start" in str(page):
-      time_start = str(page).index("Start")
+      time_start = str(page).index("Start:")
     else:
-      time_start = str(page).index("Time")
+      time_start = str(page).index("Time:")
     time = str(page)[time_start: str(page).index('<br', time_start)]
     time = format_time(strip(time))
   except:
     time = ''
 
   try:
-    site_start = str(page).index("Site")
+    site_start = str(page).index("Site:")
     location = str(page)[site_start: str(page).index('<br', site_start)]
     location = format_site(strip(location))
   except:
@@ -154,7 +154,8 @@ def get_game_data_other_type(url):
 
 if __name__ == "__main__":
   get_game_data('http://www.laxmagazine.com/links/xwxm4g')
-  get_game_data('http://newmacsports.com/sports/mlax/2013-14/boxscores/20140315_3fn9.xml')
-  get_game_data('http://newmacsports.com/sports/mlax/2013-14/boxscores/20140315_zg56.xml')
-  get_game_data('http://www.cmsvathletics.com/boxscore.aspx?path=mlax&id=2735')
-  get_game_data('http://www.centenarycyclones.com/boxscore.aspx?path=mlax&id=3022')
+  #get_game_data('http://www.laxmagazine.com/links/k5pmhe')
+  #get_game_data('http://newmacsports.com/sports/mlax/2013-14/boxscores/20140315_3fn9.xml')
+  #get_game_data('http://newmacsports.com/sports/mlax/2013-14/boxscores/20140315_zg56.xml')
+  #get_game_data('http://www.cmsvathletics.com/boxscore.aspx?path=mlax&id=2735')
+  #get_game_data('http://www.centenarycyclones.com/boxscore.aspx?path=mlax&id=3022')
