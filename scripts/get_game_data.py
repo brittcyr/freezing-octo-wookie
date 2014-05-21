@@ -15,6 +15,8 @@ def officials_split(officials):
     officials = officials.split(';')
   elif ',' in officials:
     officials = officials.split(',')
+  else:
+    officials = [officials]
   return [official_prune(x) for x in officials if official_prune(x)]
 
 def official_prune(official):
@@ -49,6 +51,11 @@ def format_time(time):
     time = time.split('p')[0]
   if 'a' in time:
     time = time.split('a')[0]
+  if 'P' in time:
+    time = time.split('P')[0]
+  if 'A' in time:
+    time = time.split('A')[0]
+  time = time.strip()
   if ':' not in time:
     time = time + ':00'
   return time
@@ -166,6 +173,7 @@ def get_game_data_other_type(url):
   # date, time, location, away, home, home_wins, faces, officials_list
 
 if __name__ == "__main__":
+  get_game_data('http://otterbeincardinals.com/boxscore.aspx?id=2166&path=mlax')
   get_game_data('http://www.bwyellowjackets.com/sports/mlax/2013-14/boxscores/20140402_qldc.xml?view=undefined')
   get_game_data('http://www.suseagulls.com/sports/mlax/2013-14/boxscores/20140518_9usw.xml')
   get_game_data('http://www.laxmagazine.com/links/xwxm4g')

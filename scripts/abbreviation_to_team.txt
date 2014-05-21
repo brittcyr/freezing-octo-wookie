@@ -219,3 +219,5 @@ WC	o. 5 Washington College
 SAL	o. 2 Salisbury
 W&L	Washington & Lee
 W&L	Washington and Lee
+SJMML14	Saint Joseph's
+KINGSML	King's (Pa.)
