@@ -1,4 +1,4 @@
-
+#!/usr/bin/env python
 
 # Load the existing mapping from a txt
 def load_mapping():

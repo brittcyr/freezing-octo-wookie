@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from get_faceoffs import get_faces, get_faces_other_type
 from get_links import get_links, get_links_calendar
 from get_game_data import get_game_data

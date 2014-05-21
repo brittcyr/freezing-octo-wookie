@@ -295,3 +295,7 @@ GC	Greensboro
 WHEM	Wheaton (Mass.)
 F-M	Franklin & Marshall
 GCM	Guilford
+SOUTHWES	Southwestern (Tex.)
+WNE-M	Western New England
+SKIDMORE	Skidmore
+UNE	Univ. of New England
