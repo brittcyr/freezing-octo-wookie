@@ -270,3 +270,24 @@ BOW	Bowdoin
 BETHANY	Bethany (WV)
 SVU	Southern Virginia
 WCSUML	Western Connecticut St. University
+STOCKM	Richard Stockton College
+HC	Hanover
+MSJ	Mt. St. Joseph
+AMCM	Albertus Magnus College
+ALMA	Alma
+UC	Utica
+SUMLAX	Southwestern (Tex.)
+WHEM	Wheaton College
+NE	University of New England
+TRI	Trinity (Conn.)
+COR	SUNY Cortland
+MOUNT UN	Mount Union
+FRANCISC	Franciscan
+MUM	Methodist
+CALVINM	Calvin
+BET	Bethany (WV)
+HOPEM	Hope
+DBQM	Dubuque
+UNE	University of New England
+BECM	Berry
+STOCKM	Stockton
