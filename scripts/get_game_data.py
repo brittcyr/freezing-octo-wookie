@@ -20,6 +20,8 @@ def officials_split(officials):
   return [official_prune(x) for x in officials if official_prune(x)]
 
 def official_prune(official):
+  if '(' in official:
+    official = official.split('(')[0].strip()
   bad = ['Sports ', 'Ath.', 'Info', 'SID', 'Comm.', 'STAT', 'Stat', 'Athle', 'Ath', ' SI',]
   if any([b in official for b in bad]):
     return None

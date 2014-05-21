@@ -304,3 +304,17 @@ UTICA	Utica College
 STEVENS	STEVENS
 MESSM	Messiah
 LYCOM	Lycoming
+CAML	Cabrini College
+CEML	Centenary College
+VCMLAX	Vassar College
+FDUFM	FDUFM
+LYCOM	LYCOM
+OSWEGO-M	OSWEGO-M
+CEML	CEML
+UNION	UNION
+W&J	W&J
+ALFREDM	Alfred University
+HCM14	Houghton Highlanders
+MUML	Marywood University
+ONEML	SUNY Oneonta
+HARTWICK	HARTWICK
