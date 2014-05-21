@@ -409,3 +409,9 @@ NUML	Neumann University
 CCM	Colorado College
 MITCHELL	Mitchell
 ADRIAN	Adrian
+MCM	Millsaps
+Trine	Trine (Ind.)
+CLARKSON	Clarkson
+NAZARETH	Nazareth College
+SALM	Salisbury
+USM	Southern Me.

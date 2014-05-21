@@ -62,6 +62,8 @@ def format_time(time):
   if 'noon' in time or 'Noon' in time:
     time = '12:00'
   time = time.strip()
+  if not time:
+    return '7:00'
   if ':' not in time:
     time = time + ':00'
   return time
