@@ -71,13 +71,13 @@ if __name__ == "__main__":
       continue
 
     (date, time, location, away_team, home_team, home_wins, num_faces, officials_list) = game_data
-    # Write the game data result
-    f = open('teams.txt', 'a')
-    f.write(str(home_team))
-    f.write('\n')
-    f.write(str(away_team))
-    f.write('\n')
-    f.close()
+
+    #f = open('teams.txt', 'a')
+    #f.write(str(home_team))
+    #f.write('\n')
+    #f.write(str(away_team))
+    #f.write('\n')
+    #f.close()
 
 
     # TODO: Check for duplicate
