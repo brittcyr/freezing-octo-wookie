@@ -339,3 +339,73 @@ CNU	Chris. Newport
 HARTWICK	Hartwick
 NAZARETH	Nazareth
 ELMIRA-M	Elmira College
+KINGSML	King's College
+DSU	DSU
+RCML	RCML
+DSU	DeSales
+SKIDMORE	SKIDMORE
+HARTWICK	Hartwick Hawks
+FU	Fontbonne University
+ALFRED S	Alfred St. (N.Y.)
+SSU	Salem State University
+WOOSTER	Wooster
+MU	Marywood
+CENT	Centenary (LA)
+STEVENS	Stevens
+SJFC	St. John Fisher
+POTMLX14	Potsdam
+BSC-M	Birmingham-Southern
+GC	Guilford
+TRINEM	Trine
+ARCADIA	Arcadia
+CALVINM	Calvin (Mich.)
+WCSU	Western Conn. St.
+ONEML	Oneonta State
+PCM	Piedmont
+MUM	Methodist (N.C.)
+HCM14	Houghton
+CAZM	Cazenovia
+UMB	UMass Boston
+NC	Nichols College
+FISHER	St. John Fisher
+BENU	Benedictine (IL)
+DWC	Daniel Webster
+CAPM	Capital
+MSU	Montclair State University
+RPI	Rensselaer
+CARTHAGE	Carthage College
+OSWEGO	Oswego
+TRINE	Trine
+SPR	Springfield College
+UMB	Mass.-Boston
+CAC	Carthage College
+GCM	Greensboro
+HGHM	Houghton
+RCML	Rosemont
+MLAX14	Bryn Athyn
+AMHERST	Amherst
+ENDICOTT	Endicott
+FRNM	Franciscan University
+LA ROCHE	La Roche (Pa.)
+MOUNT UNION	Mount Union
+POTMLX14	SUNY Potsdam
+HAMILTON	Hamilton
+CLK	Clark (Mass.)
+JOHN CAR	John Carroll
+WILMINGT	Wilmington
+RANDMX	Randolph
+OBEM	Oberlin College
+KENM	Kenyon College
+BSCM	Birmingham-Southern
+BIRMINGHAM SOUTHERN	Birmingham Southern
+WCSUML	Western Conn. St.
+CMSV-M	Mount Saint Vincent
+COBM	Cobleskill
+MITM	MIT
+EMEM	Emerson College
+SSU	Salem St.
+MES	Messiah
+NUML	Neumann University
+CCM	Colorado College
+MITCHELL	Mitchell
+ADRIAN	Adrian
