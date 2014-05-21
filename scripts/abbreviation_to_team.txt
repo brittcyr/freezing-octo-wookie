@@ -223,3 +223,47 @@ SJMML14	Saint Joseph's
 KINGSML	King's (Pa.)
 SMC	St. Mary's (Md.)
 SJMML14	Saint Joseph's (Me.)
+SAL	Salisbury
+W&J	Washington and Jefferson
+W&J	Washington and Jefferson (Pa.)
+KEUM	Keuka
+THI	Thiel
+DANIEL W	Daniel Webster
+ALBERTUS	Albertus Magnus
+WESM14	Wesleyan
+COLMLX14	Colby
+CAPITAL	Capital
+BAT	Bates
+KSC	Keene St.
+RPI_MLAX	Rensselaer
+WILM-M	Wilmington (Ohio)
+W&J	Wash. & Jeff.
+LARM	La Roche College
+CONNML	Connecticut Col.
+AUGUSTAN	Augustana (IL)
+SKIDMORE	Skidmore College
+WIDML	Widener
+UNION	Union (N.Y.)
+CNU	Christopher Newport
+MUML	Marywood
+ECSUML	Eastern Conn. St.
+RU	Reinhardt
+OUM	Oglethorpe
+HC	Hendrix
+CUAMLAX	Catholic
+ETWN-M	Elizabethtown
+VWCM	Va. Wesleyan
+LCM	Lynchburg
+OSWEGO-M	Oswego St.
+BROCMLAX	Brockport State
+PLATM14	Plattsburgh State
+SVC	St. Vincent
+AMC	Anna Maria
+TUF	Tufts
+WITTENBE	Wittenberg
+TRANSYLV	Transylvania
+MSU	Mississippi St.
+CMSV-M	College of Mt. St. Vincent
+WCSUML	Western Connecticut
+ALBMLAX	Albright
+BOW	Bowdoin

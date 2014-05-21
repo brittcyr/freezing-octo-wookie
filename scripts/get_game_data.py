@@ -173,6 +173,8 @@ def get_game_data_other_type(url):
   # date, time, location, away, home, home_wins, faces, officials_list
 
 if __name__ == "__main__":
+  get_game_data('http://www.nazathletics.com/boxscore.aspx?id=3259&path=mlax')
+  get_game_data('http://www.jcusports.com/boxscore.aspx?id=3465&path=mlax')
   get_game_data('http://athletics.lycoming.edu/boxscore.aspx?id=2442&path=mlax')
   get_game_data('http://otterbeincardinals.com/boxscore.aspx?id=2166&path=mlax')
   get_game_data('http://www.bwyellowjackets.com/sports/mlax/2013-14/boxscores/20140402_qldc.xml?view=undefined')

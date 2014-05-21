@@ -66,9 +66,22 @@ if __name__ == "__main__":
     # TODO: Check for duplicate
     # TODO: Create GAME object
 
+    # This is for learning one team if the other is known
+    team1 = faces[0][-1]
+    team2 = faces[-1][-1]
+
     for face in faces:
       (currentQuarter, time, home, away, winner) = face
-      winner = decide(home_team, away_team, winner, faces[-1][-1])
+      if winner != team1:
+        team2 = winner
+        break
+
+    for face in faces:
+      (currentQuarter, time, home, away, winner) = face
+      if winner == team1:
+        winner = decide(home_team, away_team, winner, team2)
+      else:
+        winner = decide(home_team, away_team, winner, team1)
 
       # TODO: Create FACEOFF object
       
