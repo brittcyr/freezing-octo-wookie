@@ -318,3 +318,24 @@ HCM14	Houghton Highlanders
 MUML	Marywood University
 ONEML	SUNY Oneonta
 HARTWICK	HARTWICK
+ELMIRA-M	Elmira
+BROCMLAX	Brockport
+CLARKSON	CLARKSON
+BARD	BARD
+MARITIME	Maritime College
+MSJM	Mount St. Joseph
+UTICA	Utica
+IC	Ithaca College
+IUML	Immaculata Univ.
+BARD	Bard College
+CANTONM	CANTONM
+MSMC-M	Mount Saint Mary
+FDUFM	FDU-Florham
+KINGSML	King's
+FISHER-M	St. John Fisher
+DSU	DeSales University
+HOUGHTON	Houghton
+CNU	Chris. Newport
+HARTWICK	Hartwick
+NAZARETH	Nazareth
+ELMIRA-M	Elmira College

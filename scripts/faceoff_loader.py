@@ -72,8 +72,10 @@ if __name__ == "__main__":
 
     (date, time, location, away_team, home_team, home_wins, num_faces, officials_list) = game_data
     # Write the game data result
-    f = open('game_data.txt', 'a')
-    f.write(str(game_data))
+    f = open('teams.txt', 'a')
+    f.write(str(home_team))
+    f.write('\n')
+    f.write(str(away_team))
     f.write('\n')
     f.close()
 
