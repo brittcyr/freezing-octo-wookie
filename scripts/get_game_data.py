@@ -22,6 +22,8 @@ def officials_split(officials):
 def official_prune(official):
   if '(' in official:
     official = official.split('(')[0].strip()
+  if '#' in official:
+    official = official.split('#')[0].strip()
   bad = ['Sports ', 'Ath.', 'Info', 'SID', 'Comm.', 'STAT', 'Stat', 'Athle', 'Ath', ' SI',]
   if any([b in official for b in bad]):
     return None
