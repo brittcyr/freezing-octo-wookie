@@ -300,3 +300,7 @@ WNE-M	Western New England
 SKIDMORE	Skidmore
 UNE	Univ. of New England
 IC	Ithaca
+UTICA	Utica College
+STEVENS	STEVENS
+MESSM	Messiah
+LYCOM	Lycoming

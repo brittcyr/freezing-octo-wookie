@@ -49,7 +49,7 @@ if __name__ == "__main__":
 
     # Print progress
     counter += 1
-    if counter % 10 == 0:
+    if counter % 5 == 0:
       print 'Checked ' + str(counter)
     game_data = get_game_data(link)
 
