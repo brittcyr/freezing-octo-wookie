@@ -415,3 +415,16 @@ CLARKSON	Clarkson
 NAZARETH	Nazareth College
 SALM	Salisbury
 USM	Southern Me.
+SEWM	Sewanee
+BET	Bethany College (W.V.)
+ARCADIA	ARCADIA
+ELMIRA	Elmira
+VASSAR	Vassar
+CUW	Concordia (WI)
+SLU	St. Lawrence
+ALBC	Albion
+MCD-M	McDaniel
+SJMML14	Saint Joseph's (ME)
+LSC	Lyndon St.
+AU	Aurora University
+MSUML	Montclair State

@@ -19,7 +19,15 @@ def get_faces(url):
     html_parser = HTMLParser.HTMLParser()
     br = feedparser.parse(url + '?view=plays')
     br = feedparser.parse(br['href'] + '?view=plays')
-    statbox = BeautifulSoup(str(br)).findAll("div", {"class" :"stats-fullbox clearfix"})[-1]
+    statboxes = BeautifulSoup(str(br)).findAll("div", {"class" :"stats-fullbox clearfix"})
+    statbox = statboxes[-1]
+
+    # In case there are multiple statboxes on the page
+    for box in statboxes:
+      if 'Face' in str(box):
+        statbox = box
+        break
+
     table = statbox.find("table").findAll("tr")
 
     faces = []
@@ -30,7 +38,7 @@ def get_faces(url):
     for row in table:
 
       # This is where we enter a new quarter
-      if hasattr(row.contents[0], 'tag'):
+      if hasattr(row.contents[0], 'tag') and row.find("th"):
         # Maintain quarter
         currentQuarter += 1
         if currentQuarter == 3:
@@ -134,7 +142,8 @@ def get_faces_other_type(url):
     return None
 
 if __name__ == '__main__':
-  print get_faces('http://www.mitchellathletics.com/sports/mlax/2013-14/boxscores/20140412_v9l5.xml?view=undefined')
+  get_faces('http://www.generalssports.com/sports/mlax/2013-14/boxscores/20140329_b213.xml?view=plays')
+  get_faces('http://www.mitchellathletics.com/sports/mlax/2013-14/boxscores/20140412_v9l5.xml?view=undefined')
   get_faces('http://www.ritathletics.com/boxscore.aspx?id=7227&path=mlax')
   get_faces('http://www.laxmagazine.com/links/b9gzz2')
   pass
