@@ -134,6 +134,8 @@ def get_faces_other_type(url):
     return None
 
 if __name__ == '__main__':
+  print get_faces('http://www.mitchellathletics.com/sports/mlax/2013-14/boxscores/20140412_v9l5.xml?view=undefined')
+  get_faces('http://www.ritathletics.com/boxscore.aspx?id=7227&path=mlax')
   get_faces('http://www.laxmagazine.com/links/b9gzz2')
   pass
   

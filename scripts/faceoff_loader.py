@@ -39,22 +39,29 @@ conferences3 = [
 laxmag = 'http://www.laxmagazine.com/college_men/DIII/2013-14/schedule?date=20140101'
 
 if __name__ == "__main__":
-  links = get_links_calendar(laxmag)
-  links = list(set(links))
-  total = len(links)
+#  links = get_links_calendar(laxmag)
+#  links = list(set(links))
+#  total = len(links)
   counter = 0
-  for link in links:
+  for link in open('links.txt', 'r'):
+    link = link.strip()
+    print link
+
+    # Print progress
     counter += 1
     if counter % 10 == 0:
-      print 'Checked ' + str(counter) + ' out of ' + str(total)
-    print link
+      print 'Checked ' + str(counter)
     game_data = get_game_data(link)
-    if not game_data:
+
+    # Print the failed links to the failed_links.txt
+    if game_data is None:
       f = open('failed_links.txt', 'a')
       f.write(link)
       f.write('\n')
       f.close()
       continue
+
+    # Print the failed links to the failed_links.txt
     faces = get_faces(link)
     if not faces:
       f = open('failed_links.txt', 'a')
@@ -64,19 +71,24 @@ if __name__ == "__main__":
       continue
 
     (date, time, location, away_team, home_team, home_wins, num_faces, officials_list) = game_data
+    # Write the game data result
+    f = open('game_data.txt', 'a')
+    f.write(str(game_data))
+    f.write('\n')
+    f.close()
+
+
     # TODO: Check for duplicate
     # TODO: Create GAME object
 
     # This is for learning one team if the other is known
     team1 = faces[0][-1]
     team2 = faces[-1][-1]
-
     for face in faces:
       (currentQuarter, time, home, away, winner) = face
       if winner != team1:
         team2 = winner
         break
-
     for face in faces:
       (currentQuarter, time, home, away, winner) = face
       if winner == team1:
