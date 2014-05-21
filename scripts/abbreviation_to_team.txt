@@ -222,3 +222,4 @@ W&L	Washington and Lee
 SJMML14	Saint Joseph's
 KINGSML	King's (Pa.)
 SMC	St. Mary's (Md.)
+SJMML14	Saint Joseph's (Me.)

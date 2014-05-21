@@ -68,7 +68,7 @@ if __name__ == "__main__":
 
     for face in faces:
       (currentQuarter, time, home, away, winner) = face
-      winner = decide(home_team, away_team, winner, faces[-1])
+      winner = decide(home_team, away_team, winner, faces[-1][-1])
 
       # TODO: Create FACEOFF object
       
