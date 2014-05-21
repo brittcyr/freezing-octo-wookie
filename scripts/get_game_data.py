@@ -55,6 +55,8 @@ def format_time(time):
     time = time.split('P')[0]
   if 'A' in time:
     time = time.split('A')[0]
+  if 'noon' in time or 'Noon' in time:
+    time = '12:00'
   time = time.strip()
   if ':' not in time:
     time = time + ':00'

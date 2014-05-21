@@ -267,3 +267,6 @@ CMSV-M	College of Mt. St. Vincent
 WCSUML	Western Connecticut
 ALBMLAX	Albright
 BOW	Bowdoin
+BETHANY	Bethany (WV)
+SVU	Southern Virginia
+WCSUML	Western Connecticut St. University
