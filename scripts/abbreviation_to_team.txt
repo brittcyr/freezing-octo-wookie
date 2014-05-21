@@ -291,3 +291,7 @@ DBQM	Dubuque
 UNE	University of New England
 BECM	Berry
 STOCKM	Stockton
+GC	Greensboro
+WHEM	Wheaton (Mass.)
+F-M	Franklin & Marshall
+GCM	Guilford
