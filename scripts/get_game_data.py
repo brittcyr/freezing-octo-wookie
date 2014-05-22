@@ -95,6 +95,13 @@ def get_game_data(url):
   except:
     return get_game_data_other_type(url)
 
+  try:
+    faces = int(faces)
+    home_wins = int(home_wins)
+  except:
+    faces = 0
+    home_wins = 0
+
   officials_list = []
   try:
     officials = [x for x in BeautifulSoup(str(statbox)).findAll("td") if "Officials" in str(x)][0]
@@ -183,6 +190,7 @@ def get_game_data_other_type(url):
   # date, time, location, away, home, home_wins, faces, officials_list
 
 if __name__ == "__main__":
+  get_game_data('http://www.beckerhawks.com/sports/mlax/2013-14/boxscores/20140310_w56g.xml?view=undefined')
   get_game_data('http://athletics.houghton.edu/boxscore.aspx?path=mens_lacrosse&id=1359')
   get_game_data('http://www.nazathletics.com/boxscore.aspx?id=3259&path=mlax')
   get_game_data('http://www.jcusports.com/boxscore.aspx?id=3465&path=mlax')
