@@ -24,7 +24,8 @@ def official_prune(official):
     official = official.split('(')[0].strip()
   if '#' in official:
     official = official.split('#')[0].strip()
-  bad = ['Sports ', 'Ath.', 'Info', 'SID', 'Comm.', 'STAT', 'Stat', 'Athle', 'Ath', ' SI', 'sports',]
+  bad = ['Sports ', 'Ath.', 'Info', 'SID', 'Comm.', 'STAT', 
+         'Stat', 'Athle', 'Ath', ' SI', 'sports', 'da crew',]
   if any([b in official for b in bad]):
     return None
   else:

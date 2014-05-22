@@ -428,3 +428,7 @@ SJMML14	Saint Joseph's (ME)
 LSC	Lyndon St.
 AU	Aurora University
 MSUML	Montclair State
+IUML	Immaculata
+WIT	Wentworth Institute of Technology
+ARCADIA	Arcadia University
+POTMLX14	Potsdam St.
