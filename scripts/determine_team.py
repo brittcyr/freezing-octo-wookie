@@ -17,7 +17,10 @@ def load_mapping():
   return mapping
 
 # Decide which team it belongs to or ask user for input
-def decide(home, away, abbr, other = None):
+def decide(home, away, abbr, other = None, hint = None):
+  if hint is not None:
+    return hint
+
   mapping = load_mapping()
   if abbr in mapping:
     if home in mapping[abbr]:

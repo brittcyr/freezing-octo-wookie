@@ -51,7 +51,7 @@ if __name__ == "__main__":
     counter += 1
     if counter % 5 == 0:
       print 'Checked ' + str(counter)
-    if counter < 700:
+    if counter < 840:
       continue
     game_data = get_game_data(link)
 
@@ -88,17 +88,30 @@ if __name__ == "__main__":
     # This is for learning one team if the other is known
     team1 = faces[0][-1]
     team2 = faces[-1][-1]
+
+    count_team1 = 0
     for face in faces:
       (currentQuarter, time, home, away, winner) = face
       if winner != team1:
         team2 = winner
-        break
+      else:
+        count_team1 += 1
+
+    # determine the winner based on total number of wins
+    hint = None
+    if int(num_faces) != int(home_wins) * 2:
+      if count_team1 == int(home_wins):
+        hint = True
+      else:
+        hint = False
+
     for face in faces:
       (currentQuarter, time, home, away, winner) = face
       if winner == team1:
-        winner = decide(home_team, away_team, winner, team2)
+        winner = decide(home_team, away_team, winner, other=team2, hint=hint)
       else:
-        winner = decide(home_team, away_team, winner, team1)
+        winner = decide(home_team, away_team, winner, other=team1, hint=hint)
+      print face, winner
 
       # TODO: Create FACEOFF object
       

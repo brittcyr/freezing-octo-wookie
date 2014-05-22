@@ -456,3 +456,18 @@ THOMAS~1	Thomas College (Maine)
 SWAT	Swarthmore
 HC	Hanover College
 MSU	Montclair St.
+OTTERBEI	Otterbein
+UNION	Union College
+LYNM2014	Lyndon State College
+BRYN	Bryn Athyn
+RM	Randolph-Macon
+MVILLE	Manhattanville College
+UTICAM	Utica College
+THIEL	Thiel (Pa.)
+JOHNSON	Johnson & Wales (RI)
+REGIS	Regis (Mass.)
+FDUFM	Fairleigh Dickinson University-Florham
+DOMM	Dominican College
+MUHL	Muhlenberg College
+BROCMLAX	Brockport St.
+SJMML14	St. Joseph's College (ME)
