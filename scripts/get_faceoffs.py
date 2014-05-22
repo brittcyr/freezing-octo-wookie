@@ -15,6 +15,7 @@ def format_name(name):
   name = html_parser.unescape(name)
   name = name.replace('\\', '')
   name = name.title()
+  name = name.replace('Iii', 'III')
   return name
 
 def get_faces(url):
