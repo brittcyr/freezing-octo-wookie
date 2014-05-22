@@ -110,8 +110,10 @@ if __name__ == "__main__":
       if winner == team1:
         winner = decide(home_team, away_team, winner, other=team2, hint=hint)
       else:
-        winner = decide(home_team, away_team, winner, other=team1, hint=hint)
-      print face, winner
+        if hint is not None:
+          winner = decide(home_team, away_team, winner, other=team1, hint=(not hint))
+        else:
+          winner = decide(home_team, away_team, winner, other=team1)
 
       # TODO: Create FACEOFF object
       
