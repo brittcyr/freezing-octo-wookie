@@ -432,3 +432,27 @@ IUML	Immaculata
 WIT	Wentworth Institute of Technology
 ARCADIA	Arcadia University
 POTMLX14	Potsdam St.
+RU	Rockhurst
+CORT14ML	SUNY Cortland
+WILM	Wilmington
+FSU	Frostburg State
+OLIVET	Olivet (Mich.)
+MESSM	Messiah College
+ALVML	Alvernia University
+CMSV-M	Mount St. Vincent
+RPI_MLAX	RPI
+Kenyon	Kenyon
+JOHNSON ST	Johnson St.
+NEC	New England College
+THOMAS~1	Thomas
+BAT-M	Bates
+KINGSML	King's College (Pa.)
+BET	Bethany
+GBRO	Greensboro
+CAML	Cabrini
+LYCO	Lycoming
+SMC	St. Mary's Coll. of Md.
+THOMAS~1	Thomas College (Maine)
+SWAT	Swarthmore
+HC	Hanover College
+MSU	Montclair St.
