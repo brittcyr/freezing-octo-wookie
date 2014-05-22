@@ -28,7 +28,7 @@ def official_prune(official):
   if any([b in official for b in bad]):
     return None
   else:
-    return official.lstrip(' 0123456789') 
+    return official.lstrip(' 0123456789')
 
 def format_site(site):
   if '@' in site:
@@ -78,7 +78,7 @@ def get_game_data(url):
     time = head.contents[4]
     date = time.split(' ')[0]
     time = format_time(time.split(' ')[2])
-  
+
     header = BeautifulSoup(str(statbox)).findAll("span", {"class" : "stats-header"})
     away = header[0].contents[0]
     home = header[2].contents[0]

@@ -53,11 +53,11 @@ def get_faces(url):
           violationHome = 0
           violationAway = 0
         continue
-  
+
       # At a faceoff
       if 'Faceoff' in str(row):
         time = row.find("td").contents[0]
-   
+
         face_data = str(row.findAll("td")[1].contents[0]).split('Faceoff ')[1]
         [players, rest] = face_data.split('won by')
         [home, away] = players.split('vs')
@@ -83,8 +83,8 @@ def get_faces(url):
         if '(' in winner:
           winner = winner.split(' (')[0]
         winner = html_parser.unescape(winner)
-        
-        print currentQuarter, time, home, away, winner 
+
+        print currentQuarter, time, home, away, winner
         faces.append((currentQuarter, time, home, away, winner ))
     return faces
   except:
@@ -97,7 +97,7 @@ def get_faces_other_type(url):
     br = feedparser.parse(url)
     statbox = BeautifulSoup(str(br)).findAll("table", {"class" :"center_wide"})
     html_parser = HTMLParser.HTMLParser()
-   
+
     faces = []
 
     # Remove duplicates
@@ -140,8 +140,8 @@ def get_faces_other_type(url):
           if '(' in winner:
             winner = winner.split(' (')[0]
           winner = html_parser.unescape(winner)
-        
-          print currentQuarter, time, home, away, winner 
+
+          print currentQuarter, time, home, away, winner
           faces.append((currentQuarter, time, home, away, winner ))
     return faces
 
@@ -155,4 +155,4 @@ if __name__ == '__main__':
   #get_faces('http://www.ritathletics.com/boxscore.aspx?id=7227&path=mlax')
   #get_faces('http://www.laxmagazine.com/links/b9gzz2')
   pass
-  
+
