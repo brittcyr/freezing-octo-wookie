@@ -20,6 +20,7 @@ def officials_split(officials):
   return [official_prune(x) for x in officials if official_prune(x)]
 
 def official_prune(official):
+  official = official.replace('\\', '')
   if '(' in official:
     official = official.split('(')[0].strip()
   if '#' in official:
