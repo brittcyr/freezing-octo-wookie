@@ -51,8 +51,6 @@ if __name__ == "__main__":
     counter += 1
     if counter % 5 == 0:
       print 'Checked ' + str(counter)
-    if counter < 1580:
-      continue
     game_data = get_game_data(link)
 
     # Print the failed links to the failed_links.txt
@@ -73,14 +71,6 @@ if __name__ == "__main__":
       continue
 
     (date, time, location, away_team, home_team, home_wins, num_faces, officials_list) = game_data
-
-    f = open('teams.txt', 'a')
-    f.write(str(home_team))
-    f.write('\n')
-    f.write(str(away_team))
-    f.write('\n')
-    f.close()
-
 
     # TODO: Check for duplicate
     # TODO: Create GAME object

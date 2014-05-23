@@ -19,6 +19,7 @@ def format_name(name):
   return name
 
 def format_winner(winner):
+  html_parser = HTMLParser.HTMLParser()
   winner = html_parser.unescape(winner)
   winner = winner.replace('\\', '')
   return winner
