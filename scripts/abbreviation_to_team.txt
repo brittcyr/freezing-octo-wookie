@@ -474,3 +474,16 @@ SJMML14	St. Joseph's College (ME)
 GENESEO	SUNY Geneseo
 JWUMLAX	Johnson & Wales University
 GETC	Gettysburg
+AMCM	Albertus Magnus
+ITHACA	Ithaca College
+MARITIME	MARITIME
+FSU	Frostburg
+BC	Becker
+LVC	Lebanon Valley Coll.
+ALFREDM	Alfred
+WILM-M	Wilmington
+UMBML	Mass.-Boston
+HARTWI~1	Hartwick College
+JWUMLAX	Johnson & Wales University (R.I.)
+ALMACOLL	Alma College
+MSOE	Milwaukee Engr.

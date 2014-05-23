@@ -18,6 +18,11 @@ def format_name(name):
   name = name.replace('Iii', 'III')
   return name
 
+def format_winner(winner):
+  winner = html_parser.unescape(winner)
+  winner = winner.replace('\\', '')
+  return winner
+
 def get_faces(url):
   try:
     html_parser = HTMLParser.HTMLParser()
@@ -83,7 +88,8 @@ def get_faces(url):
 
         if '(' in winner:
           winner = winner.split(' (')[0]
-        winner = html_parser.unescape(winner)
+
+        winner = format_winner(winner)
 
         print currentQuarter, time, home, away, winner
         faces.append((currentQuarter, time, home, away, winner ))
@@ -140,7 +146,8 @@ def get_faces_other_type(url):
 
           if '(' in winner:
             winner = winner.split(' (')[0]
-          winner = html_parser.unescape(winner)
+ 
+          winner = format_winner(winner)
 
           print currentQuarter, time, home, away, winner
           faces.append((currentQuarter, time, home, away, winner ))

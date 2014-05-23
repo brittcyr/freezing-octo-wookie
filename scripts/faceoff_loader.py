@@ -51,7 +51,7 @@ if __name__ == "__main__":
     counter += 1
     if counter % 5 == 0:
       print 'Checked ' + str(counter)
-    if counter < 1060:
+    if counter < 1580:
       continue
     game_data = get_game_data(link)
 
@@ -74,12 +74,12 @@ if __name__ == "__main__":
 
     (date, time, location, away_team, home_team, home_wins, num_faces, officials_list) = game_data
 
-    #f = open('teams.txt', 'a')
-    #f.write(str(home_team))
-    #f.write('\n')
-    #f.write(str(away_team))
-    #f.write('\n')
-    #f.close()
+    f = open('teams.txt', 'a')
+    f.write(str(home_team))
+    f.write('\n')
+    f.write(str(away_team))
+    f.write('\n')
+    f.close()
 
 
     # TODO: Check for duplicate
