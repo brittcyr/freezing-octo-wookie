@@ -1,0 +1,450 @@
+ARCADIA	Arcadia
+Adams St.	Adams St.
+Adrian	Adrian
+Adrian College	Adrian 
+Albertus Magnus	Albertus Magnus
+Albertus Magnus College	Albertus Magnus 
+Albion	Albion
+Albright	Albright
+Alfred	Alfred
+Alfred St.	Alfred
+Alfred St. (N.Y.)	Alfred
+Alfred University	Alfred
+Alma	Alma
+Alma College	Alma
+Alvernia	Alvernia
+Alvernia University	Alvernia
+Amherst	Amherst
+Anna Maria	Anna Maria
+Anna Maria College	Anna Maria
+Arcadia	Arcadia
+Arcadia University	Arcadia
+Augustana	Augustana
+Augustana (IL)	Augustana
+Augustana College	Augustana
+Aurora	Aurora
+Aurora University	Aurora
+BARD	Bard
+Babson	Babson
+Baldwin Wallace	Baldwin Wallace
+Bard	Bard
+Bard College	Bard College
+Bates	Bates
+Becker	Becker
+Becker College	Becker
+Beloit	Beloit
+Beloit (Wis.)	Beloit
+Beloit College	Beloit
+Benedictine	Benedictine
+Benedictine (IL)	Benedictine
+Benedictine (Ill.)	Benedictine
+Benedictine University	Benedictine
+Berry	Berry
+Bethany	Bethany
+Bethany (W.Va.)	Bethany
+Bethany (WV)	Bethany
+Bethany College (W.V.)	Bethany College
+Bethany College (WV)	Bethany College
+Birmingham Southern	Birmingham Southern
+Birmingham-Southern	Birmingham Southern
+Bowdoin	Bowdoin
+Bridgewater	Bridgewater
+Bridgewater (Va.)	Bridgewater
+Brockport	Brockport
+Brockport St.	Brockport
+Brockport State	Brockport
+Bryn Athyn	Bryn Athyn
+CANTONM	SUNY Canton
+CEML	Centenary (N.J.)
+CLARKSON	Clarkson
+Cabrini	Cabrini
+Cabrini College	Cabrini
+Calvin	Calvin
+Calvin (Mich.)	Calvin
+Calvin College	Calvin
+Capital	Capital
+Carthage	Carthage
+Carthage College	Carthage
+Castleton	Castleton
+Castleton State College	Castleton
+Catholic	Catholic
+Cazenovia	Cazenovia
+Centenary (LA)	Centenary (LA)
+Centenary (N.J.)	Centenary (N.J.)
+Centenary College	Centenary (N.J.)
+Centre	Centre
+Chris. Newport	Christopher Newport
+Christopher Newport	Christopher Newport
+Clark	Clark
+Clark (Mass.)	Clark
+Clark University	Clark
+Clarkson	Clarkson
+Clarkson University	Clarkson
+Cobleskill	Cobleskill
+Cobleskill St.	Cobleskill
+Colby	Colby
+Colby College	Colby
+College of Mount St. Joseph	MSJ
+College of Mt. St. Vincent	Mount Saint Vincent
+Colorado Col.	Colorado College
+Colorado College	Colorado College
+Concordia (WI)	Concordia
+Concordia University Wisconsin	Concordia
+Connecticut Col.	Connecticut College
+Cortland	Cortland
+Cortland St.	Cortland
+Curry	Curry
+DSU	DeSales
+Daniel Webster	Daniel Webster
+DePauw	DePauw
+DeSales	DeSales
+DeSales University	DeSales
+Defiance	Defiance
+Defiance College	Defiance
+Denison Denison
+Dickinson   Dickinson
+Dist. Columbia  Dist. Columbia
+Dominican (Cal.)	Dominican (Cal.)
+Dominican College	Dominican (Cal.)
+Drew	Drew
+Drew University	Drew
+Dubuque	Dubuque
+Dubuque (Iowa)	Dubuque
+Eastern	Eastern
+Eastern Conn. St.	Eastern Conn. St.
+Elizabethtown	Elizabethtown
+Elmhurst	Elmhurst
+Elmhurst College	Elmhurst
+Elmira	Elmira
+Elmira College	Elmira
+Emerson	Emerson
+Emerson College	Emerson
+Emmanuel (Mass.)	Emmanuel
+Emmanuel College	Emmanuel
+Emmanuel College (Mass.)	Emmanuel
+Endicott	Endicott
+FDU	Fairleigh Dickinson University
+FDU-Florham	Fairleigh Dickinson University
+FDUFM	Fairleigh Dickinson University
+Fairleigh Dickinson University-Florham	Fairleigh Dickinson University
+Farmingdale State	Farmingdale State
+Farmingdale State College	Farmingdale State
+Ferrum	Ferrum
+Finger Lakes Community College	Finger Lakes Community College
+Florida Southern College	Florida Southern College
+Fontbonne	Fontbonne
+Fontbonne University	Fontbonne
+Franciscan	Franciscan
+Franciscan University	Franciscan
+Frank. & Marsh.	Franklin & Marshall
+Franklin & Marshall	Franklin & Marshall
+Frostburg	Frostburg
+Frostburg St.	Frostburg
+Frostburg State	Frostburg
+Gettysburg	Gettysburg
+Gordon	Gordon
+Gordon College	Gordon
+Goucher	Goucher
+Green Mountain	Green Mountain
+Greensboro	Greensboro
+Guilford	Guilford
+Gwynedd Mercy	Gwynedd Mercy
+Gwynedd-Mercy	Gwynedd-Mercy
+HARTWICK	Hartwick
+Hamilton	Hamilton
+Hampden-Sydney	Hampden-Sydney
+Hanover	Hanover
+Hanover College	Hanover
+Hartwick	Hartwick
+Hartwick College	Hartwick
+Hartwick Hawks	Hartwick
+Haverford	Haverford
+Hendrix	Hendrix
+Hilbert	Hilbert
+Hilbert College	Hilbert
+Hiram	Hiram
+Hood	Hood
+Hope	Hope
+Houghton	Houghton
+Houghton (N.Y.)	Houghton
+Houghton Highlanders	Houghton
+Huntingdon	Huntingdon
+Huntingdon College	Huntingdon
+Husson	Husson
+Ill. Wesleyan	Illinois Wesleyan
+Immaculata	Immaculata
+Immaculata Univ.	Immaculata
+Ithaca	Ithaca
+Ithaca College	Ithaca
+John Carroll	John Carroll
+John Carroll University	John Carroll
+Johnson & Wales	Johnson & Wales
+Johnson & Wales (RI)	Johnson & Wales
+Johnson & Wales University	Johnson & Wales
+Johnson & Wales University (R.I.)	Johnson & Wales
+Johnson St.	Johnson State
+Johnson State	Johnson State
+Johnson State College	Johnson State
+KENM	Kenyon
+Kean University	Kean University
+Keene St.	Keene State
+Keene State	Keene State
+Kenyon	Kenyon
+Kenyon College	Kenyon
+Keuka	Keuka
+Keuka College	Keuka
+King's	King's
+King's (Pa.)	King's
+King's College	King's
+King's College (Pa.)	King's
+LVC	Lebanon Valley
+LYCOM	Lycoming
+La Roche	La Roche
+La Roche (Pa.)	La Roche
+La Roche College	La Roche
+Lasell	Lasell
+Lasell College	Lasell
+Lebanon Valley	Lebanon Valley
+Lebanon Valley Coll.	Lebanon Valley
+Lycoming	Lycoming
+Lynchburg	Lynchburg
+Lyndon St.	Lyndon State
+Lyndon State	Lyndon State
+Lyndon State College	Lyndon State
+MARITIME	Maritime
+MIT	MIT
+MSOE	MSOE
+Maine Maritime	Maine Maritime
+Maine-Farmington	Maine-Farmington
+Manhattanville	Manhattanville
+Manhattanville Coll.	Manhattanville
+Manhattanville College	Manhattanville
+Maritime	Maritime
+Maritime (N.Y.)	Maritime
+Maritime (NY)	Maritime
+Maritime College	Maritime
+Mary Washington	Mary Washington
+Marymount (Va.)	Marymount (Va.)
+Marywood	Marywood
+Marywood University	Marywood
+Mass. Maritime	Mass. Maritime
+Mass.-Boston	UMass Boston
+Mass.-Dartmouth	UMass Dartmouth
+Massachusetts Maritime	Mass Maritime
+Massachusetts Maritime Academy	Mass Maritime
+McDaniel	McDaniel
+Me.-Farmington	Maine-Farmington
+Medaille	Medaille
+Medaille College	Medaille
+Merchant Marine	Merchant Marine
+Messiah	Messiah
+Messiah College	Messiah
+Methodist	Methodist
+Methodist (N.C.)	Methodist
+Middlebury	Middlebury
+Millsaps	Millsaps
+Milwaukee Engr.	Milwaukee Engr.
+Misericordia	Misericordia
+Misericordia Univ.	Misericordia
+Mississippi St.	Mississippi St.
+Mitchell	Mitchell
+Montclair St.	Montclair State
+Montclair State	Montclair State
+Montclair State University	Montclair State
+Morrisville St.	Morrisville State
+Mount Ida	Mount Ida
+Mount Ida College	Mount Ida
+Mount Saint Mary	Mount Saint Mary
+Mount Saint Vincent	Mount Saint Vincent
+Mount St. Joseph	MSJ
+Mount St. Mary	Mount Saint Mary
+Mount St. Vincent	Mount Saint Vincent
+Mount Union	Mount Union
+Mt. St. Joseph	MSJ
+Mt. St. Mary (N.Y.)	Mount Saint Mary
+Mt. St. Mary College (N.Y.)	Mount Saint Mary
+Mt. St. Vincent	Mount Saint Vincent
+Muhlenberg	Muhlenberg
+Muhlenberg College	Muhlenberg
+NAZARETH	Nazareth
+NUML	Neumann
+Nazareth	Nazareth
+Nazareth College	Nazareth
+Neumann	Neumann
+Neumann University	Neumann
+New England Col.	New England College
+New England College	New England College
+Niagara County Community College	Niagara County Community College
+Nichols	Nichols
+Nichols	College	Nichols
+Norwich	Norwich
+Norwich	University	Norwich
+OSWEGO-M	Oswego
+Oberlin	Oberlin
+Oberlin (Ohio)	Oberlin
+Oberlin College	Oberlin
+Oglethorpe	Oglethorpe
+Ohio Wesleyan	Ohio Wesleyan
+Olivet	Olivet
+Olivet (Mich.)	Olivet
+Olivet College	Olivet
+Oneonta	Oneonta
+Oneonta St.	Oneonta
+Oneonta State	Oneonta
+Oswego	Oswego
+Oswego St.	Oswego
+Oswego State	Oswego
+Otterbein	Otterbein
+Otterbein University	Otterbein
+POTMLX14	Potsdam
+Piedmont	Piedmont
+Plattsburgh St.	Plattsburgh State
+Plattsburgh State	Plattsburgh State
+Plymouth St.	Plymouth State
+Plymouth State	Plymouth State
+Potsdam	Potsdam
+Potsdam St.	Potsdam
+RCML    Regis
+RIT	RIT
+RPI	RPI
+RPI Engineers	RPI
+RPI_MLAX	RPI
+Randolph	Randolph
+Randolph (Va.)	Randolph
+Randolph-Macon  Randolph-Macon
+Regis	Regis
+Regis (Mass.)	Regis
+Regis College (Mass.)	Regis
+Reinhardt	Reinhardt
+Rensselaer	Rensselaer
+Rhodes	Rhodes
+Richard Stockton	Richard Stockton
+Richard Stockton College	Richard Stockton
+Rivier	Rivier
+Rivier University	Rivier University
+Roanoke	Roanoke
+Rochester Inst.	RIT
+Rochester Tech	RIT
+Rockhurst	Rockhurst
+Roger Williams	Roger Williams
+Rosemont	Rosemont
+SKIDMORE	Skidmore
+SLU_M	Saint Leo
+STEVENS	Stevens
+SUNY Canton	Canton
+SUNY Cobleskill	Cobleskill
+SUNY Cortland	Cortland
+SUNY Delhi	Delhi
+SUNY Geneseo	Geneseo
+SUNY Maritime College	Maritime
+SUNY Oneonta	Oneonta
+SUNY Potsdam	Potsdam
+SUNYIT	SUNYIT
+Saint Joseph's	Saint Joseph's
+Saint Joseph's (ME)	Saint Joseph's
+Saint Joseph's (Me.)	Saint Joseph's
+Saint Leo	Saint Leo
+Saint Vincent	Saint Vincent
+Salem St.	Salem State
+Salem State	Salem State
+Salem State University	Salem State
+Salisbury	Salisbury
+Salve Regina	Salve Regina
+Scranton	Scranton
+Sewanee	Sewanee
+Shenandoah	Shenandoah
+Shorter	Shorter
+Skidmore	Skidmore
+Skidmore College	Skidmore
+Southern Maine	Southern Maine
+Southern Me.	Southern Maine
+Southern Virginia   Southern Virginia
+Southwestern (Tex.)	Southwestern (Tex.)
+Springfield	Springfield
+Springfield College	Springfield
+St. John Fisher	Saint John Fisher
+St. John Fisher JV	Saint John Fisher JV
+St. Joseph's (Maine)	Saint Joseph's
+St. Joseph's College (ME)	Saint Joseph's
+St. Lawrence	Saint Lawrence
+St. Mary's (Md.)	Saint Mary's (Md.)
+St. Mary's Coll. of Md.	Saint Mary's (Md.)
+St. Vincent	Saint Vincent
+St. Vincent College	Saint Vincent
+Stevens	Stevens
+Stevenson	Stevenson
+Stockton	Stockton
+Susquehanna	Susquehanna
+Swarthmore	Swarthmore
+Thiel	Thiel
+Thiel (Pa.)	Thiel
+Thiel College	Thiel
+Thomas	Thomas
+Thomas (ME)	Thomas
+Thomas College (Maine)	Thomas College
+Transylvania	Transylvania
+Transylvania University (KY)	Transylvania University
+Trine	Trine
+Trine (Ind.)	Trine
+Trinity (Conn.)	Trinity
+Tufts	Tufts
+U. of New England	UNE
+UDC	Dist. Columbia
+UMass Boston	UMass Boston
+UMass Dartmouth	UMass Dartmouth
+UNION	Union
+USMMA	Merchant Marine
+UTICA	Utica
+Union	Union
+Union (N.Y.)	Union
+Union College	Union
+Univ of New England	UNE
+Univ. New England	UNE
+Univ. of New England    UNEW
+University of New England	UNE
+University of Scranton	Scranton
+University of Southern Maine	Southern Maine
+Ursinus	Ursinus
+Utica	Utica
+Utica College	Utica
+Va. Wesleyan	Virginia Wesleyan
+Vassar	Vassar
+Vassar College	Vassar
+Virginia Wesleyan	Virginia Wesleyan
+W&J Washington & Jefferson
+Walsh	Walsh
+Wash. & Jeff.   Washington & Jefferson
+Wash. & Jefferson	Washington & Jefferson
+Washington & Jefferson	Washington & Jefferson
+Washington & Lee	Washington & Lee
+Washington (Md.)	Mary Washington 
+Washington College	Washington College
+Washington and Jefferson	Washington & Jefferson
+Washington and Jefferson (Pa.)	Washington & Jefferson
+Washington and Lee	Washington & Lee
+Wells	Wells
+Wentworth	Wentworth
+Wentworth Institute of Technology	Wentworth
+Wesley	Wesley
+Wesleyan	Wesleyan
+Wesleyan (Conn.)	Wesleyan
+Western Conn. St.	Western Connecticut
+Western Connecticut	Western Connecticut
+Western Connecticut St. University	Western Connecticut
+Western New Eng.	Western New England
+Western New England	Western New England
+Westminster	Westminster
+Wheaton	Wheaton
+Wheaton (Mass.)	Wheaton
+Wheaton College	Wheaton
+Whittier	Whittier
+Widener	Widener
+Williams	Williams
+Wilmington	Wilmington
+Wilmington (OH)	Wilmington
+Wilmington (Ohio)	Wilmington
+Wilmington College (OH)	Wilmington
+Wittenberg	Wittenberg
+Wooster	Wooster
+York (Pa.)	York
+Young Harris	Young Harris
