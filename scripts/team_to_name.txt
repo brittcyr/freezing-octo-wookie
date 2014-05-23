@@ -101,9 +101,9 @@ DeSales	DeSales
 DeSales University	DeSales
 Defiance	Defiance
 Defiance College	Defiance
-Denison Denison
-Dickinson   Dickinson
-Dist. Columbia  Dist. Columbia
+Denison	Denison
+Dickinson	Dickinson
+Dist. Columbia	Dist. Columbia
 Dominican (Cal.)	Dominican (Cal.)
 Dominican College	Dominican (Cal.)
 Drew	Drew
@@ -304,14 +304,14 @@ Plymouth St.	Plymouth State
 Plymouth State	Plymouth State
 Potsdam	Potsdam
 Potsdam St.	Potsdam
-RCML    Regis
+RCML	Regis
 RIT	RIT
 RPI	RPI
 RPI Engineers	RPI
 RPI_MLAX	RPI
 Randolph	Randolph
 Randolph (Va.)	Randolph
-Randolph-Macon  Randolph-Macon
+Randolph-Macon	Randolph-Macon
 Regis	Regis
 Regis (Mass.)	Regis
 Regis College (Mass.)	Regis
@@ -329,7 +329,7 @@ Rockhurst	Rockhurst
 Roger Williams	Roger Williams
 Rosemont	Rosemont
 SKIDMORE	Skidmore
-SLU_M	Saint Leo
+SLU_M	Saint Lawrence
 STEVENS	Stevens
 SUNY Canton	Canton
 SUNY Cobleskill	Cobleskill
@@ -358,7 +358,7 @@ Skidmore	Skidmore
 Skidmore College	Skidmore
 Southern Maine	Southern Maine
 Southern Me.	Southern Maine
-Southern Virginia   Southern Virginia
+Southern Virginia	Southern Virginia
 Southwestern (Tex.)	Southwestern (Tex.)
 Springfield	Springfield
 Springfield College	Springfield
@@ -400,7 +400,7 @@ Union (N.Y.)	Union
 Union College	Union
 Univ of New England	UNE
 Univ. New England	UNE
-Univ. of New England    UNEW
+Univ. of New England	UNE
 University of New England	UNE
 University of Scranton	Scranton
 University of Southern Maine	Southern Maine
@@ -411,9 +411,9 @@ Va. Wesleyan	Virginia Wesleyan
 Vassar	Vassar
 Vassar College	Vassar
 Virginia Wesleyan	Virginia Wesleyan
-W&J Washington & Jefferson
+W&J	Washington & Jefferson
 Walsh	Walsh
-Wash. & Jeff.   Washington & Jefferson
+Wash. & Jeff.	Washington & Jefferson
 Wash. & Jefferson	Washington & Jefferson
 Washington & Jefferson	Washington & Jefferson
 Washington & Lee	Washington & Lee

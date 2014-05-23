@@ -4,6 +4,20 @@ from BeautifulSoup import BeautifulSoup
 import feedparser
 import HTMLParser
 
+def team_synonym(team):
+  f = open('team_to_name.txt', 'r')
+  rows = {}
+  for line in f:
+    [given, proper] = line.split('\t')
+    rows[given] = proper
+  f.close()
+
+  if team in rows:
+    return rows[team]
+  else:
+    print 'FAIL TO GET TEAM SYNONYM'
+    return team
+
 def strip(word):
   if ':' in word:
     word = word.split(':')[1]
@@ -51,6 +65,7 @@ def format_team(team):
   team = html_parser.unescape(team)
   team = team.replace('\\', '')
   team = team.strip()
+  team = team_synonym(team)
   return team
 
 def format_time(time):

@@ -106,7 +106,7 @@ if __name__ == "__main__":
           winner = decide(home_team, away_team, winner, other=team1)
 
       # TODO: Create FACEOFF object
-      
+
 
 #  for conference in conferences2:
 #    links = get_links_calendar(conference)
