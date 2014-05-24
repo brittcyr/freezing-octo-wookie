@@ -119,6 +119,7 @@ Elmira	Elmira
 Elmira College	Elmira
 Emerson	Emerson
 Emerson College	Emerson
+Emmanuel (GA)	Emmanuel
 Emmanuel (Mass.)	Emmanuel
 Emmanuel College	Emmanuel
 Emmanuel College (Mass.)	Emmanuel
