@@ -489,3 +489,5 @@ ALMACOLL	Alma College
 MSOE	Milwaukee Engr.
 CANTONM	Canton
 W&J	Washington & Jefferson
+BETHANY	Bethany
+REGM	Regis
