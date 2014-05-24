@@ -487,3 +487,5 @@ HARTWI~1	Hartwick College
 JWUMLAX	Johnson & Wales University (R.I.)
 ALMACOLL	Alma College
 MSOE	Milwaukee Engr.
+CANTONM	Canton
+W&J	Washington & Jefferson
