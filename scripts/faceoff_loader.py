@@ -95,6 +95,13 @@ if __name__ == "__main__":
       else:
         hint = False
 
+    f = open('players.txt', 'a')
+    f.write(home)
+    f.write('\n')
+    f.write(away)
+    f.write('\n')
+    f.close()
+
     for face in faces:
       (currentQuarter, time, home, away, winner) = face
       if winner == team1:

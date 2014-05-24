@@ -276,9 +276,9 @@ New England Col.	New England College
 New England College	New England College
 Niagara County Community College	Niagara County Community College
 Nichols	Nichols
-Nichols	College	Nichols
+Nichols College	Nichols
 Norwich	Norwich
-Norwich	University	Norwich
+Norwich University	Norwich
 OSWEGO-M	Oswego
 Oberlin	Oberlin
 Oberlin (Ohio)	Oberlin

@@ -16,6 +16,7 @@ def format_name(name):
   name = name.replace('\\', '')
   name = name.title()
   name = name.replace('Iii', 'III')
+  name = name.strip()
   return name
 
 def format_winner(winner):

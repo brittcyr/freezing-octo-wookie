@@ -8,6 +8,7 @@ def team_synonym(team):
   f = open('team_to_name.txt', 'r')
   rows = {}
   for line in f:
+    line = line.strip()
     [given, proper] = line.split('\t')
     rows[given] = proper
   f.close()
