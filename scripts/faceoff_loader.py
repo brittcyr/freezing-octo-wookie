@@ -38,6 +38,31 @@ conferences3 = [
 
 laxmag = 'http://www.laxmagazine.com/college_men/DIII/2013-14/schedule?date=20140101'
 
+
+def load_game_to_db(_date, _time, _home, _away, _site, _home_wins, _total_face, link=None):
+  sys.path.append(
+    '/afs/athena.mit.edu/user/c/y/cyrbritt/Scripts/django/fogolytics'
+  )
+  os.environ.setdefault("DJANGO_SETTINGS_MODULE", "fogolytics.settings")
+  from fogo.models import Game
+  try:
+    model_game = Game(
+      away=_away,
+      home=_home,
+      time=_time,
+      date=_date,
+      site=_site,
+      home_wins=_home_wins,
+      total_face=_total_face,
+    )
+    model_game.save()
+  except:
+    f = open('failures.txt', 'a')
+    f.write(link)
+    f.write('\n')
+    f.close()
+
+
 if __name__ == "__main__":
 #  links = get_links_calendar(laxmag)
 #  links = list(set(links))
@@ -71,17 +96,8 @@ if __name__ == "__main__":
       continue
 
     (date, time, location, away_team, home_team, home_wins, num_faces, officials_list) = game_data
-    f = open('date.txt', 'a')
-    f.write(date)
-    f.write('\n')
-    f.close()
-    f = open('time.txt', 'a')
-    f.write(date)
-    f.write('\n')
-    f.close()
 
     # TODO: Check for duplicate
-    # TODO: Create GAME object
 
     # This is for learning one team if the other is known
     team1 = faces[0][-1]
@@ -103,15 +119,8 @@ if __name__ == "__main__":
       else:
         hint = False
 
-    f = open('players.txt', 'a')
-    f.write(home)
-    f.write('\n')
-    f.write(away)
-    f.write('\n')
-    f.close()
-
     for face in faces:
-      (currentQuarter, time, home, away, winner) = face
+      (currentQuarter, face_time, home, away, winner) = face
       if winner == team1:
         winner = decide(home_team, away_team, winner, other=team2, hint=hint)
       else:
@@ -121,6 +130,8 @@ if __name__ == "__main__":
           winner = decide(home_team, away_team, winner, other=team1)
 
       # TODO: Create FACEOFF object
+
+    load_game_to_db(date, time, home_team, away_team, location, home_wins, num_faces, link)
 
 
 #  for conference in conferences2:

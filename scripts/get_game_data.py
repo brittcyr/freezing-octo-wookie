@@ -87,6 +87,11 @@ def format_time(time):
     time = time + ':00'
   return time
 
+def format_date(date):
+  date = date.replace('-', '/')
+  date = date.strip()
+  return date
+
 def get_game_data(url):
   try:
     br = feedparser.parse(url)
@@ -95,7 +100,7 @@ def get_game_data(url):
     head = BeautifulSoup(str(statbox)).find("div", {"class" : "align-center"})
     location = format_site(head.contents[2])
     time = head.contents[4]
-    date = time.split(' ')[0]
+    date = format_date(time.split(' ')[0])
     time = format_time(time.split(' ')[2])
 
     header = BeautifulSoup(str(statbox)).findAll("span", {"class" : "stats-header"})
@@ -168,7 +173,7 @@ def get_game_data_other_type(url):
   try:
     date_start = str(page).index("Date:")
     date = str(page)[date_start: str(page).index('<br', date_start)]
-    date = strip(date)
+    date = format_date(strip(date))
   except:
     date = ''
 
