@@ -113,7 +113,8 @@ if __name__ == "__main__":
       else:
         hint = False
 
-    existing_games = Game.objects.filter(date=date, home=home_team, away=away_team)
+    _date = datetime.datetime.strptime(date, '%m/%d/%Y')
+    existing_games = Game.objects.filter(date=_date, home=home_team, away=away_team)
     if existing_games:
       game = existing_games[0]
     else:

@@ -14,7 +14,6 @@ def team_synonym(team):
   f.close()
 
   if team in rows:
-    print team
     return rows[team]
   else:
     print 'FAIL TO GET TEAM SYNONYM'
