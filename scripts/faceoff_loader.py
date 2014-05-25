@@ -93,7 +93,6 @@ if __name__ == "__main__":
 
     (date, time, location, away_team, home_team, home_wins, num_faces, officials_list) = game_data
 
-
     # This is for learning one team if the other is known
     team1 = faces[0][-1]
     team2 = faces[-1][-1]

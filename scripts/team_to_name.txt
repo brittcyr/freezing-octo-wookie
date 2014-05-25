@@ -347,6 +347,7 @@ Saint Joseph's (ME)	Saint Joseph's
 Saint Joseph's (Me.)	Saint Joseph's
 Saint Leo	Saint Leo
 Saint Vincent	Saint Vincent
+St. Vincent (Pa.)	Saint Vincent
 Salem St.	Salem State
 Salem State	Salem State
 Salem State University	Salem State

@@ -14,9 +14,15 @@ def team_synonym(team):
   f.close()
 
   if team in rows:
+    print team
     return rows[team]
   else:
     print 'FAIL TO GET TEAM SYNONYM'
+    g = open('failures.txt', 'a')
+    g.write(team)
+    g.write('\n')
+    g.close()
+
     return team
 
 def strip(word):
@@ -212,17 +218,17 @@ def get_game_data_other_type(url):
 
 if __name__ == "__main__":
   get_game_data('http://www.laxmagazine.com/links/jgz1p9')
-  get_game_data('http://www.beckerhawks.com/sports/mlax/2013-14/boxscores/20140310_w56g.xml?view=undefined')
-  get_game_data('http://athletics.houghton.edu/boxscore.aspx?path=mens_lacrosse&id=1359')
-  get_game_data('http://www.nazathletics.com/boxscore.aspx?id=3259&path=mlax')
-  get_game_data('http://www.jcusports.com/boxscore.aspx?id=3465&path=mlax')
-  get_game_data('http://athletics.lycoming.edu/boxscore.aspx?id=2442&path=mlax')
-  get_game_data('http://otterbeincardinals.com/boxscore.aspx?id=2166&path=mlax')
-  get_game_data('http://www.bwyellowjackets.com/sports/mlax/2013-14/boxscores/20140402_qldc.xml?view=undefined')
-  get_game_data('http://www.suseagulls.com/sports/mlax/2013-14/boxscores/20140518_9usw.xml')
-  get_game_data('http://www.laxmagazine.com/links/xwxm4g')
-  get_game_data('http://www.laxmagazine.com/links/k5pmhe')
-  get_game_data('http://newmacsports.com/sports/mlax/2013-14/boxscores/20140315_3fn9.xml')
-  get_game_data('http://newmacsports.com/sports/mlax/2013-14/boxscores/20140315_zg56.xml')
-  get_game_data('http://www.cmsvathletics.com/boxscore.aspx?path=mlax&id=2735')
-  get_game_data('http://www.centenarycyclones.com/boxscore.aspx?path=mlax&id=3022')
+  #get_game_data('http://www.beckerhawks.com/sports/mlax/2013-14/boxscores/20140310_w56g.xml?view=undefined')
+  #get_game_data('http://athletics.houghton.edu/boxscore.aspx?path=mens_lacrosse&id=1359')
+  #get_game_data('http://www.nazathletics.com/boxscore.aspx?id=3259&path=mlax')
+  #get_game_data('http://www.jcusports.com/boxscore.aspx?id=3465&path=mlax')
+  #get_game_data('http://athletics.lycoming.edu/boxscore.aspx?id=2442&path=mlax')
+  #get_game_data('http://otterbeincardinals.com/boxscore.aspx?id=2166&path=mlax')
+  #get_game_data('http://www.bwyellowjackets.com/sports/mlax/2013-14/boxscores/20140402_qldc.xml?view=undefined')
+  #get_game_data('http://www.suseagulls.com/sports/mlax/2013-14/boxscores/20140518_9usw.xml')
+  #get_game_data('http://www.laxmagazine.com/links/xwxm4g')
+  #get_game_data('http://www.laxmagazine.com/links/k5pmhe')
+  #get_game_data('http://newmacsports.com/sports/mlax/2013-14/boxscores/20140315_3fn9.xml')
+  #get_game_data('http://newmacsports.com/sports/mlax/2013-14/boxscores/20140315_zg56.xml')
+  #get_game_data('http://www.cmsvathletics.com/boxscore.aspx?path=mlax&id=2735')
+  #get_game_data('http://www.centenarycyclones.com/boxscore.aspx?path=mlax&id=3022')
