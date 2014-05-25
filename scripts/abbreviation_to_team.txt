@@ -491,3 +491,21 @@ CANTONM	Canton
 W&J	Washington & Jefferson
 BETHANY	Bethany
 REGM	Regis
+SVC	Saint Vincent
+UNE	UNE
+GENESEO	Geneseo
+MORM	Morrisville State
+JWUMLAX	Johnson & Wales
+EMM	Emmanuel
+FDUFM	Fairleigh Dickinson University
+ITHACA	Ithaca
+CEML	Centenary (N.J.)
+MARITIME	Maritime
+ONEML	Oneonta
+TCML2014	Trinity
+UMF-M	Maine-Farmington
+LYNM2014	Lyndon State
+FISHER	Saint John Fisher
+BENU	Benedictine
+HARTWI~1	Hartwick
+ALMACOLL	Alma

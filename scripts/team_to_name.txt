@@ -15,6 +15,7 @@ Alma College	Alma
 Alvernia	Alvernia
 Alvernia University	Alvernia
 Amherst	Amherst
+Amherst College	Amherst
 Anna Maria	Anna Maria
 Anna Maria College	Anna Maria
 Arcadia	Arcadia
