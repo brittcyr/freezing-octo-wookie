@@ -3,6 +3,11 @@ from get_faceoffs import get_faces, get_faces_other_type
 from get_links import get_links, get_links_calendar
 from get_game_data import get_game_data
 from determine_team import decide
+import sys, os
+sys.path.append('/afs/athena.mit.edu/user/c/y/cyrbritt/Scripts/django/fogolytics')
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "fogolytics.settings")
+from fogo.models import Player, Game, Faceoff
+import datetime
 
 conferences = [
                'http://cacsports.com/sports/mlax/2013-14/schedule',
@@ -40,27 +45,18 @@ laxmag = 'http://www.laxmagazine.com/college_men/DIII/2013-14/schedule?date=2014
 
 
 def load_game_to_db(_date, _time, _home, _away, _site, _home_wins, _total_face, link=None):
-  sys.path.append(
-    '/afs/athena.mit.edu/user/c/y/cyrbritt/Scripts/django/fogolytics'
+  _date = datetime.datetime.strptime(_date, '%m/%d/%Y')
+  model_game = Game(
+    away=_away,
+    home=_home,
+    time=_time,
+    date=_date,
+    site=_site,
+    home_wins=_home_wins,
+    total_face=_total_face,
   )
-  os.environ.setdefault("DJANGO_SETTINGS_MODULE", "fogolytics.settings")
-  from fogo.models import Game
-  try:
-    model_game = Game(
-      away=_away,
-      home=_home,
-      time=_time,
-      date=_date,
-      site=_site,
-      home_wins=_home_wins,
-      total_face=_total_face,
-    )
-    model_game.save()
-  except:
-    f = open('failures.txt', 'a')
-    f.write(link)
-    f.write('\n')
-    f.close()
+  model_game.save()
+  return model_game
 
 
 if __name__ == "__main__":
@@ -97,7 +93,6 @@ if __name__ == "__main__":
 
     (date, time, location, away_team, home_team, home_wins, num_faces, officials_list) = game_data
 
-    # TODO: Check for duplicate
 
     # This is for learning one team if the other is known
     team1 = faces[0][-1]
@@ -119,6 +114,12 @@ if __name__ == "__main__":
       else:
         hint = False
 
+    existing_games = Game.objects.filter(date=date, home=home_team, away=away_team)
+    if existing_games:
+      game = existing_games[0]
+    else:
+      game = load_game_to_db(date, time, home_team, away_team, location, home_wins, num_faces, link)
+
     for face in faces:
       (currentQuarter, face_time, home, away, winner) = face
       if winner == team1:
@@ -129,10 +130,28 @@ if __name__ == "__main__":
         else:
           winner = decide(home_team, away_team, winner, other=team1)
 
-      # TODO: Create FACEOFF object
+      home_player = Player.objects.filter(name=home)
+      if not home_player:
+        home_player =Player(name=home, team=home_team)
+        home_player.save()
+      else:
+        home_player = home_player[0]
+      away_player = Player.objects.filter(name=away)
+      if not away_player:
+        away_player =Player(name=away, team=away_team)
+        away_player.save()
+      else:
+        away_player = away_player[0]
 
-    load_game_to_db(date, time, home_team, away_team, location, home_wins, num_faces, link)
-
+      f = Faceoff(
+        away=away_player,
+        home=home_player,
+        game=game,
+        winner=winner,
+        time=face_time,
+        quarter=currentQuarter,
+      )
+      f.save()
 
 #  for conference in conferences2:
 #    links = get_links_calendar(conference)
