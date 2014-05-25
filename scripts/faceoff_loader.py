@@ -143,6 +143,8 @@ if __name__ == "__main__":
       else:
         away_player = away_player[0]
 
+      face_time = '00:' + face_time
+
       f = Faceoff(
         away=away_player,
         home=home_player,
