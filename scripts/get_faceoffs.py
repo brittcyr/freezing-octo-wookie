@@ -68,7 +68,7 @@ def get_faces(url):
 
         face_data = str(row.findAll("td")[1].contents[0]).split('Faceoff ')[1]
         [players, rest] = face_data.split('won by')
-        [home, away] = players.split('vs')
+        [away, home] = players.split('vs')
         home = format_name(home)
         away = format_name(away)
         rest = rest.strip()
@@ -126,7 +126,7 @@ def get_faces_other_type(url):
 
           face_data = str(row.findAll("td")[1].contents[0]).split('Faceoff ')[1]
           [players, rest] = face_data.split('won by')
-          [home, away] = players.split('vs')
+          [away , home] = players.split('vs')
           home = format_name(home)
           away = format_name(away)
           rest = rest.strip()
