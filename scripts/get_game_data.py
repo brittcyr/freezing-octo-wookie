@@ -107,6 +107,10 @@ def get_game_data(url):
     time = head.contents[4]
     date = format_date(time.split(' ')[0])
     time = format_time(time.split(' ')[2])
+    if ', 2014 at' in str(head):
+      # Hack to deal with a certain game, but not a bad default date and time
+      date = '3/1/2014'
+      time = '1:00'  
 
     header = BeautifulSoup(str(statbox)).findAll("span", {"class" : "stats-header"})
     away = header[0].contents[0]
@@ -216,7 +220,8 @@ def get_game_data_other_type(url):
   # date, time, location, away, home, home_wins, faces, officials_list
 
 if __name__ == "__main__":
-  get_game_data('http://www.laxmagazine.com/links/jgz1p9')
+  get_game_data('http://athletics.bates.edu/sports/mlax/2013-14/boxscores/20140301_c4jh.xml')
+  #get_game_data('http://www.laxmagazine.com/links/jgz1p9')
   #get_game_data('http://www.beckerhawks.com/sports/mlax/2013-14/boxscores/20140310_w56g.xml?view=undefined')
   #get_game_data('http://athletics.houghton.edu/boxscore.aspx?path=mens_lacrosse&id=1359')
   #get_game_data('http://www.nazathletics.com/boxscore.aspx?id=3259&path=mlax')

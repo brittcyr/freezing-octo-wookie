@@ -227,6 +227,7 @@ Maritime (N.Y.)	Maritime
 Maritime (NY)	Maritime
 Maritime College	Maritime
 Mary Washington	Mary Washington
+Marymount University (Va.)	Marymount (Va.)
 Marymount (Va.)	Marymount (Va.)
 Marywood	Marywood
 Marywood University	Marywood
@@ -406,6 +407,7 @@ Univ of New England	UNE
 Univ. New England	UNE
 Univ. of New England	UNE
 University of Dubuque	Dubuque
+Univ. of Dubuque	Dubuque
 University of New England	UNE
 University of Scranton	Scranton
 University of Southern Maine	Southern Maine

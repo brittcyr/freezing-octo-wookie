@@ -72,6 +72,8 @@ if __name__ == "__main__":
     counter += 1
     if counter % 5 == 0:
       print 'Checked ' + str(counter)
+    if counter < 1190:
+      continue
     game_data = get_game_data(link)
 
     # Print the failed links to the failed_links.txt
@@ -113,10 +115,14 @@ if __name__ == "__main__":
       else:
         hint = False
 
+    if date[-3] == '/':
+      date = date[:len(date)-2] + '2014'
     _date = datetime.datetime.strptime(date, '%m/%d/%Y')
+
     existing_games = Game.objects.filter(date=_date, home=home_team, away=away_team)
     if existing_games:
       game = existing_games[0]
+      continue
     else:
       game = load_game_to_db(date, time, home_team, away_team, location, home_wins, num_faces, link)
 
