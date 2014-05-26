@@ -44,7 +44,7 @@ conferences3 = [
 laxmag = 'http://www.laxmagazine.com/college_men/DIII/2013-14/schedule?date=20140101'
 
 
-def load_game_to_db(_date, _time, _home, _away, _site, _home_wins, _total_face, link=None):
+def load_game_to_db(_date, _time, _home, _away, _site, _home_wins, _total_face, link, _away_score, _home_score):
   _date = datetime.datetime.strptime(_date, '%m/%d/%Y')
   model_game = Game(
     away=_away,
@@ -54,6 +54,8 @@ def load_game_to_db(_date, _time, _home, _away, _site, _home_wins, _total_face, 
     site=_site,
     home_wins=_home_wins,
     total_face=_total_face,
+    away_score=_away_score,
+    home_score=_home_score,,
   )
   model_game.save()
   return model_game
@@ -72,8 +74,6 @@ if __name__ == "__main__":
     counter += 1
     if counter % 5 == 0:
       print 'Checked ' + str(counter)
-    if counter < 1575:
-      continue
     game_data = get_game_data(link)
 
     # Print the failed links to the failed_links.txt
@@ -93,7 +93,7 @@ if __name__ == "__main__":
       f.close()
       continue
 
-    (date, time, location, away_team, home_team, home_wins, num_faces, officials_list) = game_data
+    (date, game_time, location, away_team, home_team, home_wins, num_faces, officials_list, away_score, home_score) = game_data
 
     # This is for learning one team if the other is known
     team1 = faces[0][-1]
@@ -124,7 +124,7 @@ if __name__ == "__main__":
       game = existing_games[0]
       continue
     else:
-      game = load_game_to_db(date, time, home_team, away_team, location, home_wins, num_faces, link)
+      game = load_game_to_db(date, game_time, home_team, away_team, location, home_wins, num_faces, link, away_score, home_score)
 
     for face in faces:
       (currentQuarter, face_time, home, away, winner) = face

@@ -116,7 +116,9 @@ def get_game_data(url):
 
     header = BeautifulSoup(str(statbox)).findAll("span", {"class" : "stats-header"})
     away = header[0].contents[0]
+    away_score = header[1].contents[0]
     home = header[2].contents[0]
+    home_score = header[3].contents[0]
     away = format_team(away)
     home = format_team(home)
 
@@ -169,9 +171,13 @@ def get_game_data_other_type(url):
     home = stats.findAll("tr")[2].find("td").contents[0]
     away = format_team(away)
     home = format_team(home)
+    away_score = stats.findAll("tr")[1].findAll("td")[-1].contents[0].contents[0]
+    home_score = stats.findAll("tr")[2].findAll("td")[-1].contents[0].contents[0]
   except:
     away = ''
     home = ''
+    away_score = 0
+    home_score = 0
 
   try:
     official_start = str(page).index("Officials")
@@ -222,7 +228,7 @@ def get_game_data_other_type(url):
   # date, time, location, away, home, home_wins, faces, officials_list
 
 if __name__ == "__main__":
-  get_game_data('http://www.laxmagazine.com/links/eyxeki')
+  #get_game_data('http://www.laxmagazine.com/links/eyxeki')
   #get_game_data('http://athletics.bates.edu/sports/mlax/2013-14/boxscores/20140301_c4jh.xml')
   #get_game_data('http://www.laxmagazine.com/links/jgz1p9')
   #get_game_data('http://www.beckerhawks.com/sports/mlax/2013-14/boxscores/20140310_w56g.xml?view=undefined')
@@ -235,7 +241,7 @@ if __name__ == "__main__":
   #get_game_data('http://www.suseagulls.com/sports/mlax/2013-14/boxscores/20140518_9usw.xml')
   #get_game_data('http://www.laxmagazine.com/links/xwxm4g')
   #get_game_data('http://www.laxmagazine.com/links/k5pmhe')
-  #get_game_data('http://newmacsports.com/sports/mlax/2013-14/boxscores/20140315_3fn9.xml')
+  get_game_data('http://newmacsports.com/sports/mlax/2013-14/boxscores/20140315_3fn9.xml')
   #get_game_data('http://newmacsports.com/sports/mlax/2013-14/boxscores/20140315_zg56.xml')
   #get_game_data('http://www.cmsvathletics.com/boxscore.aspx?path=mlax&id=2735')
   #get_game_data('http://www.centenarycyclones.com/boxscore.aspx?path=mlax&id=3022')
