@@ -72,6 +72,8 @@ def format_team(team):
   team = team.replace('\\', '')
   team = team.strip()
   team = team_synonym(team)
+  if len(team) > 30:
+    team = team[:30]
   return team
 
 def format_time(time):
@@ -220,7 +222,8 @@ def get_game_data_other_type(url):
   # date, time, location, away, home, home_wins, faces, officials_list
 
 if __name__ == "__main__":
-  get_game_data('http://athletics.bates.edu/sports/mlax/2013-14/boxscores/20140301_c4jh.xml')
+  get_game_data('http://www.laxmagazine.com/links/eyxeki')
+  #get_game_data('http://athletics.bates.edu/sports/mlax/2013-14/boxscores/20140301_c4jh.xml')
   #get_game_data('http://www.laxmagazine.com/links/jgz1p9')
   #get_game_data('http://www.beckerhawks.com/sports/mlax/2013-14/boxscores/20140310_w56g.xml?view=undefined')
   #get_game_data('http://athletics.houghton.edu/boxscore.aspx?path=mens_lacrosse&id=1359')

@@ -72,7 +72,7 @@ if __name__ == "__main__":
     counter += 1
     if counter % 5 == 0:
       print 'Checked ' + str(counter)
-    if counter < 1190:
+    if counter < 1575:
       continue
     game_data = get_game_data(link)
 

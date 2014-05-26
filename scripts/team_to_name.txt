@@ -248,6 +248,7 @@ Methodist (N.C.)	Methodist
 Middlebury	Middlebury
 Millsaps	Millsaps
 Milwaukee Engr.	Milwaukee Engr.
+Misericordia University	Misericordia
 Misericordia	Misericordia
 Misericordia Univ.	Misericordia
 Mississippi St.	Mississippi St.
@@ -261,6 +262,7 @@ Mount Ida College	Mount Ida
 Mount Saint Mary	Mount Saint Mary
 Mount Saint Vincent	Mount Saint Vincent
 Mount St. Joseph	MSJ
+Mount St. Joseph College (OH)	MSJ
 Mount St. Mary	Mount Saint Mary
 Mount St. Vincent	Mount Saint Vincent
 Mount Union	Mount Union
