@@ -55,7 +55,7 @@ def load_game_to_db(_date, _time, _home, _away, _site, _home_wins, _total_face, 
     home_wins=_home_wins,
     total_face=_total_face,
     away_score=_away_score,
-    home_score=_home_score,,
+    home_score=_home_score,
   )
   model_game.save()
   return model_game

@@ -151,8 +151,8 @@ def get_game_data(url):
           officials_list.append(pruned)
   except:
     pass
-  print date, time, location, away, home, home_wins, faces, officials_list
-  return (date, time, location, away, home, home_wins, faces, officials_list)
+  print date, time, location, away, home, home_wins, faces, officials_list, away_score, home_score
+  return (date, time, location, away, home, home_wins, faces, officials_list, away_score, home_score)
   # date, time, location, away, home, home_wins, faces, officials_list
 
 def get_game_data_other_type(url):
@@ -222,10 +222,10 @@ def get_game_data_other_type(url):
     away_wins = 0
     faces = 0
 
-  print date, time, location, away, home, home_wins, faces, officials_list
-  return (date, time, location, away, home, home_wins, faces, officials_list)
+  print date, time, location, away, home, home_wins, faces, officials_list, away_score, home_score
+  return (date, time, location, away, home, home_wins, faces, officials_list, away_score, home_score)
 
-  # date, time, location, away, home, home_wins, faces, officials_list
+  # date, time, location, away, home, home_wins, faces, officials_list, away_score, home_score
 
 if __name__ == "__main__":
   #get_game_data('http://www.laxmagazine.com/links/eyxeki')
