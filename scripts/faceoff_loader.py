@@ -40,10 +40,10 @@ conferences3 = [
                ]
 
 # Could not find MAC, PAC, Skyline
-
 laxmag = 'http://www.laxmagazine.com/college_men/DIII/2013-14/schedule?date=20140101'
 
 
+# Loading the game into db assuming that already checked it does not exist in db
 def load_game_to_db(_date, _time, _home, _away, _site, _home_wins, _total_face, link, _away_score, _home_score):
   _date = datetime.datetime.strptime(_date, '%m/%d/%Y')
   model_game = Game(
