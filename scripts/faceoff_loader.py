@@ -69,7 +69,6 @@ def load_officials_to_db(officials, game):
     model_official.save()
 
 
-
 if __name__ == "__main__":
 #  links = get_links_calendar(laxmag)
 #  links = list(set(links))
@@ -103,6 +102,7 @@ if __name__ == "__main__":
       continue
 
     (date, game_time, location, away_team, home_team, home_wins, num_faces, officials_list, away_score, home_score) = game_data
+    game_time = game_time + datetime.timedelta(hours=12)
 
     # This is for learning one team if the other is known
     team1 = faces[0][-1]
