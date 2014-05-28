@@ -6,7 +6,7 @@ from determine_team import decide
 import sys, os
 sys.path.append('/afs/athena.mit.edu/user/c/y/cyrbritt/Scripts/django/fogolytics')
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "fogolytics.settings")
-from fogo.models import Player, Game, Faceoff
+from fogo.models import Player, Game, Faceoff, Ref
 import datetime
 
 conferences = [
@@ -59,6 +59,15 @@ def load_game_to_db(_date, _time, _home, _away, _site, _home_wins, _total_face, 
   )
   model_game.save()
   return model_game
+
+def load_officials_to_db(officials, game):
+  for official in officials:
+    model_official = Ref(
+      ref=official,
+      game=_game,
+    )
+    model_official.save()
+
 
 
 if __name__ == "__main__":
@@ -119,12 +128,13 @@ if __name__ == "__main__":
       date = date[:len(date)-2] + '2014'
     _date = datetime.datetime.strptime(date, '%m/%d/%Y')
 
-    existing_games = Game.objects.filter(date=_date, home=home_team, away=away_team)
-    if existing_games:
-      game = existing_games[0]
+    existing_game = Game.objects.filter(date=_date, home=home_team, away=away_team)
+    if existing_game:
+      game = existing_game[0]
       continue
     else:
       game = load_game_to_db(date, game_time, home_team, away_team, location, home_wins, num_faces, link, away_score, home_score)
+      officials = load_officials_to_db(official_list, game)
 
     for face in faces:
       (currentQuarter, face_time, home, away, winner) = face
