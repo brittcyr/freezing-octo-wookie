@@ -13,6 +13,26 @@
     <form>
       <input placeholder="Search" type="text" id="search">
     </form>
+    <h1>
+      GAME
+    </h1>
+    <ul>
+      <li>
+        {{ game.home }} vs. {{ game.away }}
+      </li>
+      <li>
+        {{ game.home_score }} - {{ game.away_score }}
+      </li>
+      <li>
+        Date: {{ game.date }}
+      </li>
+      <li>
+        Time: {{ game.time }}
+      </li>
+      <li>
+        Location: {{ game.site }}
+      </li>
+    </ul>
     <table class="table table-striped">
       <thead>
         <tr>
