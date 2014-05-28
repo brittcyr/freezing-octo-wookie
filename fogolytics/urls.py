@@ -6,6 +6,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
   url(r'^$', 'fogo.views.index'),
+  url(r'^game/(?P<game>\d+)$', 'fogo.game.index'),
 )
 
 urlpatterns += staticfiles_urlpatterns()

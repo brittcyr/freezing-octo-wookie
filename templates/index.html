@@ -1,0 +1,77 @@
+<html>
+  <head>
+  <link rel="stylesheet" href="/fantasy/fantasy/static/assets/css/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="/fantasy/fantasy/static/assets/css/tablecloth.css" type="text/css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="/fantasy/fantasy/static/assets/js/bootstrap.min.js"></script>
+  <script src="/fantasy/fantasy/static/assets/js/jquery.metadata.js"></script>
+  <script src="/fantasy/fantasy/static/assets/js/jquery.tablesorter.min.js"></script>
+  <script src="/fantasy/fantasy/static/assets/js/jquery.tablecloth.js"></script>
+  <script src="/fantasy/fantasy/static/assets/js/jquery.quicksearch.js"></script>
+  </head>
+  <body>
+    <form>
+      <input placeholder="Search" type="text" id="search">
+    </form>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>
+            Away
+          </th>
+          <th>
+            Home
+          </th>
+          <th>
+            Winner
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for faceoff in faceoffs %}
+        <tr>
+          <td>
+            {{ faceoff.away }}
+          </td>
+          <td>
+            {{ faceoff.home }}
+          </td>
+          <td>
+            {{ faceoff.winner }}
+          </td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+
+  <script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+      $('input#search').quicksearch('table tbody tr');
+      $("table").tablecloth({
+        // theme: "stats",
+        striped: true,
+        sortable: false,
+        // condensed: true
+      });
+      $("table").tablesorter({
+        tableClass: "tablesorter",
+        cssDesc: 'headerSortDown',
+        widthFixed: true,
+
+        headers: {
+          0: {
+            sorter: false
+          },
+          1: {
+            sorter: false
+          },
+          2: {
+            sorter: false
+          },
+        },
+      });
+    });
+
+  </script>
+  </body>
+</html>
