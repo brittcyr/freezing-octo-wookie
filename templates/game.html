@@ -18,10 +18,10 @@
     </h1>
     <ul>
       <li>
-        {{ game.home }} vs. {{ game.away }}
+        {{ game.away }} vs. {{ game.home }}
       </li>
       <li>
-        {{ game.home_score }} - {{ game.away_score }}
+        {{ game.away_score }} - {{ game.home_score }}
       </li>
       <li>
         Date: {{ game.date }}
@@ -37,10 +37,16 @@
       <thead>
         <tr>
           <th>
-            Away
+            Quarter
           </th>
           <th>
-            Home
+            Time
+          </th>
+          <th>
+            {{ game.away }}
+          </th>
+          <th>
+            {{ game.home }}
           </th>
           <th>
             Winner
@@ -50,6 +56,12 @@
       <tbody>
       {% for faceoff in faceoffs %}
         <tr>
+          <td>
+            {{ faceoff.quarter }}
+          </td>
+          <td>
+            {{ faceoff.time }}
+          </td>
           <td>
             {{ faceoff.away }}
           </td>
@@ -72,7 +84,7 @@
     $(document).ready(function() {
       $('input#search').quicksearch('table tbody tr');
       $("table").tablecloth({
-        // theme: "stats",
+        theme: "stats",
         striped: true,
         sortable: false,
         // condensed: true
