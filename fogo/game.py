@@ -9,6 +9,8 @@ import datetime
 def index(request, game):
     game = Game.objects.filter(id=game)[0]
     faceoffs = Faceoff.objects.filter(game=game)
+    for face in faceoffs:
+      face.time = face.time.strftime('%M:%S')
 
     return render_to_response('game.html',
                               {
