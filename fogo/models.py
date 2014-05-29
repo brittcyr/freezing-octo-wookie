@@ -1,5 +1,19 @@
 from django.db import models
 
+# Team object
+class Team(models.Model):
+  name = models.CharField(max_length=40)
+  # color
+  # url
+  # logo
+  # location
+  conference = models.CharField(max_length=40)
+
+  def __unicode__(self):
+    return self.name
+
+
+
 YEAR_CHOICES = (
   ('FR', 'FR'),
   ('SO', 'SO'),
@@ -13,8 +27,7 @@ YEAR_CHOICES = (
 # PLAYER Object
 class Player(models.Model):
   name = models.CharField(max_length=30)
-  team = models.CharField(max_length=40)
-  conference = models.CharField(max_length=30)
+  team = models.ForeignKey(Team)
   number = models.IntegerField(null=True, blank=True)
   year = models.CharField(max_length=7, choices=YEAR_CHOICES)
   height = models.IntegerField(null=True)
@@ -27,8 +40,8 @@ class Player(models.Model):
 
 # Game Object
 class Game(models.Model):
-  away = models.CharField(max_length=40)
-  home = models.CharField(max_length=40)
+  away = models.ForeignKey(Team, related_name='away_team')
+  home = models.ForeignKey(Team, related_name='home_team')
   time = models.TimeField()
   date = models.DateField()
   site = models.CharField(max_length=30)
@@ -63,9 +76,6 @@ class Faceoff(models.Model):
   violation = models.BooleanField()
   gb = models.NullBooleanField()		# TRUE is fogo gb, FALSE is no gb
   wing = models.NullBooleanField()		# TRUE is CT or GB from wings
-  emo = models.NullBooleanField()
-  home_violations = models.IntegerField(null=True)	# Number of violations in the half
-  away_violations = models.IntegerField(null=True)	# Number of violations in the half
 
   def __unicode__(self):
     return self.away + ' vs. ' + self.home + ' @ ' + self.time + ' in the ' + self.quarter + ' quarter of ' + self.game

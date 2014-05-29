@@ -6,7 +6,7 @@ from determine_team import decide
 import sys, os
 sys.path.append('/afs/athena.mit.edu/user/c/y/cyrbritt/Scripts/django/fogolytics')
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "fogolytics.settings")
-from fogo.models import Player, Game, Faceoff, Ref
+from fogo.models import Player, Game, Faceoff, Ref, Team
 import datetime
 
 conferences = [
@@ -60,7 +60,7 @@ def load_game_to_db(_date, _time, _home, _away, _site, _home_wins, _total_face, 
   model_game.save()
   return model_game
 
-def load_officials_to_db(officials, game):
+def load_officials_to_db(officials, _game):
   for official in officials:
     model_official = Ref(
       ref=official,
@@ -131,13 +131,27 @@ if __name__ == "__main__":
       date = date[:len(date)-2] + '2014'
     _date = datetime.datetime.strptime(date, '%m/%d/%Y')
 
-    existing_game = Game.objects.filter(date=_date, home=home_team, away=away_team)
+    # handle the team object
+    home_team_db = Team.objects.filter(name=home_team)
+    away_team_db = Team.objects.filter(name=away_team)
+    if not home_team_db:
+      home_team_db = Team(name=home_team)
+      home_team_db.save()
+    else:
+      home_team_db = home_team_db[0]
+    if not away_team_db:
+      away_team_db = Team(name=away_team)
+      away_team_db.save()
+    else:
+      away_team_db = away_team_db[0]
+
+    existing_game = Game.objects.filter(date=_date, home=home_team_db, away=away_team_db)
     if existing_game:
       game = existing_game[0]
       continue
     else:
-      game = load_game_to_db(date, game_time, home_team, away_team, location, home_wins, num_faces, link, away_score, home_score)
-      officials = load_officials_to_db(official_list, game)
+      game = load_game_to_db(date, game_time, home_team_db, away_team_db, location, home_wins, num_faces, link, away_score, home_score)
+      officials = load_officials_to_db(officials_list, game)
 
     for face in faces:
       (currentQuarter, face_time, home, away, winner) = face
@@ -151,13 +165,13 @@ if __name__ == "__main__":
 
       home_player = Player.objects.filter(name=home)
       if not home_player:
-        home_player =Player(name=home, team=home_team)
+        home_player =Player(name=home, team=home_team_db)
         home_player.save()
       else:
         home_player = home_player[0]
       away_player = Player.objects.filter(name=away)
       if not away_player:
-        away_player =Player(name=away, team=away_team)
+        away_player =Player(name=away, team=away_team_db)
         away_player.save()
       else:
         away_player = away_player[0]
