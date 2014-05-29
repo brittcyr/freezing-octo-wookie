@@ -1,0 +1,100 @@
+<html>
+  <head>
+  <link rel="stylesheet" href="/fantasy/fantasy/static/assets/css/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="/fantasy/fantasy/static/assets/css/tablecloth.css" type="text/css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="/fantasy/fantasy/static/assets/js/bootstrap.min.js"></script>
+  <script src="/fantasy/fantasy/static/assets/js/jquery.metadata.js"></script>
+  <script src="/fantasy/fantasy/static/assets/js/jquery.tablesorter.min.js"></script>
+  <script src="/fantasy/fantasy/static/assets/js/jquery.tablecloth.js"></script>
+  </head>
+  <body>
+    <h1>
+      PLAYER
+    </h1>
+    <ul>
+      <li>
+        {{ player.name }}
+      </li>
+      <li>
+        School: {{ player.team}}
+      </li>
+    </ul>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>
+            Date
+          </th>
+          <th>
+            Time
+          </th>
+          <th>
+            Opponent
+          </th>
+          <th>
+            Wins
+          </th>
+          <th>
+            Taken
+          </th>
+          <th>
+            Percent
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for game in games %}
+        <tr>
+          <td>
+            {{ game.date }}
+          </td>
+          <td>
+            {{ game.time }}
+          </td>
+          <td>
+            {{ game.opponent }}
+          </td>
+          <td>
+            {{ game.wins }}
+          </td>
+          <td>
+            {{ game.num_taken }}
+          </td>
+          <td>
+            {{ game.percent }}
+          </td>
+        </tr>
+      {% endfor %}
+        <tr>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+              {{ wins }}
+          </td>
+          <td>
+              {{ num_taken }}
+          </td>
+          <td>
+              {{ percent }}
+          </td>
+      </tbody>
+    </table>
+
+  <script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+      $("table").tablecloth({
+        theme: "stats",
+        striped: true,
+        sortable: false,
+        condensed: true
+      });
+    });
+
+  </script>
+  </body>
+</html>
