@@ -2,8 +2,7 @@
 from fogo.models import Player, Game, Ref, Faceoff
 from django.template import Context, loader, RequestContext
 from django.http import HttpResponse
-from django.shortcuts import render_to_response, redirect
-from django.db.models import Sum
+from django.shortcuts import render_to_response
 import datetime
 
 def index(request, game):
