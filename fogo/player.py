@@ -21,7 +21,7 @@ def index(request, player):
     game_ids = [x['game_id'] for x in faceoffs]
 
     # All games with one of these faceoffs
-    games = Game.objects.filter(id__in=game_ids)
+    games = Game.objects.filter(id__in=game_ids).order_by('date')
 
     for game in games:
       game.wins = int(sum([x['wins'] for x in faceoffs if x['game_id'] == game.id]))
