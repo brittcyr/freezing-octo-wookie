@@ -102,7 +102,10 @@ if __name__ == "__main__":
       continue
 
     (date, game_time, location, away_team, home_team, home_wins, num_faces, officials_list, away_score, home_score) = game_data
-    game_time = game_time + datetime.timedelta(hours=12)
+    if game_time.split(':')[0] < 9:
+      game_time_split = game_time.split(':')
+      game_time_split[0] = game_time_split[0] + 12
+      game_time = ':'.join(game_time_split)
 
     # This is for learning one team if the other is known
     team1 = faces[0][-1]
