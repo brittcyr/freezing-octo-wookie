@@ -28,8 +28,9 @@ def do_stuff():
       g.write('\n')
       g.close()
    
-def search_for_conference(team):
-  br = feedparser.parse('http://www.laxmagazine.com/college_men/DIII/standings/index')
+def search_for_conference(team, url = 'http://www.laxmagazine.com/college_men/DIII/standings/index'):
+  print team
+  br = feedparser.parse(url)
   page = BeautifulSoup(str(br))
 
   tables = page.findAll('table')
@@ -41,6 +42,9 @@ def search_for_conference(team):
         right_table = True
     if right_table:
       return table.find('h1').contents[0]
+
+  if url == 'http://www.laxmagazine.com/college_men/DIII/standings/index':
+    return search_for_conference('http://www.laxmagazine.com/college_men/DII/standings/index')
 
   return None
 
