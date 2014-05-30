@@ -45,6 +45,7 @@ def search_for_conference(team, url = 'http://www.laxmagazine.com/college_men/DI
     if right_table:
       return table.find('h1').contents[0]
 
+  # Check DII if not in D3
   if url == 'http://www.laxmagazine.com/college_men/DIII/standings/index':
     return search_for_conference(team, 'http://www.laxmagazine.com/college_men/DII/standings/index')
 
