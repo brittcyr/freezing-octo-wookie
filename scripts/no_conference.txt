@@ -1,40 +1,24 @@
-Adrian 
-Albertus Magnus 
-Bard College
-Bethany College
-Bethany College
-Delhi
-Finger Lakes Community College
-Florida Southern College
-Franklin & Marshall
-Franklin & Marshall
-Gwynedd-Mercy
-Johnson & Wales
-Johnson & Wales
-Johnson & Wales
-Johnson & Wales
-Kean University
-King's
-King's
-King's
-King's
-MSOE
-Mary Washington 
-Mass Maritime
-Mass Maritime
-Mississippi St.
-Niagara County Community College
-RPI
-RPI
-RPI
-Reinhardt
-Rivier University
-SUNY Canton
-Saint John Fisher JV
-Saint Joseph's
-Saint Joseph's
-Saint Joseph's
-Saint Joseph's
-Saint Joseph's
-Saint Mary's (Md.)
-Saint Mary's (Md.)
+Bard College	Independent
+Bethany College	Independent
+Delhi	NJCAA
+Finger Lakes Community College	NJCAA
+Florida Southern College	Sunshine State Conference
+Franklin & Marshall	Centennial Conference
+Gwynedd-Mercy	Colonial States Athletic Conference (CSAC)
+Johnson & Wales	Great Northeast Athletic Conference (GNAC)
+Kean University	Skyline Conference
+King's	MAC Freedom
+MSOE	Midwest Conference
+Mass Maritime	NEWMAC
+Mississippi St.	NCLL
+Niagara County Community College	WNYAC
+RPI	Liberty League
+Reinhardt	MCLA
+Rivier University	Great Northeast Athletic Conference (GNAC)
+SUNY Canton	Independent
+Saint John Fisher JV	Independent
+Saint Joseph's	Great Northeast Athletic Conference (GNAC)
+Saint Mary's (Md.)	Capital Athletic Conference (CAC)
+Thomas College	North Atlantic Conference (NAC)
+Transylvania University	Independent
+Westminster	MCLA

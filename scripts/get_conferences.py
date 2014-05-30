@@ -8,25 +8,30 @@ def do_stuff():
   mapping = {}
   for line in f:
     [name, team] = line.split('\t')
-    mapping[name] = team
+    mapping[name.strip()] = team.strip()
 
   f.close()
 
-  for team in sorted(mapping.values()):
+  for team in sorted(list(set(mapping.values()))):
+    team = team.strip()
     found = False
     for a in mapping:
-      if mapping[a] != team:
+      if mapping[a].strip() != team:
         continue
 
       findings = search_for_conference(a)
       if findings:
-        print team, findings
+        h = open('team_to_conference.txt', 'a')
+        h.write(team + '\t' + findings)
+        h.write('\n')
+        h.close()
         found = True
         break
 
     if not found:
       g = open('no_conference.txt', 'a')
       g.write(team)
+      g.write('\n')
       g.close()
 
 def search_for_conference(team, url = 'http://www.laxmagazine.com/college_men/DIII/standings/index'):

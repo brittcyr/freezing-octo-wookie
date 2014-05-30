@@ -1,0 +1,217 @@
+Adams St.	Western Intercollegiate Lacrosse Association
+Adrian	Michigan Intercollegiate (MIAA)
+Albertus Magnus	Great Northeast Athletic Conference (GNAC)
+Albion	Michigan Intercollegiate (MIAA)
+Albright	MAC Commonwealth
+Alfred	Empire 8
+Alma	Michigan Intercollegiate (MIAA)
+Alvernia	MAC Commonwealth
+Amherst	NESCAC
+Anna Maria	Great Northeast Athletic Conference (GNAC)
+Arcadia	MAC Freedom
+Augustana	Midwest Conference
+Aurora	Midwest Conference
+Babson	NEWMAC
+Baldwin Wallace	Ohio Athletic Conference
+Bard	Independent
+Bates	NESCAC
+Becker	Great Northeast Athletic Conference (GNAC)
+Beloit	Independent
+Benedictine	Midwest Conference
+Berry	Southern Athletic Association (SAA)
+Bethany	Independent
+Birmingham Southern	Southern Athletic Association (SAA)
+Bowdoin	NESCAC
+Bridgewater	Old Dominion Athletic Conference (ODAC)
+Brockport	SUNYAC
+Bryn Athyn	Independent
+Cabrini	Colonial States Athletic Conference (CSAC)
+Calvin	Michigan Intercollegiate (MIAA)
+Canton	Independent
+Capital	Ohio Athletic Conference
+Carthage	Midwest Conference
+Castleton	North Atlantic Conference (NAC)
+Catholic	Landmark Conference
+Cazenovia	North Eastern Athletic Conference (NEAC)
+Centenary (LA)	Independent
+Centenary (N.J.)	Colonial States Athletic Conference (CSAC)
+Centre	Southern Athletic Association (SAA)
+Christopher Newport	Capital Athletic Conference (CAC)
+Clark	Liberty League
+Clarkson	Liberty League
+Cobleskill	North Eastern Athletic Conference (NEAC)
+Colby	NESCAC
+Colorado College	Independent
+Concordia	Midwest Conference
+Connecticut College	NESCAC
+Cortland	SUNYAC
+Curry	Commonwealth Conference
+Daniel Webster	Great Northeast Athletic Conference (GNAC)
+DePauw	North Coast Athletic Conference (NCAC)
+DeSales	MAC Freedom
+Defiance	Midwest Conference
+Denison	North Coast Athletic Conference (NCAC)
+Dickinson	Centennial Conference
+Dist. Columbia	East Coast Conference (ECC)
+Dominican (Cal.)	Western Intercollegiate Lacrosse Association
+Drew	Landmark Conference
+Dubuque	Independent
+Eastern	Little East
+Eastern Conn. St.	Little East
+Elizabethtown	MAC Commonwealth
+Elmhurst	Midwest Conference
+Elmira	Empire 8
+Emerson	NEWMAC
+Emmanuel	Great Northeast Athletic Conference (GNAC)
+Endicott	Commonwealth Conference
+Fairleigh Dickinson University	MAC Freedom
+Farmingdale State	Skyline Conference
+Ferrum	Independent
+Fontbonne	Midwest Conference
+Franciscan	Independent
+Frostburg	Capital Athletic Conference (CAC)
+Geneseo	SUNYAC
+Gettysburg	Centennial Conference
+Gordon	Commonwealth Conference
+Goucher	Landmark Conference
+Green Mountain	North Atlantic Conference (NAC)
+Greensboro	Independent
+Guilford	Old Dominion Athletic Conference (ODAC)
+Gwynedd Mercy	Colonial States Athletic Conference (CSAC)
+Hamilton	NESCAC
+Hampden-Sydney	Old Dominion Athletic Conference (ODAC)
+Hanover	Midwest Conference
+Hartwick	Empire 8
+Haverford	Centennial Conference
+Hendrix	Southern Athletic Association (SAA)
+Hilbert	North Eastern Athletic Conference (NEAC)
+Hiram	North Coast Athletic Conference (NCAC)
+Hood	MAC Commonwealth
+Hope	Michigan Intercollegiate (MIAA)
+Houghton	Independent
+Huntingdon	Independent
+Husson	North Atlantic Conference (NAC)
+Illinois Wesleyan	Independent
+Immaculata	Colonial States Athletic Conference (CSAC)
+Ithaca	Empire 8
+John Carroll	Ohio Athletic Conference
+Johnson State	North Atlantic Conference (NAC)
+Keene State	Little East
+Kenyon	North Coast Athletic Conference (NCAC)
+Keuka	North Eastern Athletic Conference (NEAC)
+La Roche	Independent
+Lasell	Great Northeast Athletic Conference (GNAC)
+Lebanon Valley	MAC Commonwealth
+Lycoming	MAC Commonwealth
+Lynchburg	Old Dominion Athletic Conference (ODAC)
+Lyndon State	North Atlantic Conference (NAC)
+MIT	NEWMAC
+MSJ	Midwest Conference
+Maine Maritime	North Atlantic Conference (NAC)
+Maine-Farmington	North Atlantic Conference (NAC)
+Manhattanville	MAC Freedom
+Maritime	NEWMAC
+Mary Washington	Capital Athletic Conference (CAC)
+Marymount (Va.)	Capital Athletic Conference (CAC)
+Marywood	Colonial States Athletic Conference (CSAC)
+Mass. Maritime	NEWMAC
+McDaniel	Centennial Conference
+Medaille	North Eastern Athletic Conference (NEAC)
+Merchant Marine	Landmark Conference
+Messiah	MAC Commonwealth
+Methodist	Independent
+Middlebury	NESCAC
+Millsaps	Southern Athletic Association (SAA)
+Milwaukee Engr.	Midwest Conference
+Misericordia	MAC Freedom
+Mitchell	Independent
+Montclair State	Skyline Conference
+Morrisville State	North Eastern Athletic Conference (NEAC)
+Mount Ida	Great Northeast Athletic Conference (GNAC)
+Mount Saint Mary	Skyline Conference
+Mount Saint Vincent	Skyline Conference
+Mount Union	Ohio Athletic Conference
+Muhlenberg	Centennial Conference
+Nazareth	Empire 8
+Neumann	Colonial States Athletic Conference (CSAC)
+New England College	North Atlantic Conference (NAC)
+Nichols	Commonwealth Conference
+Norwich	Great Northeast Athletic Conference (GNAC)
+Oberlin	North Coast Athletic Conference (NCAC)
+Oglethorpe	Southern Athletic Association (SAA)
+Ohio Wesleyan	North Coast Athletic Conference (NCAC)
+Olivet	Michigan Intercollegiate (MIAA)
+Oneonta	SUNYAC
+Oswego	SUNYAC
+Otterbein	Ohio Athletic Conference
+Piedmont	Independent
+Plattsburgh State	SUNYAC
+Plymouth State	Little East
+Potsdam	SUNYAC
+RIT	Liberty League
+Randolph	Old Dominion Athletic Conference (ODAC)
+Randolph-Macon	Old Dominion Athletic Conference (ODAC)
+Regis	Independent
+Rensselaer	Liberty League
+Rhodes	Southern Athletic Association (SAA)
+Richard Stockton	Skyline Conference
+Rivier	Great Northeast Athletic Conference (GNAC)
+Roanoke	Old Dominion Athletic Conference (ODAC)
+Rockhurst	Independent
+Roger Williams	Commonwealth Conference
+Rosemont	Colonial States Athletic Conference (CSAC)
+SUNYIT	North Eastern Athletic Conference (NEAC)
+Saint John Fisher	Empire 8
+Saint Lawrence	Liberty League
+Saint Leo	Sunshine State Conference
+Saint Vincent	Independent
+Salem State	Little East
+Salisbury	Capital Athletic Conference (CAC)
+Salve Regina	Commonwealth Conference
+Scranton	Landmark Conference
+Sewanee	Southern Athletic Association (SAA)
+Shenandoah	Old Dominion Athletic Conference (ODAC)
+Shorter	Independent
+Skidmore	Liberty League
+Southern Maine	Little East
+Southern Virginia	Capital Athletic Conference (CAC)
+Southwestern (Tex.)	Independent
+Springfield	NEWMAC
+Stevens	Empire 8
+Stevenson	MAC Commonwealth
+Stockton	Skyline Conference
+Susquehanna	Landmark Conference
+Swarthmore	Centennial Conference
+Thiel	Independent
+Thomas	North Atlantic Conference (NAC)
+Transylvania	Independent
+Trine	Michigan Intercollegiate (MIAA)
+Trinity	NESCAC
+Tufts	NESCAC
+UMass Boston	Little East
+UMass Dartmouth	Little East
+UNE	Commonwealth Conference
+Union	Liberty League
+Ursinus	Centennial Conference
+Utica	Empire 8
+Vassar	Liberty League
+Virginia Wesleyan	Old Dominion Athletic Conference (ODAC)
+Walsh	East Coast Athletic Conference (ECAC)
+Washington & Jefferson	Landmark Conference
+Washington & Lee	Old Dominion Athletic Conference (ODAC)
+Washington College	Centennial Conference
+Wells	North Eastern Athletic Conference (NEAC)
+Wentworth	Commonwealth Conference
+Wesley	Capital Athletic Conference (CAC)
+Wesleyan	NESCAC
+Western Connecticut	Little East
+Western New England	Commonwealth Conference
+Wheaton	NEWMAC
+Whittier	Independent
+Widener	MAC Commonwealth
+Williams	Commonwealth Conference
+Wilmington	Ohio Athletic Conference
+Wittenberg	North Coast Athletic Conference (NCAC)
+Wooster	North Coast Athletic Conference (NCAC)
+York	Capital Athletic Conference (CAC)
+Young Harris	Independent
