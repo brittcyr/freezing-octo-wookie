@@ -45,25 +45,25 @@ def get_faces(url):
         break
 
     table = statbox.find("table").findAll("tr")
-
     faces = []
-
     currentQuarter = 0
-    violationHome = 0
-    violationAway = 0
-    for row in table:
+    last_row_face = False
+    current_face = None
 
+    for row in table:
       # This is where we enter a new quarter
       if hasattr(row.contents[0], 'tag') and row.find("th"):
         # Maintain quarter
         currentQuarter += 1
-        if currentQuarter == 3:
-          violationHome = 0
-          violationAway = 0
-        continue
+
+      if last_row_face and current_face:
+        faces.append(current_face)
+        current_face = None
+      last_row_face = False
 
       # At a faceoff
       if 'Faceoff' in str(row):
+        last_row_face = True
         time = row.find("td").contents[0]
 
         face_data = str(row.findAll("td")[1].contents[0]).split('Faceoff ')[1]
@@ -93,12 +93,18 @@ def get_faces(url):
 
         winner = format_winner(winner)
 
-        print currentQuarter, time, home, away, winner
-        faces.append((currentQuarter, time, home, away, winner ))
+        gb = False
+        ind = max(str(row).find('ground'), str(row).find('Ground'), str(row).find('GB'))
+        if ind > 0:
+          if home in str(row)[ind:] or away in str(row)[ind:]:
+            gb = True
+
+        print currentQuarter, time, home, away, winner, gb
+        current_face = (currentQuarter, time, home, away, winner, gb)
     return faces
   except:
     return get_faces_other_type(url)
-    # currentQuarter, home, away, winner, time
+    # currentQuarter, time, home, away, winner
 
 
 def get_faces_other_type(url):
@@ -148,11 +154,12 @@ def get_faces_other_type(url):
 
           if '(' in winner:
             winner = winner.split(' (')[0]
- 
+
           winner = format_winner(winner)
 
           print currentQuarter, time, home, away, winner
-          faces.append((currentQuarter, time, home, away, winner ))
+
+          faces.append((currentQuarter, time, home, away, winner, False))
     return faces
 
   except :

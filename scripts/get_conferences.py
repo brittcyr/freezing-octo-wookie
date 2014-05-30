@@ -24,7 +24,7 @@ def do_stuff():
         break
 
     if not found:
-      g = open('no_conference.txt', 'w')
+      g = open('no_conference.txt', 'a')
       g.write(team)
       g.write('\n')
       g.close()

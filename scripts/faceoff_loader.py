@@ -113,7 +113,7 @@ if __name__ == "__main__":
 
     count_team1 = 0
     for face in faces:
-      (currentQuarter, time, home, away, winner) = face
+      (currentQuarter, time, home, away, winner, _) = face
       if winner != team1:
         team2 = winner
       else:
