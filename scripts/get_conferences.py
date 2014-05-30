@@ -17,17 +17,18 @@ def do_stuff():
     for a in mapping:
       if mapping[a] != team:
         continue
-     
+
       findings = search_for_conference(a)
       if findings:
         found = True
+        break
 
     if not found:
-      g = open('no_conference.txt')
+      g = open('no_conference.txt', 'w')
       g.write(team)
       g.write('\n')
       g.close()
-   
+
 def search_for_conference(team, url = 'http://www.laxmagazine.com/college_men/DIII/standings/index'):
   print team
   br = feedparser.parse(url)
@@ -40,14 +41,15 @@ def search_for_conference(team, url = 'http://www.laxmagazine.com/college_men/DI
     for link in links:
       if team in str(link):
         right_table = True
+        break
     if right_table:
       return table.find('h1').contents[0]
 
   if url == 'http://www.laxmagazine.com/college_men/DIII/standings/index':
-    return search_for_conference('http://www.laxmagazine.com/college_men/DII/standings/index')
+    return search_for_conference(team, 'http://www.laxmagazine.com/college_men/DII/standings/index')
 
   return None
 
-    
+
 if __name__ == "__main__":
   do_stuff()
