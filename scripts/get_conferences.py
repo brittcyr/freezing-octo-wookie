@@ -20,6 +20,7 @@ def do_stuff():
 
       findings = search_for_conference(a)
       if findings:
+        print team, findings
         found = True
         break
 
