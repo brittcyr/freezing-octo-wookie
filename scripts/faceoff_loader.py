@@ -43,6 +43,31 @@ conferences3 = [
 laxmag = 'http://www.laxmagazine.com/college_men/DIII/2013-14/schedule?date=20140101'
 
 
+# get the conference from txt files
+def get_conference(_team):
+  f = open('team_to_conference.txt', 'r')
+  for line in f:
+    [team, conference] = line.split('\t')
+    team = team.strip()
+    conference = conference.strip()
+    if _team.strip() == team:
+      f.close()
+      return conference
+
+  f = open('no_conference.txt', 'r')
+  for line in f:
+    [team, conference] = line.split('\t')
+    team = team.strip()
+    conference = conference.strip()
+    if _team.strip() == team:
+      f.close()
+      return conference
+
+  # Should not get here
+  return 'Independent'
+
+
+
 # Loading the game into db assuming that already checked it does not exist in db
 def load_game_to_db(_date, _time, _home, _away, _site, _home_wins, _total_face, link, _away_score, _home_score):
   _date = datetime.datetime.strptime(_date, '%m/%d/%Y')
@@ -135,12 +160,14 @@ if __name__ == "__main__":
     home_team_db = Team.objects.filter(name=home_team)
     away_team_db = Team.objects.filter(name=away_team)
     if not home_team_db:
-      home_team_db = Team(name=home_team)
+      conference = get_conference(home_team)
+      home_team_db = Team(name=home_team, conference=conference)
       home_team_db.save()
     else:
       home_team_db = home_team_db[0]
     if not away_team_db:
-      away_team_db = Team(name=away_team)
+      conference = get_conference(away_team)
+      away_team_db = Team(name=away_team, conference=conference)
       away_team_db.save()
     else:
       away_team_db = away_team_db[0]
