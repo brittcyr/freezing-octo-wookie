@@ -154,7 +154,7 @@ if __name__ == "__main__":
       officials = load_officials_to_db(officials_list, game)
 
     for face in faces:
-      (currentQuarter, face_time, home, away, winner) = face
+      (currentQuarter, face_time, home, away, winner, _) = face
       if winner == team1:
         winner = decide(home_team, away_team, winner, other=team2, hint=hint)
       else:

@@ -12,7 +12,7 @@ def do_stuff():
 
   f.close()
 
-  for team in mapping.values():
+  for team in sorted(mapping.values()):
     found = False
     for a in mapping:
       if mapping[a] != team:
@@ -26,7 +26,6 @@ def do_stuff():
     if not found:
       g = open('no_conference.txt', 'a')
       g.write(team)
-      g.write('\n')
       g.close()
 
 def search_for_conference(team, url = 'http://www.laxmagazine.com/college_men/DIII/standings/index'):

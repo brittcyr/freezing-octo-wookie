@@ -57,8 +57,27 @@ def get_faces(url):
         currentQuarter += 1
 
       if last_row_face and current_face:
+        home = current_face[2]
+        away = current_face[3]
+        ind = max(str(row).find('ground'), str(row).find('Ground'), str(row).find('GB'), str(row).find('Draw'))
+        gb = False
+        if ind > 0:
+          if home in str(row)[ind:] or away in str(row)[ind:]:
+            gb = True
+          home_flipped = ', '.join(reversed(home.split(' ')))
+          away_flipped = ', '.join(reversed(away.split(' ')))
+          if home_flipped in str(row)[ind:] or away_flipped in str(row)[ind:]:
+            gb = True
+        is_gb = current_face[5] or gb
+        l = list(current_face)
+        l[5] = is_gb
+        current_face = tuple(l)
         faces.append(current_face)
+        print current_face
+
         current_face = None
+
+      # last row face is whether the last row is a face
       last_row_face = False
 
       # At a faceoff
@@ -94,12 +113,15 @@ def get_faces(url):
         winner = format_winner(winner)
 
         gb = False
-        ind = max(str(row).find('ground'), str(row).find('Ground'), str(row).find('GB'))
+        ind = max(str(row).find('ground'), str(row).find('Ground'), str(row).find('GB'), str(row).find('Draw'))
         if ind > 0:
           if home in str(row)[ind:] or away in str(row)[ind:]:
             gb = True
+          home_flipped = ', '.join(reversed(home.split(' ')))
+          away_flipped = ', '.join(reversed(away.split(' ')))
+          if home_flipped in str(row)[ind:] or away_flipped in str(row)[ind:]:
+            gb = True
 
-        print currentQuarter, time, home, away, winner, gb
         current_face = (currentQuarter, time, home, away, winner, gb)
     return faces
   except:
@@ -121,12 +143,42 @@ def get_faces_other_type(url):
     table = [x.findAll("tr") for x in statbox]
 
     currentQuarter = 0
+    last_row_face = False
+    current_face = None
+
     for ind in range(len(table)):
       quarter = table[ind]
       currentQuarter = ind + 1
       for row in quarter:
+
+        # if the last fow was a faceoff
+        if last_row_face and current_face:
+          home = current_face[2]
+          away = current_face[3]
+          ind = max(str(row).find('ground'), str(row).find('Ground'), str(row).find('GB'), str(row).find('Draw'))
+          gb = False
+          if ind > 0:
+            if home in str(row)[ind:] or away in str(row)[ind:]:
+              gb = True
+            home_flipped = ', '.join(reversed(home.split(' ')))
+            away_flipped = ', '.join(reversed(away.split(' ')))
+            if home_flipped in str(row)[ind:] or away_flipped in str(row)[ind:]:
+              gb = True
+          is_gb = current_face[5] or gb
+          l = list(current_face)
+          l[5] = is_gb
+          current_face = tuple(l)
+          faces.append(current_face)
+          print current_face
+
+          current_face = None
+
+        # last row face is whether the last row is a face
+        last_row_face = False
+
         # At a faceoff
         if 'Faceoff' in str(row):
+          last_row_face = True
           time = row.find("td").contents[0]
           time = time[1:-1]
 
@@ -157,9 +209,17 @@ def get_faces_other_type(url):
 
           winner = format_winner(winner)
 
-          print currentQuarter, time, home, away, winner
+          gb = False
+          ind = max(str(row).find('ground'), str(row).find('Ground'), str(row).find('GB'), str(row).find('Draw'))
+          if ind > 0:
+            if home in str(row)[ind:] or away in str(row)[ind:]:
+              gb = True
+            home_flipped = ', '.join(reversed(home.split(' ')))
+            away_flipped = ', '.join(reversed(away.split(' ')))
+            if home_flipped in str(row)[ind:] or away_flipped in str(row)[ind:]:
+              gb = True
 
-          faces.append((currentQuarter, time, home, away, winner, False))
+          current_face = (currentQuarter, time, home, away, winner, gb)
     return faces
 
   except :
@@ -167,7 +227,9 @@ def get_faces_other_type(url):
     return None
 
 if __name__ == '__main__':
-  get_faces('http://www.generalssports.com/sports/mlax/2013-14/boxscores/20140329_b213.xml?view=plays')
+  get_faces('http://www.ritathletics.com/boxscore.aspx?id=7226&path=mlax')
+  #get_faces('http://www.mlc-mwlc.org/sports/mlax/2013-14/boxscores/20140423_wnd9.xml')
+  #get_faces('http://www.generalssports.com/sports/mlax/2013-14/boxscores/20140329_b213.xml?view=plays')
   #get_faces('http://www.mitchellathletics.com/sports/mlax/2013-14/boxscores/20140412_v9l5.xml?view=undefined')
   #get_faces('http://www.ritathletics.com/boxscore.aspx?id=7227&path=mlax')
   #get_faces('http://www.laxmagazine.com/links/b9gzz2')
