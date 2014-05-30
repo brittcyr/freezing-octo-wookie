@@ -62,11 +62,11 @@ def get_faces(url):
         ind = max(str(row).find('ground'), str(row).find('Ground'), str(row).find('GB'), str(row).find('Draw'))
         gb = False
         if ind > 0:
-          if home in str(row)[ind:] or away in str(row)[ind:]:
+          if home.lower() in str(row)[ind:].lower() or away.lower() in str(row)[ind:].lower():
             gb = True
           home_flipped = ', '.join(reversed(home.split(' ')))
           away_flipped = ', '.join(reversed(away.split(' ')))
-          if home_flipped in str(row)[ind:] or away_flipped in str(row)[ind:]:
+          if home_flipped.lower() in str(row)[ind:].lower() or away_flipped.lower() in str(row)[ind:].lower():
             gb = True
         is_gb = current_face[5] or gb
         l = list(current_face)
@@ -115,11 +115,11 @@ def get_faces(url):
         gb = False
         ind = max(str(row).find('ground'), str(row).find('Ground'), str(row).find('GB'), str(row).find('Draw'))
         if ind > 0:
-          if home in str(row)[ind:] or away in str(row)[ind:]:
+          if home.lower() in str(row)[ind:].lower() or away.lower() in str(row)[ind:].lower():
             gb = True
           home_flipped = ', '.join(reversed(home.split(' ')))
           away_flipped = ', '.join(reversed(away.split(' ')))
-          if home_flipped in str(row)[ind:] or away_flipped in str(row)[ind:]:
+          if home_flipped.lower() in str(row)[ind:].lower() or away_flipped.lower() in str(row)[ind:].lower():
             gb = True
 
         current_face = (currentQuarter, time, home, away, winner, gb)
@@ -158,11 +158,11 @@ def get_faces_other_type(url):
           ind = max(str(row).find('ground'), str(row).find('Ground'), str(row).find('GB'), str(row).find('Draw'))
           gb = False
           if ind > 0:
-            if home in str(row)[ind:] or away in str(row)[ind:]:
+            if home.lower() in str(row)[ind:].lower() or away.lower() in str(row)[ind:].lower():
               gb = True
             home_flipped = ', '.join(reversed(home.split(' ')))
             away_flipped = ', '.join(reversed(away.split(' ')))
-            if home_flipped in str(row)[ind:] or away_flipped in str(row)[ind:]:
+            if home_flipped.lower() in str(row)[ind:].lower() or away_flipped.lower() in str(row)[ind:].lower():
               gb = True
           is_gb = current_face[5] or gb
           l = list(current_face)
@@ -212,11 +212,11 @@ def get_faces_other_type(url):
           gb = False
           ind = max(str(row).find('ground'), str(row).find('Ground'), str(row).find('GB'), str(row).find('Draw'))
           if ind > 0:
-            if home in str(row)[ind:] or away in str(row)[ind:]:
+            if home.lower() in str(row)[ind:].lower() or away.lower() in str(row)[ind:].lower():
               gb = True
             home_flipped = ', '.join(reversed(home.split(' ')))
             away_flipped = ', '.join(reversed(away.split(' ')))
-            if home_flipped in str(row)[ind:] or away_flipped in str(row)[ind:]:
+            if home_flipped.lower() in str(row)[ind:].lower() or away_flipped.lower() in str(row)[ind:].lower():
               gb = True
 
           current_face = (currentQuarter, time, home, away, winner, gb)
@@ -227,7 +227,8 @@ def get_faces_other_type(url):
     return None
 
 if __name__ == '__main__':
-  get_faces('http://www.ritathletics.com/boxscore.aspx?id=7226&path=mlax')
+  get_faces('http://middlebury.prestosports.com/sports/mlax/2013-14/boxscores/20140315_y4vr.xml?view=plays')
+  #get_faces('http://www.ritathletics.com/boxscore.aspx?id=7226&path=mlax')
   #get_faces('http://www.mlc-mwlc.org/sports/mlax/2013-14/boxscores/20140423_wnd9.xml')
   #get_faces('http://www.generalssports.com/sports/mlax/2013-14/boxscores/20140329_b213.xml?view=plays')
   #get_faces('http://www.mitchellathletics.com/sports/mlax/2013-14/boxscores/20140412_v9l5.xml?view=undefined')
