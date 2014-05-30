@@ -1,0 +1,49 @@
+#!/usr/bin/env python
+from BeautifulSoup import BeautifulSoup
+import feedparser
+import urlparse
+
+def do_stuff():
+  f = open('team_to_name.txt', 'r')
+  mapping = {}
+  for line in f:
+    [name, team] = line.split('\t')
+    mapping[name] = team
+
+  f.close()
+
+  for team in mapping.values():
+    found = False
+    for a in mapping:
+      if mapping[a] != team:
+        continue
+     
+      findings = search_for_conference(a)
+      if findings:
+        found = True
+
+    if not found:
+      g = open('no_conference.txt')
+      g.write(team)
+      g.write('\n')
+      g.close()
+   
+def search_for_conference(team):
+  br = feedparser.parse('http://www.laxmagazine.com/college_men/DIII/standings/index')
+  page = BeautifulSoup(str(br))
+
+  tables = page.findAll('table')
+  for table in tables:
+    links = table.findAll('a')
+    right_table = False
+    for link in links:
+      if team in str(link):
+        right_table = True
+    if right_table:
+      return table.find('h1').contents[0]
+
+  return None
+
+    
+if __name__ == "__main__":
+  do_stuff()
