@@ -69,8 +69,10 @@ def get_faces(url):
           if home_flipped.lower() in str(row)[ind:].lower() or away_flipped.lower() in str(row)[ind:].lower():
             gb = True
         is_gb = current_face[5] or gb
+        is_violation = current_face[6] or 'violation' in str(row).lower()
         l = list(current_face)
         l[5] = is_gb
+        l[6] = is_violation
         current_face = tuple(l)
         faces.append(current_face)
         print current_face
@@ -122,7 +124,9 @@ def get_faces(url):
           if home_flipped.lower() in str(row)[ind:].lower() or away_flipped.lower() in str(row)[ind:].lower():
             gb = True
 
-        current_face = (currentQuarter, time, home, away, winner, gb)
+        violation = 'violation' in str(row).lower()
+
+        current_face = (currentQuarter, time, home, away, winner, gb, violation)
     return faces
   except:
     return get_faces_other_type(url)
@@ -165,8 +169,10 @@ def get_faces_other_type(url):
             if home_flipped.lower() in str(row)[ind:].lower() or away_flipped.lower() in str(row)[ind:].lower():
               gb = True
           is_gb = current_face[5] or gb
+          is_violation = current_face[6] or 'violation' in str(row).lower()
           l = list(current_face)
           l[5] = is_gb
+          l[6] = is_violation
           current_face = tuple(l)
           faces.append(current_face)
           print current_face
@@ -219,7 +225,9 @@ def get_faces_other_type(url):
             if home_flipped.lower() in str(row)[ind:].lower() or away_flipped.lower() in str(row)[ind:].lower():
               gb = True
 
-          current_face = (currentQuarter, time, home, away, winner, gb)
+          violation = 'violation' in str(row).lower()
+
+          current_face = (currentQuarter, time, home, away, winner, gb, violation)
     return faces
 
   except :
