@@ -133,8 +133,8 @@ if __name__ == "__main__":
       game_time = ':'.join(game_time_split)
 
     # This is for learning one team if the other is known
-    team1 = faces[0][-1]
-    team2 = faces[-1][-1]
+    team1 = faces[0][4]
+    team2 = faces[-1][4]
 
     count_team1 = 0
     for face in faces:

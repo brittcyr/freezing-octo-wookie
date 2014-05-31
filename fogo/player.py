@@ -17,6 +17,10 @@ def index(request, player):
                                    .values('game_id') \
                                    .annotate(wins=Sum('winner')) \
                                    .annotate(num_taken=Count('winner'))
+    # Have to flip this because wins are 0 on the road
+    for face in away_faceoffs:
+        face['wins'] = face['num_taken'] - face['wins']
+
     faceoffs = [x for x in home_faceoffs] + [y for y in away_faceoffs]
     game_ids = [x['game_id'] for x in faceoffs]
 

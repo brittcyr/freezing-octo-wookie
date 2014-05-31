@@ -7,7 +7,7 @@ class Team(models.Model):
   # url
   # logo
   # location
-  conference = models.CharField(max_length=40)
+  conference = models.CharField(max_length=60)
 
   def __unicode__(self):
     return self.name
