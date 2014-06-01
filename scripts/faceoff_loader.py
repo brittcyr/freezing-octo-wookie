@@ -203,6 +203,7 @@ if __name__ == "__main__":
       else:
         away_player = away_player[0]
 
+      # make sure that there is a 00: for every face so that it is in hours:min:sec
       face_time = '00:' + face_time
 
       f = Faceoff(
