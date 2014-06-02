@@ -3,6 +3,7 @@ import re
 from BeautifulSoup import BeautifulSoup
 import feedparser
 import HTMLParser
+import collections
 
 def format_name(name):
   if len(name.split(', ')) == 2:
@@ -25,6 +26,9 @@ def format_winner(winner):
   winner = winner.replace('\\', '')
   return winner
 
+def decide_reason(plays_queue):
+ pass
+
 def get_faces(url):
   try:
     html_parser = HTMLParser.HTMLParser()
@@ -37,6 +41,8 @@ def get_faces(url):
     br = feedparser.parse(current_page)
     statboxes = BeautifulSoup(str(br)).findAll("div", {"class" :"stats-fullbox clearfix"})
     statbox = statboxes[-1]
+
+    plays_queue = collections.deque(maxlen=5)
 
     # In case there are multiple statboxes on the page
     for box in statboxes:
@@ -51,6 +57,8 @@ def get_faces(url):
     current_face = None
 
     for row in table:
+      plays_queue.appendleft(str(row))
+
       # This is where we enter a new quarter
       if hasattr(row.contents[0], 'tag') and row.find("th"):
         # Maintain quarter
@@ -139,6 +147,8 @@ def get_faces_other_type(url):
     statbox = BeautifulSoup(str(br)).findAll("table", {"class" :"center_wide"})
     html_parser = HTMLParser.HTMLParser()
 
+    plays_queue = collections.deque(maxlen=5)
+
     faces = []
 
     # Remove duplicates
@@ -154,6 +164,8 @@ def get_faces_other_type(url):
       quarter = table[ind]
       currentQuarter = ind + 1
       for row in quarter:
+        # Handle the queue of recent plays
+        plays_queue.appendleft(str(row))
 
         # if the last fow was a faceoff
         if last_row_face and current_face:
