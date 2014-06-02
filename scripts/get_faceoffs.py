@@ -31,14 +31,22 @@ def decide_reason(plays_queue, quarter, time):
   if quarter < 5:
     if time[0:1] == '15' or (time[0:1] == '14' and int(time[-2:-1]) >= 58):
       # If it was this close to the start of the quarter assume it was start
-      return 0
+      return 'QUARTER'
   else:
     if time == '4:00' or time =='04:00':
       # If it was the start of an overtime
-      return 0
+      return 'QUARTER'
 
-  # TODO: FIX this to decide who scored
-  return 1
+  for play in plays_queue:
+    if 'goal' in play.lower():
+      goal_ind = play.lower().index('goal')
+      # this play is the goal
+
+      after_ind = play[goal_ind:]
+      by = after_ind.split(' ')[2]
+      return by
+
+  return 'QUARTER'
 
 
 def get_faces(url):
