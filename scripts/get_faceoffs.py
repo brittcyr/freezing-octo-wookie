@@ -203,7 +203,12 @@ def get_faces_other_type(url):
           l[5] = is_gb
           l[6] = is_violation
           current_face = tuple(l)
-          reason = decide_reason(plays_queue)
+
+          # This should make it easier to decide if it was the start of a quarter
+          quarter_of_face = l[0]
+          face_time = l[1]
+          reason = decide_reason(plays_queue, quarter_of_face, face_time)
+
           faces.append(current_face)
           print current_face
 
