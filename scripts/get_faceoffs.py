@@ -38,7 +38,7 @@ def decide_reason(plays_queue, quarter, time):
       return 'QUARTER'
 
   for play in plays_queue:
-    if 'goal ' in play.lower():
+    if 'goal by' in play.lower():
       goal_ind = play.lower().index('goal')
       # this play is the goal
 
