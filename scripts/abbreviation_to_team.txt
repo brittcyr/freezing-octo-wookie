@@ -526,3 +526,16 @@ DELHI	Delhi
 UMF	Maine-Farmington
 W&amp;L	Washington & Lee
 BALDWIN	Baldwin Wallace
+MSJM	MSJ
+SMML14	Southern Maine
+CONN	Connecticut College
+DANIEL	Daniel Webster
+ALFRED	Alfred
+CONNML	Connecticut College
+AUGUSTAN	Augustana
+FISHER-M	Saint John Fisher
+MSJ	MSJ
+WHEM	Wheaton
+NE	UNE
+TRI	Trinity
+MOUNT	Mount Union

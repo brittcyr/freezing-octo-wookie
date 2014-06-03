@@ -29,7 +29,7 @@ def format_winner(winner):
 def decide_reason(plays_queue, quarter, time):
   # If it was the start of a quarter, make it a 0
   if quarter < 5:
-    if int(time.split(':')[0]) == 15 or (time[0:1] == '14' and int(time[-2:-1]) >= 58):
+    if int(time.split(':')[0]) == 15 or (int(time.split(':')[0]) == 14 and int(time.split(':')[1]) >= 58:
     # If it was this close to the start of the quarter assume it was start
       return 'QUARTER'
   else:
@@ -49,6 +49,9 @@ def decide_reason(plays_queue, quarter, time):
       by = by.strip()
       by = format_winner(by)
       return by
+
+    if 'quarter' in play.lower():
+      return 'QUARTER'
 
   return 'QUARTER'
 
