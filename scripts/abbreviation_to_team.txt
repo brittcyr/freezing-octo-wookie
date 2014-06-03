@@ -509,3 +509,6 @@ FISHER	Saint John Fisher
 BENU	Benedictine
 HARTWI~1	Hartwick
 ALMACOLL	Alma
+AUGIE	Augustana
+SLU_M	Saint Lawrence
+YCP	York

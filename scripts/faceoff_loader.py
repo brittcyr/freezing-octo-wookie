@@ -206,6 +206,19 @@ if __name__ == "__main__":
       # make sure that there is a 00: for every face so that it is in hours:min:sec
       face_time = '00:' + face_time
 
+      if reason == 'QUARTER':
+        reason = 0
+      else:
+        other = None
+        if reason == team1:
+          other = team2
+        if reason == team2:
+          other = team1
+        if other:
+          reason = 1 if decide(home_team, away_team, reason, other) else -1
+        else:
+          reason = 1 if decide(home_team, away_team, reason) else -1
+
       f = Faceoff(
         away=away_player,
         home=home_player,
@@ -215,6 +228,7 @@ if __name__ == "__main__":
         quarter=currentQuarter,
         gb=gb,
         violation=violation,
+        reason=reason,
       )
       f.save()
 

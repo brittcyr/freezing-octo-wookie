@@ -73,6 +73,7 @@ class Faceoff(models.Model):
   winner = models.BooleanField()	# TRUE is home, FALSE is away / None
   time = models.TimeField()
   quarter = models.IntegerField()
+  reason = models.IntegerField()	# 0 is for start of quarter, 1 for home goal, -1 for away goal
   violation = models.BooleanField()
   gb = models.NullBooleanField()		# TRUE is fogo gb, FALSE is no gb
   wing = models.NullBooleanField()		# TRUE is CT or GB from wings
