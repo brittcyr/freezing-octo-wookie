@@ -38,12 +38,15 @@ def decide_reason(plays_queue, quarter, time):
       return 'QUARTER'
 
   for play in plays_queue:
-    if 'goal' in play.lower():
+    if 'goal ' in play.lower():
       goal_ind = play.lower().index('goal')
       # this play is the goal
 
       after_ind = play[goal_ind:]
       by = after_ind.split(' ')[2]
+      if '<' in by:
+        by = by.split('<')[0]
+      by = by.strip()
       return by
 
   return 'QUARTER'
@@ -62,7 +65,7 @@ def get_faces(url):
     statboxes = BeautifulSoup(str(br)).findAll("div", {"class" :"stats-fullbox clearfix"})
     statbox = statboxes[-1]
 
-    plays_queue = collections.deque(maxlen=5)
+    plays_queue = collections.deque(maxlen=9)
 
     # In case there are multiple statboxes on the page
     for box in statboxes:
@@ -101,12 +104,14 @@ def get_faces(url):
         l = list(current_face)
         l[5] = is_gb
         l[6] = is_violation
-        current_face = tuple(l)
 
         # This should make it easier to decide if it was the start of a quarter
         quarter_of_face = l[0]
         face_time = l[1]
         reason = decide_reason(plays_queue, quarter_of_face, face_time)
+        l.append(reason)
+
+        current_face = tuple(l)
         faces.append(current_face)
         print current_face
 
@@ -172,7 +177,7 @@ def get_faces_other_type(url):
     statbox = BeautifulSoup(str(br)).findAll("table", {"class" :"center_wide"})
     html_parser = HTMLParser.HTMLParser()
 
-    plays_queue = collections.deque(maxlen=5)
+    plays_queue = collections.deque(maxlen=9)
 
     faces = []
 
@@ -210,13 +215,14 @@ def get_faces_other_type(url):
           l = list(current_face)
           l[5] = is_gb
           l[6] = is_violation
-          current_face = tuple(l)
 
           # This should make it easier to decide if it was the start of a quarter
           quarter_of_face = l[0]
           face_time = l[1]
           reason = decide_reason(plays_queue, quarter_of_face, face_time)
+          l.append(reason)
 
+          current_face = tuple(l)
           faces.append(current_face)
           print current_face
 
