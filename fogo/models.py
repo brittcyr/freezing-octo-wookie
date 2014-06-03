@@ -76,7 +76,8 @@ class Faceoff(models.Model):
   reason = models.IntegerField()	# 0 is for start of quarter, 1 for home goal, -1 for away goal
   violation = models.BooleanField()
   gb = models.NullBooleanField()		# TRUE is fogo gb, FALSE is no gb
-  wing = models.NullBooleanField()		# TRUE is CT or GB from wings
+  wing_gb = models.NullBooleanField()   # TRUE is gb from the wing player
+  wing_ct = models.NullBooleanField()   # TRUE is ct by a wing player in next 20 seconds
 
   def __unicode__(self):
     return self.away + ' vs. ' + self.home + ' @ ' + self.time + ' in the ' + self.quarter + ' quarter of ' + self.game
