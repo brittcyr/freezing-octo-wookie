@@ -20,6 +20,13 @@ def format_name(name):
   name = name.strip()
   return name
 
+def determine_wing_ct(row):
+  row = str(row).lower()
+  if 'failed' in row or 'caused' in row or 'forced' in row:
+    return True
+  else:
+    return False
+
 def format_winner(winner):
   html_parser = HTMLParser.HTMLParser()
   winner = html_parser.unescape(winner)
@@ -113,6 +120,7 @@ def get_faces(url):
         l[5] = is_gb
         l[6] = is_violation
         l[7] = is_wing_gb
+        l[8] = determine_wing_ct(row)
 
         # This should make it easier to decide if it was the start of a quarter
         quarter_of_face = l[0]
@@ -176,7 +184,7 @@ def get_faces(url):
 
         violation = 'violation' in str(row).lower()
 
-        current_face = (currentQuarter, time, home, away, winner, gb, violation, wing_gb)
+        current_face = (currentQuarter, time, home, away, winner, gb, violation, wing_gb, False)
     return faces
   except:
     return get_faces_other_type(url)
@@ -232,6 +240,7 @@ def get_faces_other_type(url):
           l[5] = is_gb
           l[6] = is_violation
           l[7] = is_wing_gb
+          l[8] = determine_wing_ct(row)
 
           # This should make it easier to decide if it was the start of a quarter
           quarter_of_face = l[0]
@@ -296,7 +305,7 @@ def get_faces_other_type(url):
 
           violation = 'violation' in str(row).lower()
 
-          current_face = (currentQuarter, time, home, away, winner, gb, violation, wing_gb)
+          current_face = (currentQuarter, time, home, away, winner, gb, violation, wing_gb, False)
     return faces
 
   except :
@@ -304,7 +313,8 @@ def get_faces_other_type(url):
     return None
 
 if __name__ == '__main__':
-  get_faces('http://middlebury.prestosports.com/sports/mlax/2013-14/boxscores/20140315_y4vr.xml?view=plays')
+  get_faces('http://mitathletics.com/sports/m-lacros/2013-14/boxscores/20140423_ntiw.xml')
+  #get_faces('http://middlebury.prestosports.com/sports/mlax/2013-14/boxscores/20140315_y4vr.xml?view=plays')
   #get_faces('http://www.ritathletics.com/boxscore.aspx?id=7226&path=mlax')
   #get_faces('http://www.mlc-mwlc.org/sports/mlax/2013-14/boxscores/20140423_wnd9.xml')
   #get_faces('http://www.generalssports.com/sports/mlax/2013-14/boxscores/20140329_b213.xml?view=plays')

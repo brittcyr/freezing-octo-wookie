@@ -3,11 +3,8 @@ from django.db import models
 # Team object
 class Team(models.Model):
   name = models.CharField(max_length=40)
-  # color
-  # url
-  # logo
-  # location
   conference = models.CharField(max_length=60)
+  logo = models.URLField(null=True)
 
   def __unicode__(self):
     return self.name
