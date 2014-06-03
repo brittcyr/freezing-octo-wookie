@@ -512,3 +512,17 @@ ALMACOLL	Alma
 AUGIE	Augustana
 SLU_M	Saint Lawrence
 YCP	York
+COR	Cortland
+OSWEGO-M	Oswego
+BENEDICT	Benedictine
+PLATM1~1	Plattsburgh State
+SMC	Saint Mary's (Md.)
+F&amp;M	Franklin & Marshall
+W&amp;J	Washington & Jefferson
+MMA	Mass Maritime
+ALMC	Alma
+CUW	Concordia
+DELHI	Delhi
+UMF	Maine-Farmington
+W&amp;L	Washington & Lee
+BALDWIN	Baldwin Wallace

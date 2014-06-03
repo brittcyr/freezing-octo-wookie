@@ -210,9 +210,10 @@ if __name__ == "__main__":
         reason = 0
       else:
         other = None
-        if reason == team1:
+        # The in part of the next line is because reason takes only the first word
+        if reason == team1 or reason in team1:
           other = team2
-        if reason == team2:
+        if reason == team2 or reason in team2:
           other = team1
         if other:
           reason = 1 if decide(home_team, away_team, reason, other) else -1

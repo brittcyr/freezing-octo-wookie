@@ -47,6 +47,7 @@ def decide_reason(plays_queue, quarter, time):
       if '<' in by:
         by = by.split('<')[0]
       by = by.strip()
+      by = format_winner(by)
       return by
 
   return 'QUARTER'
