@@ -138,7 +138,7 @@ if __name__ == "__main__":
 
     count_team1 = 0
     for face in faces:
-      (currentQuarter, time, home, away, winner, gb, violation, reason) = face
+      (currentQuarter, time, home, away, winner, gb, violation, wing_gb, reason) = face
       if winner != team1:
         team2 = winner
       else:
@@ -181,7 +181,7 @@ if __name__ == "__main__":
       officials = load_officials_to_db(officials_list, game)
 
     for face in faces:
-      (currentQuarter, face_time, home, away, winner, gb, violation, reason) = face
+      (currentQuarter, face_time, home, away, winner, gb, violation, wing_gb, reason) = face
       if winner == team1:
         winner = decide(home_team, away_team, winner, other=team2, hint=hint)
       else:
@@ -228,6 +228,7 @@ if __name__ == "__main__":
         time=face_time,
         quarter=currentQuarter,
         gb=gb,
+        wing_gb=wing_gb,
         violation=violation,
         reason=reason,
       )

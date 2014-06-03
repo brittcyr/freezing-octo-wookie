@@ -539,3 +539,8 @@ WHEM	Wheaton
 NE	UNE
 TRI	Trinity
 MOUNT	Mount Union
+RCML	Regis
+FU	Fontbonne
+SSU	Salem State
+SJFC	Saint John Fisher
+BSC-M	Birmingham Southern

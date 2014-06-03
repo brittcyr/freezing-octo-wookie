@@ -29,7 +29,7 @@ def format_winner(winner):
 def decide_reason(plays_queue, quarter, time):
   # If it was the start of a quarter, make it a 0
   if quarter < 5:
-    if int(time.split(':')[0]) == 15 or (int(time.split(':')[0]) == 14 and int(time.split(':')[1]) >= 58:
+    if int(time.split(':')[0]) == 15 or (int(time.split(':')[0]) == 14 and int(time.split(':')[1]) >= 58):
     # If it was this close to the start of the quarter assume it was start
       return 'QUARTER'
   else:
@@ -96,6 +96,7 @@ def get_faces(url):
         away = current_face[3]
         ind = max(str(row).find('ground'), str(row).find('Ground'), str(row).find('GB'), str(row).find('Draw'))
         gb = False
+        wing_gb = False
         if ind > 0:
           if home.lower() in str(row)[ind:].lower() or away.lower() in str(row)[ind:].lower():
             gb = True
@@ -103,11 +104,15 @@ def get_faces(url):
           away_flipped = ', '.join(reversed(away.split(' ')))
           if home_flipped.lower() in str(row)[ind:].lower() or away_flipped.lower() in str(row)[ind:].lower():
             gb = True
+          if not gb:
+            wing_gb = True
         is_gb = current_face[5] or gb
         is_violation = current_face[6] or 'violation' in str(row).lower()
+        is_wing_gb = current_face[7] or wing_gb
         l = list(current_face)
         l[5] = is_gb
         l[6] = is_violation
+        l[7] = is_wing_gb
 
         # This should make it easier to decide if it was the start of a quarter
         quarter_of_face = l[0]
@@ -157,6 +162,7 @@ def get_faces(url):
         winner = format_winner(winner)
 
         gb = False
+        wing_gb = False
         ind = max(str(row).find('ground'), str(row).find('Ground'), str(row).find('GB'), str(row).find('Draw'))
         if ind > 0:
           if home.lower() in str(row)[ind:].lower() or away.lower() in str(row)[ind:].lower():
@@ -165,14 +171,15 @@ def get_faces(url):
           away_flipped = ', '.join(reversed(away.split(' ')))
           if home_flipped.lower() in str(row)[ind:].lower() or away_flipped.lower() in str(row)[ind:].lower():
             gb = True
+          if not gb:
+            wing_gb = True
 
         violation = 'violation' in str(row).lower()
 
-        current_face = (currentQuarter, time, home, away, winner, gb, violation)
+        current_face = (currentQuarter, time, home, away, winner, gb, violation, wing_gb)
     return faces
   except:
     return get_faces_other_type(url)
-    # currentQuarter, time, home, away, winner
 
 
 def get_faces_other_type(url):
@@ -207,6 +214,7 @@ def get_faces_other_type(url):
           away = current_face[3]
           ind = max(str(row).find('ground'), str(row).find('Ground'), str(row).find('GB'), str(row).find('Draw'))
           gb = False
+          wing_gb = False
           if ind > 0:
             if home.lower() in str(row)[ind:].lower() or away.lower() in str(row)[ind:].lower():
               gb = True
@@ -214,11 +222,16 @@ def get_faces_other_type(url):
             away_flipped = ', '.join(reversed(away.split(' ')))
             if home_flipped.lower() in str(row)[ind:].lower() or away_flipped.lower() in str(row)[ind:].lower():
               gb = True
+            if not gb:
+              wing_gb = True
+
           is_gb = current_face[5] or gb
           is_violation = current_face[6] or 'violation' in str(row).lower()
+          is_wing_gb = current_face[7] or wing_gb
           l = list(current_face)
           l[5] = is_gb
           l[6] = is_violation
+          l[7] = is_wing_gb
 
           # This should make it easier to decide if it was the start of a quarter
           quarter_of_face = l[0]
@@ -269,6 +282,7 @@ def get_faces_other_type(url):
           winner = format_winner(winner)
 
           gb = False
+          wing_gb = False
           ind = max(str(row).find('ground'), str(row).find('Ground'), str(row).find('GB'), str(row).find('Draw'))
           if ind > 0:
             if home.lower() in str(row)[ind:].lower() or away.lower() in str(row)[ind:].lower():
@@ -277,10 +291,12 @@ def get_faces_other_type(url):
             away_flipped = ', '.join(reversed(away.split(' ')))
             if home_flipped.lower() in str(row)[ind:].lower() or away_flipped.lower() in str(row)[ind:].lower():
               gb = True
+            if not gb:
+              wing_gb = True
 
           violation = 'violation' in str(row).lower()
 
-          current_face = (currentQuarter, time, home, away, winner, gb, violation)
+          current_face = (currentQuarter, time, home, away, winner, gb, violation, wing_gb)
     return faces
 
   except :
