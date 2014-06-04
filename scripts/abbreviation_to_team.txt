@@ -660,3 +660,10 @@ FLCC	Finger Lakes Community College
 RIT_MLAX	RIT
 Capital	Capital
 POTSDAM	Potsdam
+TRANSY	Transylvania University
+ASUMLAX	Adams St.
+OBER	Oberlin
+SALVE	Salve Regina
+WES	Wesleyan
+BW	Baldwin Wallace
+CONNECTI	Connecticut College
