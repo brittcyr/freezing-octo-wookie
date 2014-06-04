@@ -544,3 +544,65 @@ FU	Fontbonne
 SSU	Salem State
 SJFC	Saint John Fisher
 BSC-M	Birmingham Southern
+WCSU	Western Connecticut
+CAC	Carthage
+LA	La Roche
+JOHN	John Carroll
+BSCM	Birmingham Southern
+BIRMINGHAM	Birmingham Southern
+Trine	Trine
+USM	Southern Maine
+COLORADO	Colorado College
+BET	Bethany College
+SLU	Saint Lawrence
+LSC	Lyndon State
+CORT14ML	Cortland
+JOHNSON	Johnson State
+THOMAS~1	Thomas College
+UTICAM	Utica
+REGIS	Regis
+JOHNSON	Johnson & Wales
+DOMM	Dominican (Cal.)
+BWM	Baldwin Wallace
+HUS	Husson
+THOMLX14	Thomas
+HIRAM	Hiram
+BEN	Benedictine
+JCU	John Carroll
+WHE	Wheaton
+SAINT	Saint Joseph's
+WID	Widener
+BELOIT	Beloit
+MWOOD	Marymount (Va.)
+UDC	Dist. Columbia
+MSC	Morrisville State
+BAC	Bryn Athyn
+TUFM	Tufts
+ROANOKE	Roanoke
+FSCM	Florida Southern College
+EC	Elmhurst
+COL	Colby
+KSCM	Keene State
+BU	Benedictine
+WALSH	Walsh
+WIL	Williams
+NAZ	Nazareth
+MILLSA~2	Millsaps
+KENYON	Kenyon
+AC	Augustana
+CUA	Catholic
+SCOTSML	Gordon
+KEUKA	Keuka
+LYNDON	Lyndon State
+RMC	Randolph-Macon
+CLARK	Clarkson
+AURORA	Aurora
+BOWDOIN	Bowdoin
+SU-M	Shorter
+WNEU	Western New England
+GREEN	Green Mountain
+SUS	Susquehanna
+AUC	Augustana
+OWU	Ohio Wesleyan
+TUFM14	Tufts
+CONNM14	Connecticut College

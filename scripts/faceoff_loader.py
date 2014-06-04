@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 from get_faceoffs import get_faces, get_faces_other_type
 from get_links import get_links, get_links_calendar
+from get_logo import do_logo
 from get_game_data import get_game_data
 from determine_team import decide
 import sys, os
@@ -107,6 +108,8 @@ if __name__ == "__main__":
     counter += 1
     if counter % 5 == 0:
       print 'Checked ' + str(counter)
+    if counter < 1245:
+      continue
     game_data = get_game_data(link)
 
     # Print the failed links to the failed_links.txt
@@ -234,6 +237,8 @@ if __name__ == "__main__":
         reason=reason,
       )
       f.save()
+
+  do_logo()
 
 #  for conference in conferences2:
 #    links = get_links_calendar(conference)
