@@ -8,6 +8,7 @@ urlpatterns = patterns('',
   url(r'^$', 'fogo.views.index'),
   url(r'^game/(?P<game>\d+)$', 'fogo.game.index'),
   url(r'^player/(?P<player>\d+)$', 'fogo.player.index'),
+  url(r'^all_players$', 'fogo.all_players.index'),
 )
 
 urlpatterns += staticfiles_urlpatterns()

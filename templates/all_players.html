@@ -1,0 +1,64 @@
+<html>
+  <head>
+  <link rel="stylesheet" href="/fantasy/fantasy/static/assets/css/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="/fantasy/fantasy/static/assets/css/tablecloth.css" type="text/css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="/fantasy/fantasy/static/assets/js/bootstrap.min.js"></script>
+  <script src="/fantasy/fantasy/static/assets/js/jquery.metadata.js"></script>
+  <script src="/fantasy/fantasy/static/assets/js/jquery.tablesorter.min.js"></script>
+  <script src="/fantasy/fantasy/static/assets/js/jquery.tablecloth.js"></script>
+  <script src="/fantasy/fantasy/static/assets/js/jquery.quicksearch.js"></script>
+  </head>
+  <body>
+    {% include "header.html" %}
+    <div class="container">
+      <form>
+        <input placeholder="Search" type="text" id="search">
+      </form>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>
+              Name
+            </th>
+            <th>
+              Team
+            </th>
+            <th>
+              Percent
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for player in players %}
+          <tr>
+            <td>
+              {{ player.name }}
+            </td>
+            <td>
+              {{ player.team }}
+            </td>
+            <td>
+              {{ player.percent }}
+            </td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div> <!-- container -->
+
+    <script type="text/javascript" charset="utf-8">
+      $(document).ready(function() {
+        $('input#search').quicksearch('table tbody tr');
+        $("table").tablecloth({
+          theme: "stats",
+          striped: true,
+          condensed: true
+        });
+        $("table").tablesorter({
+          tableClass: "tablesorter",
+          });
+      });
+    </script>
+  </body>
+</html>
