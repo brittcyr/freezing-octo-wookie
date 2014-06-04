@@ -31,7 +31,8 @@ def index(request, player):
       game.wins = int(sum([x['wins'] for x in faceoffs if x['game_id'] == game.id]))
       game.num_taken = sum([x['num_taken'] for x in faceoffs if x['game_id'] == game.id])
       game.percent = "{0:.0f}".format(float(game.wins) / float(game.num_taken) * 100)
-      game.opponent = game.home if game.home != team else game.away
+      game.road = game.home != team
+      game.opponent = game.home if game.road else game.away
 
     wins = sum([x.wins for x in games])
     num_taken = sum([x.num_taken for x in games])
