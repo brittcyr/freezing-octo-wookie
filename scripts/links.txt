@@ -1243,10 +1243,8 @@ http://www.laxmagazine.com/links/c6x9j3
 http://www.laxmagazine.com/links/rxwj6r
 http://www.laxmagazine.com/links/jza2k1
 http://www.laxmagazine.com/links/cysqmd
-http://www.laxmagazine.com/links/l05y84
 http://www.laxmagazine.com/links/4hjvv4
 http://www.laxmagazine.com/links/yii3p5
-http://www.laxmagazine.com/links/yampc7
 http://www.laxmagazine.com/links/72n4dt
 http://www.laxmagazine.com/links/77f15y
 http://www.laxmagazine.com/links/qtwexd
@@ -1823,3 +1821,5 @@ http://www.laxmagazine.com/links/czggv4
 http://www.laxmagazine.com/links/53c5tl
 http://www.laxmagazine.com/links/iavqzl
 http://www.laxmagazine.com/links/d3j62u
+http://www.laxmagazine.com/links/l05y84
+http://www.laxmagazine.com/links/yampc7

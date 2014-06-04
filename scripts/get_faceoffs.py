@@ -57,7 +57,7 @@ def decide_reason(plays_queue, quarter, time):
       by = format_winner(by)
       return by
 
-    if 'quarter' in play.lower():
+  if 'quarter' in play.lower() or 'half' in play.lower():
       return 'QUARTER'
 
   return 'QUARTER'

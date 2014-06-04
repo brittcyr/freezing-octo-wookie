@@ -606,3 +606,57 @@ AUC	Augustana
 OWU	Ohio Wesleyan
 TUFM14	Tufts
 CONNM14	Connecticut College
+WC	Mary Washington
+RIV	Rivier
+ME.-FARMINGTON	Maine-Farmington
+AMHM14	Amherst
+WILMM	Wilmington
+COLBY	Colby
+DUC	Dominican (Cal.)
+RIVIER	Rivier University
+SLM	Saint Leo
+RC	Rhodes
+OBERLIN	Oberlin
+OGLETHOR	Oglethorpe
+ASCM	Alfred
+MAMA	Mass. Maritime
+ADC	Adrian
+EME	Emerson
+RCM	Roanoke
+CMSJ	MSJ
+ANNA	Anna Maria
+MIDDLEBURY	Middlebury
+CASTLETO	Castleton
+W-L	Washington & Lee
+ICM	Ithaca
+MESSIAH	Messiah
+LYDON	Lyndon State
+ASU	Adams St.
+FISHERJV	Saint John Fisher JV
+CORTLAND	Cortland
+Hiram	Hiram
+NEW	New England College
+PIEDMONT	Piedmont
+WILML	Williams
+BRYNATHY	Bryn Athyn
+ONEONTA	Oneonta
+ECONNST	Eastern Conn. St.
+ALMAM	Alma
+NCCC	Niagara County Community Colle
+CAB	Cabrini
+HAN	Hanover
+WILM14	Williams
+GOU	Goucher
+CNUM	Christopher Newport
+PC	Piedmont
+YHC	Young Harris
+MILLM	Millsaps
+CORT	Cortland
+WIL	Wilmington
+FSC	Farmingdale State
+USM	Sewanee
+SJF	Saint John Fisher
+FLCC	Finger Lakes Community College
+RIT_MLAX	RIT
+Capital	Capital
+POTSDAM	Potsdam
