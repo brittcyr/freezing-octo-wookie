@@ -44,5 +44,6 @@ def index(request, player):
                                 'wins': wins,
                                 'num_taken': num_taken,
                                 'percent': percent,
+                                'team': team,
                               },
                               context_instance=RequestContext(request))

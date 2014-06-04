@@ -8,18 +8,24 @@
   <script src="/fantasy/fantasy/static/assets/js/jquery.tablecloth.js"></script>
   </head>
   <body>
+    {% include "header.html" %}
     <div class="container">
-      <h1>
-        PLAYER
-      </h1>
-      <ul>
-        <li>
-          {{ player.name }}
-        </li>
-        <li>
-          School: {{ player.team}}
-        </li>
-      </ul>
+      <div class="row">
+        <div class="col-xs-3">
+          <img width="200" src={{ team.logo }} />
+        </div>
+        <div class="col-xs-5">
+          <h1>
+            <b>
+              {{ player.name }}
+            </b>
+          </h1>
+          <div class="list-group">
+            <a href="#" class="list-group-item">Team: {{ player.team }}</a>
+            <a href="#" class="list-group-item">Conference: {{ team.conference }}</a>
+            <a href="#" class="list-group-item">Faceoffs: {{ percent }}%</a>
+          </div>
+        </div>
       <table class="table table-striped">
         <thead>
           <tr>
@@ -77,7 +83,7 @@
           </tr>
         </tbody>
       </table>
-    </div>
+    </div> <!-- container -->
 
     <script type="text/javascript" charset="utf-8">
       $(document).ready(function() {
