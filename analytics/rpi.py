@@ -4,11 +4,13 @@ sys.path.append('/afs/athena.mit.edu/user/c/y/cyrbritt/Scripts/django/fogolytics
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "fogolytics.settings")
 from fogo.models import Player, Game, Faceoff, Ref, Team
 
+# Whether a player has more than the threshold of faces
 def has_enough_faces(player, number):
   away_face = Faceoff.objects.filter(away=player)
   home_face = Faceoff.objects.filter(home=player)
   return len(away_face) + len(home_face) >= number
 
+# Player's FO percent on the year
 def get_percent(player):
   away_face = Faceoff.objects.filter(away=player)
   home_face = Faceoff.objects.filter(home=player)
@@ -18,6 +20,7 @@ def get_percent(player):
 
   return float(wins) / float(total_taken) * 100.0
 
+# Player has taken enough of the team faceoffs
 def is_qualified(player, qualifying_threshold = .4 ):
   team = player.team
   players = Player.objects.filter(team=team)
