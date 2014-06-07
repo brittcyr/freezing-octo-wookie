@@ -5,7 +5,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="/fantasy/fantasy/static/assets/js/bootstrap.min.js"></script>
   <script src="/fantasy/fantasy/static/assets/js/jquery.metadata.js"></script>
-  <script src="/fantasy/fantasy/static/assets/js/jquery.tablesorter.min.js"></script>
   <script src="/fantasy/fantasy/static/assets/js/jquery.tablecloth.js"></script>
   <script src="/fantasy/fantasy/static/assets/js/jquery.quicksearch.js"></script>
   </head>
@@ -52,23 +51,6 @@
         striped: true,
         sortable: false,
         // condensed: true
-      });
-      $("table").tablesorter({
-        tableClass: "tablesorter",
-        cssDesc: 'headerSortDown',
-        widthFixed: true,
-
-        headers: {
-          0: {
-            sorter: false
-          },
-          1: {
-            sorter: false
-          },
-          2: {
-            sorter: false
-          },
-        },
       });
     });
 
