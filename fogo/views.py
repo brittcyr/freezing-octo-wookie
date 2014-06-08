@@ -9,8 +9,4 @@ from django.db.models import Sum
 def index(request):
     faceoffs = Faceoff.objects.all()[:100]
 
-    return render_to_response('index.html',
-                              {
-                                'faceoffs': faceoffs,
-                              },
-                              context_instance=RequestContext(request))
+    return str(faceoffs)
