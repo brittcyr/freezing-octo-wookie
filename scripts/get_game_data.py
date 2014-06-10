@@ -4,6 +4,7 @@ from BeautifulSoup import BeautifulSoup
 import feedparser
 import HTMLParser
 
+# This is so the same name is used everywhere
 def team_synonym(team):
   f = open('team_to_name.txt', 'r')
   rows = {}
@@ -112,7 +113,7 @@ def get_game_data(url):
     if ', 2014 at' in str(head):
       # Hack to deal with a certain game, but not a bad default date and time
       date = '3/1/2014'
-      time = '1:00'  
+      time = '1:00'
 
     header = BeautifulSoup(str(statbox)).findAll("span", {"class" : "stats-header"})
     away = header[0].contents[0]
