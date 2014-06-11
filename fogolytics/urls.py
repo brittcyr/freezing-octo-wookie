@@ -5,8 +5,13 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
+  # Single game page
   url(r'^game/(?P<game>\d+)$', 'fogo.game.index'),
+
+  # Single player page
   url(r'^player/(?P<player>\d+)$', 'fogo.player.index'),
+
+  # All players aggregated stats
   url(r'^all_players$', 'fogo.all_players.index'),
 )
 
