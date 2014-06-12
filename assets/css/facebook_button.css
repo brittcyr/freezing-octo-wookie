@@ -1,0 +1,93 @@
+.button-facebook {
+  -webkit-border-radius:5px 5px 5px 5px;
+  -webkit-background-clip:padding-box;
+  -moz-border-radius:5px 5px 5px 5px;
+  -khtml-border-radius:5px 5px 5px 5px;
+  border-radius:5px 5px 5px 5px;
+  position:relative;
+  zoom:1;
+  margin:0 6px 0 0;
+  color:#ffffff;
+  font-weight:normal;
+  white-space:nowrap;
+  cursor:pointer;
+  text-decoration:none;
+  display:inline-block;
+  font-weight:bold;
+  font-size:13px;
+  padding:5px 14px;
+  background-color:#3b5b99;
+  background-image:url("../images/fb_logo.png");
+  background-repeat:no-repeat;
+  background-position:2px 0;
+  padding:4px 10px 3px 37px !important;
+  font-size:13px;
+  font-weight:bold;
+  font-family:'lucida grande', tahoma, verdana, arial, sans-serif;
+  background-image:-webkit-gradient(linear,0% 0%,0% 200%,from(#3b5b99),to(#325971));
+  background-image:-moz-linear-gradient(0% 200% 90deg,#325971,#3b5b99);
+  filter:progid:DXImageTransform.Microsoft.gradient(StartColorStr='#3b5b99',EndColorStr='#325971');
+  -ms-filter:progid:DXImageTransform.Microsoft.gradient(StartColorStr='#3b5b99',EndColorStr='#325971');
+  background-color:#3b5b99;
+  border:1px solid #3b5b99;
+  -webkit-box-shadow:inset 1px 1px 0px #6e84b1;
+  -moz-box-shadow:inset 1px 1px 0px #6e84b1;
+  box-shadow:inset 1px 1px 0px #6e84b1;
+  behavior:url(/css/PIE.htc);
+  background-image:url("/fantasy/fantasy/static/assets/images/fb_logo.png?v=00001");
+}
+.button-facebook:hover { 
+  color:#ffffff;
+  background-image:url("/fantasy/fantasy/static/assets/images/fb_logo.png?v=00001");
+}
+.button-facebook.block {
+  padding-left:0;
+  padding-right:0;
+  text-align:center;
+}
+.button-facebook.disabled {
+  color:#eeeeee;
+  cursor:pointer;
+}
+.button-facebook.right { margin-left:5px; }
+.button-facebook.xlarge {
+  font-size:22px;
+  padding:7px 25px;
+}
+.button-facebook.xlarge.clickable { padding:7px 15px; }
+.button-facebook.large {
+  font-size:15px;
+  padding:6px 20px;
+}
+.button-facebook.large.clickable { padding:6px 10px; }
+.button-facebook.medium {
+  font-size:13px;
+  padding:5px 14px;
+}
+.button-facebook.small {
+  font-size:12px;
+  padding:4px 10px;
+}
+.button-facebook.link {
+  text-align:center;
+  padding:5px 0 6px;
+}
+.button-facebook:hover {
+  background-color:#5975ae;
+  -webkit-box-shadow:inset 1px 1px 0px #6e84b1;
+  -moz-box-shadow:inset 1px 1px 0px #6e84b1;
+  box-shadow:inset 1px 1px 0px #6e84b1;
+}
+.button-facebook:active, .button-facebook:focus { border-color:#6b86bd; }
+.button-facebook.disabled {
+  color:#eeeeee;
+  cursor:wait;
+}
+.button-facebook.disabled:hover {
+  background:none #6b86bd;
+  background-color:#6b86bd;
+  border:1px solid #0a5689;
+  -webkit-box-shadow:inset 1px 1px 0px #9abfd5;
+  -moz-box-shadow:inset 1px 1px 0px #9abfd5;
+  box-shadow:inset 1px 1px 0px #9abfd5;
+}
