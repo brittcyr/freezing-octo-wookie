@@ -13,6 +13,9 @@ urlpatterns = patterns('',
 
   # All players aggregated stats
   url(r'^all_players$', 'fogo.all_players.index'),
+
+  # Typeahead
+  url(r'^search$', 'fogo.search.query')
 )
 
 urlpatterns += staticfiles_urlpatterns()
