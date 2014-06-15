@@ -70,6 +70,9 @@ STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
+    ('assets', '/afs/athena.mit.edu/user/c/y/cyrbritt/Scripts/django/fogolytics/static/'),
+    ('', '/afs/athena.mit.edu/user/c/y/cyrbritt/Scripts/django/fogolytics/static'),
+    #('assets', '~/Scripts/django/fogolytics/static')
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
