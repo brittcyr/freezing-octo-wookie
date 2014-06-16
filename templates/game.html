@@ -8,15 +8,11 @@
   <script src="static/js/jquery.metadata.js"></script>
   <script src="static/js/jquery.tablesorter.min.js"></script>
   <script src="static/js/jquery.tablecloth.js"></script>
-  <script src="static/js/jquery.quicksearch.js"></script>
   <script src="static/js/typeahead.bundle.min.js"></script>
   <script src="static/js/typeahead.jquery.min.js"></script>
   <script src="static/js/bloodhound.min.js"></script>
   </head>
   <body>
-    <form>
-      <input placeholder="Search" type="text" id="search">
-    </form>
     <h1>
       GAME
     </h1>
@@ -86,7 +82,6 @@
 
   <script type="text/javascript" charset="utf-8">
     $(document).ready(function() {
-      $('input#search').quicksearch('table tbody tr');
       $("table").tablecloth({
         theme: "stats",
         striped: true,
