@@ -5,6 +5,9 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
+  # Home page
+  url(r'^$', 'fogo.index.index'),
+
   # Single game page
   url(r'^game/(?P<game>\d+)$', 'fogo.game.index'),
 
