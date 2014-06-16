@@ -1,15 +1,15 @@
 <html>
   <head>
   <link rel="stylesheet" href="/fogolytics/static/css/bootstrap.css" type="text/css" />
-  <link rel="stylesheet" href="static/css/typeahead.css" type="text/css" />
+  <link rel="stylesheet" href="/fogolytics/static/css/typeahead.css" type="text/css" />
   <link rel="stylesheet" href="/fogolytics/static/css/tablecloth.css" type="text/css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="/fogolytics/static/js/bootstrap.min.js"></script>
   <script src="/fogolytics/static/js/jquery.metadata.js"></script>
   <script src="/fogolytics/static/js/jquery.tablecloth.js"></script>
-  <script src="static/js/typeahead.bundle.min.js"></script>
-  <script src="static/js/typeahead.jquery.min.js"></script>
-  <script src="static/js/bloodhound.min.js"></script>
+  <script src="/fogolytics/static/js/typeahead.bundle.min.js"></script>
+  <script src="/fogolytics/static/js/typeahead.jquery.min.js"></script>
+  <script src="/fogolytics/static/js/bloodhound.min.js"></script>
   </head>
   <body>
     {% include "header.html" %}
@@ -106,8 +106,16 @@
         $("#search").typeahead(null, {
           name: 'search',
           displayKey: 'value',
-          source: searchResults.ttAdapter()
-        });
+          source: searchResults.ttAdapter(),
+        })
+        .on('typeahead:selected', onSelected)
+        .on('typeahead:autoCompeleted', onSelected);
+
+        function onSelected($e, datum) {
+          console.log('autocompleted');
+          console.log(datum['link']);
+          window.location.href = datum['link'];
+        }
       });
     </script>
   </body>

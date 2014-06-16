@@ -56,7 +56,7 @@
         });
         $("table").tablesorter({
           tableClass: "tablesorter",
-          });
+        });
         var searchResults = new Bloodhound({
           datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
           queryTokenizer: Bloodhound.tokenizers.whitespace,
@@ -66,8 +66,16 @@
         $("#search").typeahead(null, {
           name: 'search',
           displayKey: 'value',
-          source: searchResults.ttAdapter()
-        });
+          source: searchResults.ttAdapter(),
+        })
+        .on('typeahead:selected', onSelected)
+        .on('typeahead:autoCompeleted', onSelected);
+
+        function onSelected($e, datum) {
+          console.log('autocompleted');
+          console.log(datum['link']);
+          window.location.href = datum['link'];
+        }
       });
     </script>
   </body>
