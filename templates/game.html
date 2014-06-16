@@ -108,8 +108,6 @@
       .on('typeahead:autoCompeleted', onSelected);
 
       function onSelected($e, datum) {
-        console.log('autocompleted');
-        console.log(datum['link']);
         window.location.href = datum['link'];
       }
     });
