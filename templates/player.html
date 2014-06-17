@@ -52,7 +52,8 @@
         </thead>
         <tbody>
         {% for game in games %}
-          <tr>
+          <tr class="game-row">
+            <input type="hidden" name="link" value={{ game.id }}>
             <td>
               {{ game.date }}
             </td>
@@ -91,13 +92,35 @@
       </table>
     </div> <!-- container -->
 
+
+    <div class="modal fade" id="gameModal" tabIndex="-1" role="dialog" 
+        aria-labelledby="gameModal" aria-hidden="true"> <!-- modal -->
+      <div class="modal-dialog"> <!-- modal-dialog -->
+        <div class="modal-content"> <!-- modal-content -->
+          <div class="modal-header"> <!-- modal-header -->
+            <button type="button" class="close" data-dismiss="modal"
+              aria-hidden="true">
+              &times;
+            </button>
+            <h4 class="modal-title" id="gameModalLabel"> Game data</h4>
+          </div> <!-- modal-header -->
+          <div class="modal-body"> <!-- modal-body -->
+          </div> <!-- modal-body -->
+        </div> <!-- modal-content -->
+      </div> <!-- modal-dialog -->
+    <div> <!-- modal -->
+
+
     <script type="text/javascript" charset="utf-8">
       $(document).ready(function() {
+        // Make the table look pretty
         $("table").tablecloth({
           theme: "stats",
           striped: true,
           condensed: true
         });
+
+        // Make the typeahead in the header work
         var searchResults = new Bloodhound({
           datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
           queryTokenizer: Bloodhound.tokenizers.whitespace,
@@ -109,12 +132,23 @@
           displayKey: 'value',
           source: searchResults.ttAdapter(),
         })
-        .on('typeahead:selected', onSelected)
-        .on('typeahead:autoCompeleted', onSelected);
+          .on('typeahead:selected', onSelected)
+          .on('typeahead:autoCompeleted', onSelected);
 
         function onSelected($e, datum) {
           window.location.href = datum['link'];
         }
+
+        // Make rows pop up the the game modal
+        $(".game-row").click(function() {
+          // Get the id of the game from the hidden input field
+          var id = $( this ).find("input").attr("value");
+
+          $(".modal-body").load("/fogolytics/game/" + id);
+
+          // Displays the modal
+          $("#gameModal").modal();
+        });
       });
     </script>
   </body>
