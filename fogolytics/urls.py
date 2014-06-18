@@ -14,6 +14,9 @@ urlpatterns = patterns('',
   # Single player page
   url(r'^player/(?P<player>\d+)$', 'fogo.player.index'),
 
+  # Conference page
+  url(r'^conference/(?P<conference>\w+)$', 'fogo.conference.index'),
+
   # All players aggregated stats
   url(r'^all_players$', 'fogo.all_players.index'),
 

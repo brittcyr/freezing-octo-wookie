@@ -1,35 +1,35 @@
 <html>
   <head>
-  <link rel="stylesheet" href="/fogolytics/static/css/bootstrap.css" type="text/css" />
-  <link rel="stylesheet" href="/fogolytics/static/css/typeahead.css" type="text/css" />
-  <link rel="stylesheet" href="/fogolytics/static/css/tablecloth.css" type="text/css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="/fogolytics/static/js/bootstrap.min.js"></script>
-  <script src="/fogolytics/static/js/jquery.metadata.js"></script>
-  <script src="/fogolytics/static/js/jquery.tablecloth.js"></script>
-  <script src="/fogolytics/static/js/typeahead.bundle.min.js"></script>
-  <script src="/fogolytics/static/js/typeahead.jquery.min.js"></script>
-  <script src="/fogolytics/static/js/bloodhound.min.js"></script>
+    <link rel="stylesheet" href="/fogolytics/static/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="/fogolytics/static/css/typeahead.css" type="text/css" />
+    <link rel="stylesheet" href="/fogolytics/static/css/tablecloth.css" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/fogolytics/static/js/bootstrap.min.js"></script>
+    <script src="/fogolytics/static/js/jquery.metadata.js"></script>
+    <script src="/fogolytics/static/js/jquery.tablecloth.js"></script>
+    <script src="/fogolytics/static/js/typeahead.bundle.min.js"></script>
+    <script src="/fogolytics/static/js/typeahead.jquery.min.js"></script>
+    <script src="/fogolytics/static/js/bloodhound.min.js"></script>
   </head>
   <body>
     {% include "header.html" %}
     <div class="container">
-      <div class="row">
-        <div class="col-xs-3">
-          <img width="200" src={{ team.logo }} />
+      <div class="col-xs-3">
+        <img width="200" src={{ team.logo }} />
+      </div>
+      <div class="col-xs-5">
+        <h1>
+          <b>
+            {{ player.name }}
+          </b>
+        </h1>
+        <div class="list-group">
+          <a href="#" class="list-group-item">Team: {{ player.team }}</a>
+          <a href="/fogolytics/conference/{{ team.conference }}" 
+              class="list-group-item">Conference: {{ team.conference }}</a>
+          <a href="#" class="list-group-item">Faceoffs: {{ percent }}%</a>
         </div>
-        <div class="col-xs-5">
-          <h1>
-            <b>
-              {{ player.name }}
-            </b>
-          </h1>
-          <div class="list-group">
-            <a href="#" class="list-group-item">Team: {{ player.team }}</a>
-            <a href="#" class="list-group-item">Conference: {{ team.conference }}</a>
-            <a href="#" class="list-group-item">Faceoffs: {{ percent }}%</a>
-          </div>
-        </div>
+      </div>
       <table class="table table-striped">
         <thead>
           <tr>
@@ -71,21 +71,20 @@
               {{ game.percent }}
             </td>
           </tr>
-      </a>
-        {% endfor %}
+          {% endfor %}
           <tr>
             <td>
             </td>
             <td>
             </td>
             <td>
-                {{ wins }}
+              {{ wins }}
             </td>
             <td>
-                {{ num_taken }}
+              {{ num_taken }}
             </td>
             <td>
-                {{ percent }}
+              {{ percent }}
             </td>
           </tr>
         </tbody>
