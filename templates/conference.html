@@ -1,0 +1,117 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/fogolytics/static/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="/fogolytics/static/css/typeahead.css" type="text/css" />
+    <link rel="stylesheet" href="/fogolytics/static/css/tablecloth.css" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/fogolytics/static/js/bootstrap.min.js"></script>
+    <script src="/fogolytics/static/js/jquery.metadata.js"></script>
+    <script src="/fogolytics/static/js/jquery.tablecloth.js"></script>
+    <script src="/fogolytics/static/js/jquery.tablesorter.min.js"></script>
+    <script src="/fogolytics/static/js/typeahead.bundle.min.js"></script>
+    <script src="/fogolytics/static/js/typeahead.jquery.min.js"></script>
+    <script src="/fogolytics/static/js/bloodhound.min.js"></script>
+  </head>
+  <body>
+    {% include "header.html" %}
+    <div class="container">
+      <h1 align="center">
+        <b>
+          {{ conference }}
+        </b>
+      </h1>
+      <div align="center">
+        {% for team in teams %}
+          <img width="100" src={{ team.logo }} />
+        {% endfor %}
+      </div>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>
+              Player
+            </th>
+            <th>
+              Team
+            </th>
+            <th>
+              Wins
+            </th>
+            <th>
+              Taken
+            </th>
+            <th>
+              Percent
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for player in players%}
+          <tr class="player-row">
+            <input type="hidden" name="link" value={{ player.id }}>
+            <td>
+              {{ player.name }}
+            </td>
+            <td>
+              {{ player.team }}
+            </td>
+            <td>
+              {{ player.wins }}
+            </td>
+            <td>
+              {{ player.num_taken }}
+            </td>
+            <td>
+              {{ player.percent }}
+            </td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div> <!-- container -->
+
+
+    <script type="text/javascript" charset="utf-8">
+      $(document).ready(function() {
+        // Make the table look pretty
+        $("table").tablecloth({
+          theme: "stats",
+          striped: true,
+          condensed: true
+        });
+
+        // Make the table sortable
+        $("table").tablesorter({
+          tableClass: "tablesorter",
+        });
+
+        // Make the typeahead in the header work
+        var searchResults = new Bloodhound({
+          datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
+          queryTokenizer: Bloodhound.tokenizers.whitespace,
+          remote: '/fogolytics/search?query=%QUERY'
+        });
+        searchResults.initialize();
+        $("#search").typeahead(null, {
+          name: 'search',
+          displayKey: 'value',
+          source: searchResults.ttAdapter(),
+        })
+          .on('typeahead:selected', onSelected)
+          .on('typeahead:autoCompeleted', onSelected);
+
+        function onSelected($e, datum) {
+          window.location.href = datum['link'];
+        }
+
+        // Make player into a link
+        $(".player-row").click(function() {
+          // Get the id of the game from the hidden input field
+          var id = $( this ).find("input").attr("value");
+
+          window.location.href = "/fogolytics/player/" + id;
+        });
+      });
+    </script>
+  </body>
+</html>
