@@ -1,9 +1,8 @@
 # Create your views here.
-from fogo.models import Player, Game, Ref, Faceoff, Team
+from fogo.models import Player, Game, Faceoff, Team
 from django.template import Context, loader, RequestContext
 from django.http import HttpResponse
 from django.shortcuts import render_to_response
-import datetime
 from django.db.models import Sum, Count
 
 def index(request, conference):
