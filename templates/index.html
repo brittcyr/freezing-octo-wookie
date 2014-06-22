@@ -12,7 +12,34 @@
   <body>
     {% include "header.html" %}
     <div class="container">
-      HOME PAGE
+      <p>
+        This is a project by Britt Cyr to analyze all faceoffs from the 2014 DIII Mens
+        Lacrosse season. The most information is on the 'All Players' page which
+        compares some aggregated statistics over the whole season. This tool does not
+        contain all of data from the season though. The crawler only captured data
+        from games for which a play by play was available because this gives data
+        as to which FOGO went against which for every faceoff. Also, the crawler may
+        have failed for other reasons, so it ended up reporting 84% success and got
+        over 35000 faceoffs.
+      </p>
+      <p>
+        To navigate, you can either search for a player in the search bar or go to
+        the all players page. There, clicking on a player's name will redirect to
+        the player's page. On the player's page, clicking on a game will give details
+        about that game.
+      </p>
+      <p>
+        The statistics collected on the all players page are for all FOGO's that are
+        qualified. To be qualified, a player must be on a DIII team and have taken at
+        least 40% of his team's faceoffs. Percent is the player's faceoff win
+        percentage. RPI is calculated the same as in basketball and is a metric that
+        is adjusted for strength of schedule. Wing rating is an estimate of the
+        amount of impact wings had on this player. A ground ball from a wing or
+        immediate caused turnover from a wing will increase this, but if an opponent's
+        wing gets either of these, the rating decreases. 4th Quarter + OT is the
+        winning percentage late in the game. Clutch is 4th Quarter + OT for games which
+        are close (3 goal or less differential).
+      </p>
     </div> <!-- container -->
 
     <script type="text/javascript" charset="utf-8">
