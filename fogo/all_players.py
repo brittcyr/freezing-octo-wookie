@@ -120,10 +120,43 @@ def index(request):
         face_taken[face['home']] += face['num_taken']
 
     for player in players:
-        player.wins = face_wins[player.id]
-        player.num_taken = face_taken[player.id]
-        player.late_percent = float(player.wins) / player.num_taken * 100.0
+        player.late_percent = float(face_wins[player.id]) / face_taken[player.id] * 100.0
 
+    games = Game.objects.all()
+    close_games = []
+    for game in games:
+        if abs(game.away_score - game.home_score) <= 3:
+            close_games.append(game)
+
+    home_faceoffs = Faceoff.objects.filter(quarter__gte=4).filter(game__in=close_games) \
+                                   .values('home') \
+                                   .annotate(wins=Sum('winner')) \
+                                   .annotate(num_taken=Count('winner'))
+    away_faceoffs = Faceoff.objects.filter(quarter__gte=4).filter(game__in=close_games) \
+                                   .values('away') \
+                                   .annotate(wins=Sum('winner')) \
+                                   .annotate(num_taken=Count('winner'))
+    face_wins = {}
+    face_taken = {}
+
+    for player in Player.objects.all():
+        face_wins[player.id] = 0
+        face_taken[player.id] = 0
+
+    for face in away_faceoffs:
+        face['wins'] = face['num_taken'] - face['wins']
+        face_wins[face['away']] = face['wins']
+        face_taken[face['away']] = face['num_taken']
+
+    for face in home_faceoffs:
+        face_wins[face['home']] += face['wins']
+        face_taken[face['home']] += face['num_taken']
+
+    for player in players:
+        if face_taken[player.id] == 0:
+            player.clutch = 0.00
+        else:
+            player.clutch = float(face_wins[player.id]) / face_taken[player.id] * 100.0
     players.sort(key=lambda k: k.percent, reverse=True)
 
     return render_to_response('all_players.html',

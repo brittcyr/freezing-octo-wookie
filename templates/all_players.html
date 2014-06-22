@@ -19,6 +19,8 @@
         <thead>
           <tr>
             <th>
+            </th>
+            <th>
               Name
             </th>
             <th>
@@ -36,11 +38,16 @@
             <th>
               4th Quarter + OT
             </th>
+            <th>
+              Clutch
+            </th>
           </tr>
         </thead>
         <tbody>
         {% for player in players %}
           <tr>
+            <td>
+            </td>
             <td class="player-row">
               <input type="hidden" name="link" value={{ player.id }}>
               {{ player.name }}
@@ -61,6 +68,9 @@
             <td>
               {{ player.late_percent|floatformat:2 }}
             </td>
+            <td>
+              {{ player.clutch|floatformat:2 }}
+            </td>
           </tr>
         {% endfor %}
         </tbody>
@@ -77,6 +87,14 @@
         $("table").tablesorter({
           tableClass: "tablesorter",
         });
+        var table = $("table");
+        table.bind("sortEnd",function() { 
+            var i = 1;
+            table.find("tr:gt(0)").each(function(){
+                $(this).find("td:eq(0)").text(i);
+                i++;
+            });
+        }); 
         var searchResults = new Bloodhound({
           datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
           queryTokenizer: Bloodhound.tokenizers.whitespace,
