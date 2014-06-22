@@ -27,19 +27,39 @@
             <th>
               Percent
             </th>
+            <th>
+              RPI
+            </th>
+            <th>
+              Wing rating
+            </th>
+            <th>
+              4th Quarter + OT
+            </th>
           </tr>
         </thead>
         <tbody>
         {% for player in players %}
           <tr>
-            <td>
+            <td class="player-row">
+              <input type="hidden" name="link" value={{ player.id }}>
               {{ player.name }}
             </td>
-            <td>
+            <td class="team-row">
+              <input type="hidden" name="link" value={{ team.id }}>
               {{ player.team }}
             </td>
             <td>
-              {{ player.percent }}
+              {{ player.percent|floatformat:2 }}
+            </td>
+            <td>
+              {{ player.RPI }}
+            </td>
+            <td>
+              {{ player.wing|floatformat:4 }}
+            </td>
+            <td>
+              {{ player.late_percent|floatformat:2 }}
             </td>
           </tr>
         {% endfor %}
@@ -74,6 +94,18 @@
         function onSelected($e, datum) {
           window.location.href = datum['link'];
         }
+
+        // Make rows be links
+        $(".player-row").click(function() {
+          // Get the id of the player from the hidden input field
+          var id = $( this ).find("input").attr("value");
+          window.location = ("/fogolytics/player/" + id);
+        });
+        $(".team-row").click(function() {
+          // Get the id of the player from the hidden input field
+          var id = $( this ).find("input").attr("value");
+          //window.location = ("/fogolytics/team/" + id);
+        });
       });
     </script>
   </body>
