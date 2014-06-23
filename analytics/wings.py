@@ -19,6 +19,7 @@ if __name__ == '__main__':
   num_faces = [0] * (len(players) + 1)
   wings_score = [0] * (len(players) + 1)
 
+  # for every face, add the wing_score and adjust num_faces
   for face in faceoffs:
     wing_score = determine_wing(face)
     wings_score[face.home.id] += wing_score
