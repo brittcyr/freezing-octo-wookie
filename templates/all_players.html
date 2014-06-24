@@ -89,11 +89,11 @@
         });
         var table = $("table");
         table.bind("sortEnd",function() { 
-            var i = 1;
-            table.find("tr:gt(0)").each(function(){
-                $(this).find("td:eq(0)").text(i);
-                i++;
-            });
+          var i = 1;
+          table.find("tr:gt(0)").each(function(){
+            $(this).find("td:eq(0)").text(i);
+            i++;
+          });
         }); 
         var searchResults = new Bloodhound({
           datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
