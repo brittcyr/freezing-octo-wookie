@@ -31,6 +31,7 @@ if __name__ == '__main__':
   for i in range(len(num_faces)):
     if num_faces[i] == 0:
       continue
+    # take the average of the wing contribution over all faces
     wings_score[i] = float(wings_score[i]) / num_faces[i]
     print i, wings_score[i]
 
