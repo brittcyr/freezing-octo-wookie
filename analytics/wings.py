@@ -29,6 +29,7 @@ if __name__ == '__main__':
 
   num_faces[0] = 1
   for i in range(len(num_faces)):
+    # do not divide by zero
     if num_faces[i] == 0:
       continue
     # take the average of the wing contribution over all faces
