@@ -48,6 +48,7 @@ if __name__ == '__main__':
   winning_percent = [0] * (len(players) + 1)
   opponent_winning_percent = [0] * (len(players) + 1)
   opponent_opponent_winning_percent = [0] * (len(players) + 1)
+  # qualified and has_enough are here to keep the D2 guys out
   qualified = set([])
   has_enough = set([])
   for player in players:
