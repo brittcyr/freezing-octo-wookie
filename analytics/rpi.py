@@ -31,6 +31,7 @@ def is_qualified(player, qualifying_threshold = .4 ):
   return player_faces >= num_faces * qualifying_threshold
 
 def get_opponent_percent(player, winning_percent):
+  # This is the opponent's winning percentage
   away_face = Faceoff.objects.filter(away=player)
   home_face = Faceoff.objects.filter(home=player)
   total_faces = len(away_face) + len(home_face)
