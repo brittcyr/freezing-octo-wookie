@@ -86,6 +86,7 @@ def load_game_to_db(_date, _time, _home, _away, _site, _home_wins, _total_face, 
   model_game.save()
   return model_game
 
+# Loading refs and scorekeepers to db
 def load_officials_to_db(officials, _game):
   for official in officials:
     model_official = Ref(
