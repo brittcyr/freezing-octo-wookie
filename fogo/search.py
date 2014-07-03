@@ -7,7 +7,7 @@ import json
 def query(request):
     query = request.GET.get('query', '')
     if len(query) > 0:
-        results = Player.objects.filter(name__istartswith=query)
+        results = Player.objects.filter(name__icontains=query)
 
     response = []
     for r in results:
